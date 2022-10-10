@@ -1,0 +1,1 @@
+Bienvenido a tu billetera alectrónica.
