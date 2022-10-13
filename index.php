@@ -1,3 +1,26 @@
+<?php
+session_start();
+
+if ($_POST) {
+  $user = $_POST['user'];
+  $pass = $_POST['pass'];
+
+  $_SESSION['show_searchBar']=true;
+  $_SESSION['go_home']=true;
+
+  include_once "conn.php";
+  $query = mysqli_query($conn, "SELECT * FROM usuarios WHERE usuario = '$user' AND clave = '$pass'");
+  
+  if (mysqli_num_rows($query)===1) {
+    $row = mysqli_fetch_row($query);
+    $_SESSION['logged_id']=$row[0];
+    $_SESSION['user-name']=$row[1];
+    $_SESSION['user-pass']=$row[2];
+    header("Location: home.php");
+  }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -5,28 +28,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body background="img/login.webp" style="height: auto; backdrop-filter: blur(5px);">
-    <div class="container-fluid relative pt-5">
+<body background="img/login.png">
+    <div class="container flex flex-col content-center items-center w-screen h-screen">
         <!-- Content here -->    
-        <div class="row" style="height: 300px;"></div>
-        <div class="row">
-            <div class="col-sm-5"></div>
-            <div class="col-sm-2">
-                <form action="home.php" method="post">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1" class="text-light">Usuario</label>
-                        <input type="text" class="form-control mt-2" id="usuario" name="usuario" aria-describedby="emailHelp" placeholder="Ingresa tu usuario">
-                    </div>
-                    <div class="form-group">
-                        <label for="exampleInputPassword1" class="text-light mt-4">Contraseña</label>
-                        <input type="password" class="form-control mt-2" id="contra" name="contra" placeholder="Ingresa tu contraseña">
-                    </div>
-                    <button type="submit" class="btn btn-primary mt-4">Ingresar</button>
-                </form>
-            </div>
+        <div class="text-center">
+            <!-- login form -->
+            <form action="index.php" method="post">
+                <div class="form-group">
+                    <input type="text" class="flex-none hover:flex-1" id="usuario" placeholder="Ingresa tu usuario" name="user">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control mt-2" id="contra" placeholder="Ingresa tu contraseña" name="pass">
+                </div>
+                <button type="submit" class="btn btn-primary mt-4">Ingresar</button>
+            </form>
         </div>    
     </div>    
 </body>
