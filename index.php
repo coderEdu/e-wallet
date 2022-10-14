@@ -30,19 +30,19 @@ if ($_POST) {
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body background="img/login.png">
-    <div class="container flex flex-col content-center items-center w-screen h-screen">
+<body background="img/login.webp">
+    <div class="flex items-center content-center w-screen min-h-screen">
         <!-- Content here -->    
-        <div class="text-center">
+        <div class="flex text-center mx-auto h-1/2 bg-neutral-100 rounded-2xl opacity-80">
             <!-- login form -->
-            <form action="index.php" method="post">
-                <div class="form-group">
-                    <input type="text" class="flex-none hover:flex-1" id="usuario" placeholder="Ingresa tu usuario" name="user">
+            <form action="index.php" method="post" class="p-12 space-y-4">
+                <div class="">
+                    <input type="text" class="bg-amber-100 py-1 px-2 border-2 border-orange-300 rounded-xl" id="usuario" placeholder="Ingresa tu usuario" name="user">
                 </div>
-                <div class="form-group">
-                    <input type="password" class="form-control mt-2" id="contra" placeholder="Ingresa tu contraseña" name="pass">
+                <div class="">
+                    <input type="password" class="bg-amber-100 py-1 px-2 border-2 border-orange-300 rounded-xl" id="contra" placeholder="Ingresa tu contraseña" name="pass">
                 </div>
-                <button type="submit" class="btn btn-primary mt-4">Ingresar</button>
+                <button type="submit" class="bg-amber-100 py-2 px-4 border-2 border-orange-300 rounded-xl">Ingresar</button>
             </form>
         </div>    
     </div>    
