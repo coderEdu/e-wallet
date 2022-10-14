@@ -33,16 +33,16 @@ if ($_POST) {
 <body background="img/login.webp">
     <div class="flex items-center content-center w-screen min-h-screen">
         <!-- Content here -->    
-        <div class="flex text-center mx-auto h-1/2 bg-neutral-100 rounded-2xl opacity-80">
+        <div class="flex text-sm sm:text-xs text-center mx-auto h-1/2 bg-neutral-100 rounded-2xl opacity-80">
             <!-- login form -->
             <form action="index.php" method="post" class="p-12 space-y-4">
                 <div class="">
-                    <input type="text" class="bg-amber-100 py-1 px-2 border-2 border-orange-300 rounded-xl" id="usuario" placeholder="Ingresa tu usuario" name="user">
+                    <input type="text" class="bg-slate-100 py-1 px-2 border-2 border-orange-300 rounded-xl" id="usuario" placeholder="Ingresa tu usuario" name="user">
                 </div>
                 <div class="">
-                    <input type="password" class="bg-amber-100 py-1 px-2 border-2 border-orange-300 rounded-xl" id="contra" placeholder="Ingresa tu contraseña" name="pass">
+                    <input type="password" class="bg-slate-100 py-1 px-2 border-2 border-orange-300 rounded-xl" id="contra" placeholder="Ingresa tu contraseña" name="pass">
                 </div>
-                <button type="submit" class="bg-amber-100 py-2 px-4 border-2 border-orange-300 rounded-xl">Ingresar</button>
+                <button type="submit" class="bg-blue-600 text-indigo-50 py-2 px-4 border-2 bg-blue-800 rounded-xl">Ingresar</button>
             </form>
         </div>    
     </div>    
