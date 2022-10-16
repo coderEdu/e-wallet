@@ -43,7 +43,7 @@ if ($_POST) {
                 <div class="">
                     <input type="password" class="bg-slate-100 py-1 px-2 border-2 border-orange-300 rounded-xl" id="contra" placeholder="Ingresa tu contraseña" name="pass">
                 </div>
-                <button type="submit" class="bg-blue-600 text-indigo-50 py-2 px-4 border-2 bg-blue-800 rounded-xl">Ingresar</button>
+                <button type="submit" class="bg-blue-600 text-indigo-50 py-2 px-4 border-2 border-blue-700 rounded-xl">Ingresar</button>
             </form>
         </div>    
     </div>    
