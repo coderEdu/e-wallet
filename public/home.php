@@ -30,19 +30,19 @@
 
         <!-- account list -->
         <div class="flex flex-col mb-5 sm:flex-row sm:flex-wrap w-full content-between items-center bg-slate-200">
-            <div class="flex w-full h-48 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 bg-slate-400"></div>
-            <div class="flex w-full h-48 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 bg-slate-400"></div>
-            <div class="flex w-full h-48 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 bg-slate-400"></div>
-            <div class="flex w-full h-48 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 bg-slate-400"></div>
-            <div class="flex w-full h-48 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 bg-slate-400"></div>          
+            <div class="flex w-full h-48 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 rounded-2xl bg-slate-400"></div>
+            <div class="flex w-full h-48 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 rounded-2xl bg-slate-400"></div>
+            <div class="flex w-full h-48 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 rounded-2xl bg-slate-400"></div>
+            <div class="flex w-full h-48 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 rounded-2xl bg-slate-400"></div>
+            <div class="flex w-full h-48 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 rounded-2xl bg-slate-400"></div>          
         </div>
 
         <div class="flex flex-col sm:flex-row sm:flex-wrap w-full content-between items-center bg-slate-200">
             <!-- last movements -->
-            <div class="flex w-full h-64 sm:w-[47.5%] md:w-[47.8%] lg:w-[48.4%] xl:w-[48.7%] 2xl:w-[48.9%] m-2 bg-slate-400"></div>
+            <div class="flex w-full h-64 sm:w-[47.5%] md:w-[47.8%] lg:w-[48.4%] xl:w-[48.7%] 2xl:w-[48.9%] m-2 rounded-2xl bg-slate-400"></div>
 
             <!-- last notes -->
-            <div class="flex w-full h-64 sm:w-[47.5%] md:w-[47.8%] lg:w-[48.4%] xl:w-[48.7%] 2xl:w-[48.9%] m-2 bg-slate-400"></div>
+            <div class="flex w-full h-64 sm:w-[47.5%] md:w-[47.8%] lg:w-[48.4%] xl:w-[48.7%] 2xl:w-[48.9%] m-2 rounded-2xl bg-slate-400"></div>
         </div>
     </div>
 </body>
