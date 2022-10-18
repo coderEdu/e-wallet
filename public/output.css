@@ -640,6 +640,14 @@ video {
   height: 50%;
 }
 
+.h-40 {
+  height: 10rem;
+}
+
+.h-32 {
+  height: 8rem;
+}
+
 .min-h-screen {
   min-height: 100vh;
 }
@@ -767,6 +775,10 @@ video {
   padding: 3rem;
 }
 
+.p-8 {
+  padding: 2rem;
+}
+
 .py-1 {
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
@@ -799,6 +811,21 @@ video {
 .text-sm {
   font-size: 0.875rem;
   line-height: 1.25rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .text-red-800 {
@@ -840,6 +867,11 @@ video {
     font-size: 0.75rem;
     line-height: 1rem;
   }
+
+  .sm\:text-xl {
+    font-size: 1.25rem;
+    line-height: 1.75rem;
+  }
 }
 
 @media (min-width: 768px) {
@@ -863,6 +895,10 @@ video {
 
   .lg\:w-\[48\.4\%\] {
     width: 48.4%;
+  }
+
+  .lg\:p-10 {
+    padding: 2.5rem;
   }
 }
 
