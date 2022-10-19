@@ -1,6 +1,6 @@
-<nav class="flex flex-row header-rounded bg-yellow-400 w-full h-24 justify-between">
+<nav class="flex flex-row header-rounded bg-yellow-400 w-full h-24 justify-between items-center">
     <!-- logo -->
-    <div class="w-1/4 sm:w-24 sm:h-full mx-6 my-2">
+    <div class="flex w-16 h-16 md:w-20 md:h-20 mx-6">
         <img src="img/atm-money-icon.png" alt="atm-money-icon.png">
     </div>
     <!-- mainmenu navbar -->
