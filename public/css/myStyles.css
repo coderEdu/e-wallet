@@ -1,7 +1,23 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+
 .bg-default {
     background-color: #f9f9f9;
 }
 
 .header-rounded {
     border-radius: 0px 0px 8px 8px;
+}
+
+.def-f-family {
+    font-family: "Roboto", sans-serif;
+}
+
+.card-box-shadow {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: all 0.2s;
+}
+
+.card-box-shadow:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
