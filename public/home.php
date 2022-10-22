@@ -10,17 +10,23 @@
                 <div class="flex flex-col w-[80%]">
                     <p class="font-serif mb-1 text-md text-zinc-500">GOTECH</p>
                     <h2 class="def-f-family font-medium text-2xl text-black"><i class="fa fa-dollar-sign"></i> 164589,00</i></h2>
-                    <div>
-                        <span class="font-bold text-sm mr-1 text-green-700"><i class="fa fa-arrow-down"></i></span>
-                        <span class="text-sm text-zinc-500">12</span>
-                        <div class="inline-block w-4"></div>
-                        <span class="font-bold text-sm mr-1 text-red-700"><i class="fa fa-arrow-up"></i></span>
-                        <span class="text-sm text-zinc-500">34</span>
+                    <div class="flex w-1/2 gap-2">
+                        <div>
+                            <span class="text-zinc-500">Movs:</span>
+                        </div>
+                        <div class="flex content-center items-center">
+                            <span class="font-bold text-sm mr-1 text-green-700"><i class="fa fa-arrow-down"></i></span>
+                            <span class="text-sm text-zinc-500">12</span>
+                        </div>
+                        <div class="flex content-center items-center">
+                            <span class="font-bold text-sm mr-1 text-red-700"><i class="fa fa-arrow-up"></i></span>
+                            <span class="text-sm text-zinc-500">34</span>
+                        </div>
                     </div>
                 </div>
                 <div class="flex flex-col w-[20%]">
-                    <div class="bg-emerald-100 w-16 h-16 md:w-12 md:h-12 xl:w-16 xl:h-16 rounded-full">
-                        <i class="fa fa-suitcase"></i>
+                    <div class="flex bg-emerald-100 w-16 h-16 md:w-12 md:h-12 xl:w-16 xl:h-16 rounded-full items-center">
+                        <i class="fa fa-wallet text-[1.5rem] md:text-[1.4rem] xl:text-[1.5rem] text-lime-700 mx-auto"></i>
                     </div>
                 </div>
             </div>
