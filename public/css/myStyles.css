@@ -17,6 +17,10 @@
     transition: all 0.2s;
 }
 
+.mov-card-b-shadow {
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
 .card-box-shadow:hover {
     transform: translateY(-2px);
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
