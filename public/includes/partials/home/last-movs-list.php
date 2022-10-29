@@ -1,8 +1,8 @@
 <!-- last movements -->
-<div class="flex flex-col w-11/12 h-auto sm:w-[47.5%] md:w-[47.8%] lg:w-[48.4%] xl:w-[48.7%] 2xl:w-[48.9%] m-2 rounded-2xl mov-card-b-shadow bg-slate-300">
+<div class="flex flex-col w-11/12 h-auto sm:w-[47.5%] md:w-[47.8%] lg:w-[48.4%] xl:w-[48.7%] 2xl:w-[48.9%] m-2 rounded-2xl mov-card-b-shadow bg-gray-100">
     <div class="flex flex-row w-full ml-4 justify-center items-center">
-        <span class="flex "><i class="fa fa-money-bill text-xl text-slate-500"></i></span>
-        <h1 class="flex font-sans text-lg sm:text-lg w-full mx-auto content-start px-3 py-4  text-slate-700">Tus últimos movimientos</h1>
+        <span class="flex "><i class="fa fa-money-bill text-xl text-green-500"></i></span>
+        <h1 class="flex font-sans text-base w-full mx-auto content-start px-3 py-3 text-slate-800">Tus últimos movimientos</h1>
     </div>
     <div class="flex w-full h-0.5 border-b-2 border-gray-200"></div>
 
@@ -11,7 +11,7 @@
         <div class="flex flex-col w-full divide-y-2">
 
             <div class="flex w-full justify-between flex-wrap">
-                <span class="flex font-serif mb-1 py-0 px-3 bg-indigo-100 rounded-2xl text-md text-zinc-900">Gotech</span>
+                <span class="flex font-serif mb-1 py-0 px-3 bg-blue-100 rounded-2xl text-md text-zinc-900">Gotech</span>
                 <h3 class="flex font-serif mb-1 text-md text-zinc-500">13 oct 2022 14:21:44</h3>
             </div>
 
@@ -33,7 +33,7 @@
         <div class="flex flex-col w-full divide-y-2">
 
             <div class="flex w-full justify-between flex-wrap">
-                <span class="flex font-serif mb-1 py-0 px-3 bg-indigo-100 rounded-2xl text-md text-zinc-900">Gotech</span>
+                <span class="flex font-serif mb-1 py-0 px-3 bg-blue-100 rounded-2xl text-md text-zinc-900">Gotech</span>
                 <h3 class="flex font-serif mb-1 text-md text-zinc-500">9 mar 2022 1:26:04</h3>
             </div>
 
@@ -55,7 +55,7 @@
         <div class="flex flex-col w-full divide-y-2">
 
             <div class="flex w-full justify-between flex-wrap">
-                <span class="flex font-serif mb-1 py-0 px-3 bg-indigo-100 rounded-2xl text-md text-zinc-900">Gotech</span>
+                <span class="flex font-serif mb-1 py-0 px-3 bg-blue-100 rounded-2xl text-md text-zinc-900">Gotech</span>
                 <h3 class="flex font-serif mb-1 text-md text-zinc-500">24 oct 2022 17:12:04</h3>
             </div>
 
@@ -77,7 +77,7 @@
         <div class="flex flex-col w-full divide-y-2">
 
             <div class="flex w-full justify-between flex-wrap">
-                <span class="flex font-serif mb-1 py-0 px-3 bg-indigo-100 rounded-2xl text-md text-zinc-900">Bios</span>
+                <span class="flex font-serif mb-1 py-0 px-3 bg-blue-100 rounded-2xl text-md text-zinc-900">Bios</span>
                 <h3 class="flex font-serif mb-1 text-md text-zinc-500">20 oct 2022 17:00:34</h3>
             </div>
 
@@ -93,4 +93,11 @@
             </div>
         </div>
     </a>
+
+    <div class="flex flex-row w-full justify-end items-center">
+        <a href="#" class="flex items-center">
+            <span class="flex"><i class="fa fa-plus text-base text-green-500"></i></span>
+            <h1 class="flex w-full font-sans text-sm sm:text-md mx-auto px-3 mr-1 py-2 text-slate-800">Ver toda tu actividad</h1>
+        </a>
+    </div>
 </div>

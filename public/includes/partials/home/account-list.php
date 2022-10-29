@@ -1,9 +1,9 @@
 <div class="flex flex-col mb-5 pt-10 md:pt-12 lg:pt-14 sm:flex-row sm:flex-wrap w-full content-between items-center rounded-2xl">
-    <div class="flex w-full ml-2 justify-center items-center">
-        <span class="flex"><i class="fa fa-wallet text-xl text-slate-500"></i></span>
-        <h1 class="flex font-sans text-lg sm:text-xl w-full mx-auto content-start px-3 py-4 text-slate-900">Tus cuentas</h1>
+    <div class="flex w-full sm:ml-2 justify-center sm:justify-start items-center">
+        <span class="flex text-left"><i class="fa fa-wallet text-xl text-slate-500"></i></span>
+        <h1 class="flex font-sans text-base text-left px-3 py-4 text-slate-900">Tus cuentas</h1>
     </div>
-    <div class="flex w-11/12 h-32 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 py-4 px-6 rounded-2xl card-box-shadow card-box-shadow:hover bg-white"> <!-- card 1 -->
+    <div class="flex w-11/12 h-fit sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 py-4 px-6 rounded-2xl card-box-shadow card-box-shadow:hover bg-white"> <!-- card 1 -->
         <div class="flex flex-col w-[80%]">
             <p class="font-serif mb-1 text-md text-zinc-500">GOTECH</p>
             <a href="#">
@@ -29,7 +29,7 @@
             </div>
         </div>
     </div>
-    <div class="flex w-11/12 h-32 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 py-4 px-6 rounded-2xl card-box-shadow card-box-shadow:hover bg-white"> <!-- card 2 -->
+    <div class="flex w-11/12 h-fit sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 py-4 px-6 rounded-2xl card-box-shadow card-box-shadow:hover bg-white"> <!-- card 2 -->
         <div class="flex flex-col w-[80%]">
             <p class="font-serif mb-1 text-md text-zinc-500">DELMA</p>
             <a href="#">
@@ -55,7 +55,7 @@
             </div>
         </div>
     </div>
-    <div class="flex w-11/12 h-32 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 py-4 px-6 rounded-2xl card-box-shadow card-box-shadow:hover bg-white"> <!-- card 3 -->
+    <div class="flex w-11/12 h-fit sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 py-4 px-6 rounded-2xl card-box-shadow card-box-shadow:hover bg-white"> <!-- card 3 -->
         <div class="flex flex-col w-[80%]">
             <p class="font-serif mb-1 text-md text-zinc-500">DESBLOQUEOS</p>
             <a href="#">
@@ -81,7 +81,7 @@
             </div>
         </div>
     </div>
-    <div class="flex w-11/12 h-32 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 py-4 px-6 rounded-2xl card-box-shadow card-box-shadow:hover bg-white"> <!-- card 4 -->
+    <div class="flex w-11/12 h-fit sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 py-4 px-6 rounded-2xl card-box-shadow card-box-shadow:hover bg-white"> <!-- card 4 -->
         <div class="flex flex-col w-[80%]">
             <p class="font-serif mb-1 text-md text-zinc-500">IFE 5</p>
             <a href="#">
@@ -107,7 +107,7 @@
             </div>
         </div>
     </div>
-    <div class="flex w-11/12 h-32 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 py-4 px-6 rounded-2xl card-box-shadow card-box-shadow:hover bg-white"> <!-- card 5 -->
+    <div class="flex w-11/12 h-fit sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 py-4 px-6 rounded-2xl card-box-shadow card-box-shadow:hover bg-white"> <!-- card 5 -->
         <div class="flex flex-col w-[80%]">
             <p class="font-serif mb-1 text-md text-zinc-500">EDU</p>
             <a href="#">
