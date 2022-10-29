@@ -8,7 +8,7 @@ if ($_POST) {
   $_SESSION['show_searchBar']=true;
   $_SESSION['go_home']=true;
 
-  include_once "conn.php";
+  include_once "includes/partials/bd/conn.php";
   $query = mysqli_query($conn, "SELECT * FROM usuarios WHERE usuario = '$user' AND clave = '$pass'");
   
   if (mysqli_num_rows($query)===1) {
