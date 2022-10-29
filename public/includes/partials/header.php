@@ -10,6 +10,6 @@
 
     <!-- FontAwesome Kit -->
     <script src="https://kit.fontawesome.com/cf3e3a7ec6.js" crossorigin="anonymous"></script>
-    <title>Bienvenido</title>
+    <title>E-Wallet - Home</title>
 </head>
 <body class="bg-default">

@@ -1,7 +1,8 @@
-<nav class="flex flex-row header-rounded bg-yellow-400 w-full h-24 justify-between items-center">
+<nav class="flex flex-row header-rounded bg-yellow-400 w-full h-fit justify-between items-center">
     <div class="flex content-between items-center">
+
         <!-- logo -->
-        <div class="flex w-16 h-16 md:w-20 md:h-20 mx-6">
+        <div class="flex w-14 h-14 md:w-16 md:h-16 py-2 ml-6">
             <img src="img/atm-money-icon.png" alt="atm-money-icon.png">
         </div>
 
