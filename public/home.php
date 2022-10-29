@@ -1,6 +1,6 @@
 <?php include "includes/partials/header.php" ?>
     <div class="container flex flex-col w-full h-screen mx-auto bg-default">
-        <?php include "includes/header-nav.php"; ?>        
+        <?php include "includes/partials/header-nav.php"; ?>        
         
         <!-- account list -->
         <?php include "includes/partials/home/account-list.php" ?>
