@@ -1,4 +1,4 @@
-<nav class="flex flex-row header-rounded bg-yellow-400 w-full h-fit justify-between items-center">
+<div class="flex flex-row header-rounded bg-yellow-400 w-full h-fit justify-between items-center">
     <div class="flex content-between items-center">
 
         <!-- logo -->
@@ -13,12 +13,28 @@
     </div>
 
     <!-- mainmenu navbar -->
-    <div class="hidden md:flex">
+    <nav class="hidden md:flex">
         <ul class="flex flex-row w-fit h-full text-md p-6 space-x-4 items-center">
-            <a href="#"><li>Extraer</li></a>
-            <a href="#"><li>Depositar</li></a>
-            <a href="#"><li>Ver registro</li></a>
-            <a href="#"><li>Cerrar sesión</li></a>
+            <li>
+                <a href="#">Acciones
+                    <ul class="hidden hover:block">
+                        <li><a href="#">Depositar</a></li>
+                        <li><a href="#">Transferir</a></li>
+                        <li><a href="#">Extraer</a></li>
+                    </ul>
+                </a>
+            </li>
+            <li>
+                <a href="#">Notas
+                    <ul class="hidden">
+                        <a href="#"><li>Crear</li></a>
+                        <a href="#"><li>Editar</li></a>
+                        <a href="#"><li>Eliminar</li></a>
+                        <a href="#"><li>Ver notas</li></a>
+                    </ul>
+                </a>
+            </li>
+            <li><a href="#">Ver registro</a></li>
         </ul>
-    </div>
-</nav>
+    </nav>
+</div>
