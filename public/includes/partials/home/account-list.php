@@ -1,4 +1,4 @@
-<div class="flex flex-col mb-5 pt-10 md:pt-12 lg:pt-14 sm:flex-row sm:flex-wrap w-full content-between items-center rounded-2xl">
+<div class="flex flex-col mb-2 sm:mb-4 md:mb-5 pt-10 md:pt-12 lg:pt-14 sm:flex-row sm:flex-wrap w-full content-between items-center rounded-2xl">
     <div class="flex w-full sm:ml-2 justify-center sm:justify-start items-center">
         <span class="flex text-left"><i class="fa fa-wallet text-xl text-slate-500"></i></span>
         <h1 class="flex font-sans text-base text-left px-3 py-4 text-slate-900">Tus cuentas</h1>

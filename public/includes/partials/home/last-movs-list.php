@@ -1,5 +1,5 @@
 <!-- last movements -->
-<div class="flex flex-col w-11/12 h-auto sm:w-[47.5%] md:w-[47.8%] lg:w-[48.4%] xl:w-[48.7%] 2xl:w-[48.9%] m-2 rounded-2xl mov-card-b-shadow bg-gray-100">
+<div class="flex flex-col w-11/12 h-fit sm:w-[47.5%] md:w-[47.8%] lg:w-[48.4%] xl:w-[48.7%] 2xl:w-[48.9%] m-2 rounded-2xl mov-card-b-shadow bg-gray-100">
     <div class="flex flex-row w-full ml-4 justify-center items-center">
         <span class="flex "><i class="fa fa-money-bill text-xl text-green-500"></i></span>
         <h1 class="flex font-sans text-base w-full mx-auto content-start px-3 py-3 text-slate-800">Tus últimos movimientos</h1>
