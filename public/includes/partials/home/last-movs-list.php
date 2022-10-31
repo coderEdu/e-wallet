@@ -1,7 +1,7 @@
 <!-- last movements -->
 <div class="flex flex-col w-11/12 h-fit sm:w-[46.5%] md:w-[46.8%] lg:w-[47.4%] xl:w-[47.7%] 2xl:w-[47.9%] m-2 rounded-2xl mov-card-b-shadow bg-cards">
     <div class="flex flex-row w-full ml-4 justify-center items-center">
-        <span class="flex "><i class="fa fa-money-bill text-xl text-green-500"></i></span>
+        <span class="flex "><i class="fa fa-money text-xl text-green-500"></i></span>
         <h1 class="flex font-sans text-base w-full mx-auto content-start px-3 py-3 text-slate-800">Tus últimos movimientos</h1>
     </div>
     <div class="flex w-full h-0.5 border-b-2 border-gray-200"></div>
