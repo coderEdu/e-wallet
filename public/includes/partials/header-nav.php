@@ -2,9 +2,11 @@
     <div class="flex content-between items-center">
 
         <!-- logo -->
-        <div class="flex w-14 h-14 md:w-16 md:h-16 py-2 ml-6">
-            <img src="img/atm-money-icon.png" alt="atm-money-icon.png">
-        </div>
+        <a href="home.php">
+            <div class="flex w-14 h-14 md:w-16 md:h-16 py-2 ml-6">
+                <img src="img/atm-money-icon.png" alt="atm-money-icon.png">
+            </div>
+        </a>
 
         <!-- logged name -->
         <div class="font-sans text-lg md:text-xl">
@@ -19,8 +21,8 @@
                 <a href="#">Acciones
                     <ul class="hidden hover:block">
                         <li><a href="#">Depositar</a></li>
-                        <li><a href="#">Transferir</a></li>
                         <li><a href="#">Extraer</a></li>
+                        <li><a href="#">Transferir</a></li>
                     </ul>
                 </a>
             </li>
@@ -34,7 +36,7 @@
                     </ul>
                 </a>
             </li>
-            <li><a href="#">Ver registro</a></li>
+            <li><a href="log.php">Ver registro</a></li>
         </ul>
     </nav>
 </div>
