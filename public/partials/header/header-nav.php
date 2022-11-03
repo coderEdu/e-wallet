@@ -4,7 +4,7 @@
         <!-- logo -->
         <a href="home.php">
             <div class="flex w-14 h-14 md:w-16 md:h-16 py-2 ml-6">
-                <img src="img/atm-money-icon.png" alt="atm-money-icon.png">
+                <img src="../img/atm-money-icon.png" alt="atm-money-icon.png">
             </div>
         </a>
 

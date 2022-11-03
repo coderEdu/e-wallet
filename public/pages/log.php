@@ -1,6 +1,6 @@
-<?php include "includes/partials/header.php" ?>
+<?php include "../partials/header/header.php" ?>
 <div class="container flex flex-col w-full h-screen mx-auto bg-default">
-    <?php include "includes/partials/header-nav.php"; ?>        
+    <?php include "../partials/header/header-nav.php"; ?>        
     
     <section>
         <div class="w-full p-5 mx-auto">
@@ -11,4 +11,4 @@
 </div>
 
 <!-- footer -->
-<?php include "includes/partials/footer.php"; ?>
+<?php include "../partials/footer/footer.php"; ?>
