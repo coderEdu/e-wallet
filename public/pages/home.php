@@ -14,6 +14,7 @@
         <?php include "includes/partials/home/last-note-list.php" ?>            
     </div>
 
-    <!-- footer -->
-    <?php include "includes/partials/footer.php"; ?>
 </div>
+
+<!-- footer -->
+<?php include "includes/partials/footer.php"; ?>
