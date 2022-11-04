@@ -1117,6 +1117,10 @@ video {
     margin-left: 0.5rem;
   }
 
+  .sm\:hidden {
+    display: none;
+  }
+
   .sm\:w-\[47\.5\%\] {
     width: 47.5%;
   }
@@ -1168,6 +1172,10 @@ video {
 
   .md\:flex {
     display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
   }
 
   .md\:h-16 {
