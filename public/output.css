@@ -916,6 +916,11 @@ video {
   padding-right: 1rem;
 }
 
+.px-6 {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -924,11 +929,6 @@ video {
 .py-4 {
   padding-top: 1rem;
   padding-bottom: 1rem;
-}
-
-.px-6 {
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .py-3 {
@@ -1115,10 +1115,6 @@ video {
 
   .sm\:ml-2 {
     margin-left: 0.5rem;
-  }
-
-  .sm\:hidden {
-    display: none;
   }
 
   .sm\:w-\[47\.5\%\] {

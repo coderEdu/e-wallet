@@ -29,9 +29,9 @@ if ($_POST) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
-    <link href="output.css" rel="stylesheet">
+    <link href="../output.css" rel="stylesheet">
 </head>
-<body background="img/login.webp">
+<body background="../img/login.webp">  <!-- body background image -->
     <div class="flex items-center content-center w-screen min-h-screen">
         <!-- Content here -->    
         <div class="flex text-sm sm:text-xs text-center mx-auto h-1/2 bg-neutral-100 rounded-2xl opacity-80">
