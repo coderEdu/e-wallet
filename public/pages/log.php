@@ -8,7 +8,6 @@
         </div>
     </section>
 
+    <!-- footer -->
+    <?php include "../partials/footer/footer.php"; ?>
 </div>
-
-<!-- footer -->
-<?php include "../partials/footer/footer.php"; ?>
