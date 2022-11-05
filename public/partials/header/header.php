@@ -10,6 +10,7 @@
 
     <!-- FontAwesome Kit -->
     <script src="https://kit.fontawesome.com/cf3e3a7ec6.js" crossorigin="anonymous"></script>
+    <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
     <title>E-Wallet - Home</title>
 </head>
 <body class="bg-default">
