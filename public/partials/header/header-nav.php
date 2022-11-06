@@ -17,14 +17,11 @@
     <!-- mainmenu navbar -->
     <nav class="hidden md:flex">
         <ul class="flex flex-row w-fit h-full text-md p-6 space-x-4 items-center">
-
             <?php include "../partials/header-nav/menu/actions.php" ?>
 
             <?php include "../partials/header-nav/menu/notes.php" ?>
 
-            <li>
-                <a href="log.php" class="flex items-center justify-center px-4 py-2 text-sm border rounded-full dark:border-neutral-700 focus:outline-none border-primary-500 hover:bg-amber-500">Ver registro</a>
-            </li>
+            <li><a href="log.php" class="flex items-center justify-center px-4 py-2 text-sm border rounded-full dark:border-neutral-700 focus:outline-none border-primary-500 hover:bg-amber-500">Ver registro</a></li>
         </ul>
     </nav>
 
