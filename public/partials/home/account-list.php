@@ -1,3 +1,14 @@
+<?php 
+// retrieve all accounts from account table
+
+include_once "../partials/bd/conn.php";
+
+foreach($conn->query('SELECT * from cuentas') as $fila) {
+    print_r($fila);
+}
+
+
+?>
 <div class="flex flex-col mb-2 sm:mb-4 md:mb-5 pt-10 md:pt-12 lg:pt-14 sm:flex-row sm:flex-wrap w-full content-between items-center rounded-2xl">
     <div class="flex w-full sm:ml-2 justify-center sm:justify-start items-center">
         <span class="flex text-left"><i class="fa fa-wallet text-xl text-slate-500"></i></span>

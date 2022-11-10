@@ -2,21 +2,24 @@
 session_start();
 
 if ($_POST) {
-  $user = $_POST['user'];
-  $pass = $_POST['pass'];
-
-  $_SESSION['show_searchBar']=true;
-  $_SESSION['go_home']=true;
+  $user_name = $_POST['user_name'];
+  $user_pass = $_POST['user_pass'];
 
   include_once "../partials/bd/conn.php";
-  $query = mysqli_query($conn, "SELECT * FROM usuarios WHERE usuario = '$user' AND clave = '$pass'");
-  
-  if (mysqli_num_rows($query)===1) {
-    $row = mysqli_fetch_row($query);
-    $_SESSION['logged_id']=$row[0];
-    $_SESSION['user-name']=$row[1];
-    $_SESSION['user-pass']=$row[2];
-    header("Location: home.php");
+
+  $sql = "SELECT id, usuario, clave FROM usuarios WHERE usuario = '$user_name' AND clave = '$user_pass'";
+
+  foreach ($conn->query($sql) as $row) {
+    if ($row) {
+        //print $row['usuario'] . "\t";
+        //print $row['clave'] . "\t";
+        //print $row['id'] . "\t";
+        $_SESSION['logged_id']=$row['id'];
+        $_SESSION['user-name']=$row['usuario'];
+        $_SESSION['user-pass']=$row['clave'];
+
+        header("Location: home.php");
+    }
   }
 }
 ?>
@@ -31,17 +34,17 @@ if ($_POST) {
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link href="../output.css" rel="stylesheet">
 </head>
-<body background="../img/login.webp">  <!-- body background image -->
+<body background="../img/login.webp">  <!-- body background image (background="../img/login.webp") -->
     <div class="flex items-center content-center w-screen min-h-screen">
         <!-- Content here -->    
         <div class="flex text-sm sm:text-xs text-center mx-auto h-1/2 bg-neutral-100 rounded-2xl opacity-80">
             <!-- login form -->
             <form action="index.php" method="post" class="p-12 space-y-4">
                 <div class="">
-                    <input type="text" class="bg-slate-100 py-1 px-2 border-2 border-orange-300 rounded-xl" id="usuario" placeholder="Ingresa tu usuario" name="user">
+                    <input type="text" class="bg-slate-100 py-1 px-2 border-2 border-orange-300 rounded-xl" id="usuario" placeholder="Ingresa tu usuario" name="user_name">
                 </div>
                 <div class="">
-                    <input type="password" class="bg-slate-100 py-1 px-2 border-2 border-orange-300 rounded-xl" id="contra" placeholder="Ingresa tu contraseña" name="pass">
+                    <input type="password" class="bg-slate-100 py-1 px-2 border-2 border-orange-300 rounded-xl" id="contra" placeholder="Ingresa tu contraseña" name="user_pass">
                 </div>
                 <button type="submit" class="bg-blue-600 text-indigo-50 py-2 px-4 border-2 border-blue-700 rounded-xl">Ingresar</button>
             </form>

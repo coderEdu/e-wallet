@@ -610,8 +610,8 @@ video {
   margin-right: auto;
 }
 
-.mt-4 {
-  margin-top: 1rem;
+.mt-6 {
+  margin-top: 1.5rem;
 }
 
 .mt-10 {
@@ -650,16 +650,16 @@ video {
   margin-top: 0.75rem;
 }
 
-.mt-6 {
-  margin-top: 1.5rem;
-}
-
 .block {
   display: block;
 }
 
 .flex {
   display: flex;
+}
+
+.table {
+  display: table;
 }
 
 .hidden {
@@ -798,24 +798,12 @@ video {
   justify-content: space-between;
 }
 
-.gap-6 {
-  gap: 1.5rem;
+.gap-9 {
+  gap: 2.25rem;
 }
 
 .gap-2 {
   gap: 0.5rem;
-}
-
-.gap-8 {
-  gap: 2rem;
-}
-
-.gap-10 {
-  gap: 2.5rem;
-}
-
-.gap-9 {
-  gap: 2.25rem;
 }
 
 .space-y-4 > :not([hidden]) ~ :not([hidden]) {
@@ -1342,10 +1330,6 @@ video {
 }
 
 @media (min-width: 1280px) {
-  .xl\:mt-6 {
-    margin-top: 1.5rem;
-  }
-
   .xl\:mt-8 {
     margin-top: 2rem;
   }
