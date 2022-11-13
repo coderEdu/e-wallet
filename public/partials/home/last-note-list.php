@@ -1,5 +1,5 @@
 <!-- last notes list -->
-<div class="flex flex-col w-11/12 h-fit sm:w-[46.5%] md:w-[46.8%] lg:w-[47.4%] xl:w-[47.7%] 2xl:w-[47.9%] m-2 rounded-2xl mov-card-b-shadow bg-cards">
+<div class="flex flex-col w-11/12 h-fit sm:w-[46.5%] md:w-[46.8%] lg:w-[47.4%] xl:w-[47.7%] 2xl:w-[47.9%] m-2 rounded-2xl mov-card-b-shadow bg-white">
     <div class="flex flex-row w-full ml-4 justify-center items-center">
         <span class="flex "><i class="fa fa-clipboard text-xl text-green-500"></i></span>
         <h1 class="flex def-f-family text-base w-full mx-auto content-start px-3 py-3 text-slate-800">Tus últimas notas</h1>
@@ -9,7 +9,7 @@
     <!-- first note card -->
     <a href="#" class="flex w-full h-auto justify-center items-center py-4 px-6 mb-1 card-box-shadow card-box-shadow:hover bg-white"> 
         <div class="flex w-fit h-fit mr-4">
-            <i class="fa fa-clipboard flex text-5xl text-green-500"></i>
+            <i class="fa fa-clipboard flex text-5xl text-blue-200"></i>
         </div>
 
         <div class="flex flex-col w-full divide-y-2">
@@ -29,7 +29,7 @@
      <!-- second note card -->
      <a href="#" class="flex w-full h-auto justify-center items-center py-4 px-6 mb-1 card-box-shadow card-box-shadow:hover bg-white"> 
         <div class="flex w-fit h-fit mr-4">
-            <i class="fa fa-clipboard flex text-5xl text-green-500"></i>
+            <i class="fa fa-clipboard flex text-5xl text-blue-200"></i>
         </div>
 
         <div class="flex flex-col w-full divide-y-2">
@@ -49,7 +49,7 @@
     <!-- third note card -->
     <a href="#" class="flex w-full h-auto justify-center items-center py-4 px-6 mb-1 card-box-shadow card-box-shadow:hover bg-white"> 
         <div class="flex w-fit h-fit mr-4">
-            <i class="fa fa-clipboard flex text-5xl text-green-500"></i>
+            <i class="fa fa-clipboard flex text-5xl text-blue-200"></i>
         </div>
 
         <div class="flex flex-col w-full divide-y-2">
@@ -67,7 +67,7 @@
     </a>
 
     <div class="flex flex-row w-full justify-end items-center">
-        <a href="#" class="flex items-center">
+        <a href="notes-list.php" class="flex items-center">
             <span class="flex"><i class="fa fa-plus text-base text-green-500"></i></span>
             <h1 class="flex w-full font-sans text-sm sm:text-md mx-auto px-3 mr-1 py-2 text-slate-800">Ver todas tus notas</h1>
         </a>

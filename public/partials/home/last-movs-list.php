@@ -1,5 +1,5 @@
 <!-- last movements -->
-<div class="flex flex-col w-11/12 h-fit sm:w-[46.5%] md:w-[46.8%] lg:w-[47.4%] xl:w-[47.7%] 2xl:w-[47.9%] m-2 rounded-2xl mov-card-b-shadow bg-cards">
+<div class="flex flex-col w-11/12 h-fit sm:w-[46.5%] md:w-[46.8%] lg:w-[47.4%] xl:w-[47.7%] 2xl:w-[47.9%] m-2 rounded-2xl mov-card-b-shadow bg-white">
     <div class="flex flex-row w-full ml-4 justify-center items-center">
         <span class="flex "><i class="fa fa-money text-xl text-green-500"></i></span>
         <h1 class="flex def-f-family text-base w-full mx-auto content-start px-3 py-3 text-slate-800">Tus últimos movimientos</h1>
@@ -11,7 +11,7 @@
         <div class="flex flex-col w-full divide-y-2">
 
             <div class="flex w-full justify-between flex-wrap">
-                <span class="flex font-serif mb-1 py-0 px-3 bg-blue-100 rounded-2xl text-md text-zinc-900">Gotech</span>
+                <span class="flex font-serif mb-1 py-0 px-3 bg-blue-400 rounded-2xl text-base text-white">Gotech</span>
                 <h3 class="flex font-serif mb-1 text-md text-zinc-500">13 oct 2022 14:21:44</h3>
             </div>
 
@@ -33,7 +33,7 @@
         <div class="flex flex-col w-full divide-y-2">
 
             <div class="flex w-full justify-between flex-wrap">
-                <span class="flex font-serif mb-1 py-0 px-3 bg-blue-100 rounded-2xl text-md text-zinc-900">Gotech</span>
+                <span class="flex font-serif mb-1 py-0 px-3 bg-blue-400 rounded-2xl text-base text-white">Gotech</span>
                 <h3 class="flex font-serif mb-1 text-md text-zinc-500">9 mar 2022 1:26:04</h3>
             </div>
 
@@ -55,7 +55,7 @@
         <div class="flex flex-col w-full divide-y-2">
 
             <div class="flex w-full justify-between flex-wrap">
-                <span class="flex font-serif mb-1 py-0 px-3 bg-blue-100 rounded-2xl text-md text-zinc-900">Gotech</span>
+                <span class="flex font-serif mb-1 py-0 px-3 bg-blue-400 rounded-2xl text-base text-white">Gotech</span>
                 <h3 class="flex font-serif mb-1 text-md text-zinc-500">24 oct 2022 17:12:04</h3>
             </div>
 
@@ -77,7 +77,7 @@
         <div class="flex flex-col w-full divide-y-2">
 
             <div class="flex w-full justify-between flex-wrap">
-                <span class="flex font-serif mb-1 py-0 px-3 bg-blue-100 rounded-2xl text-md text-zinc-900">Bios</span>
+                <span class="flex font-serif mb-1 py-0 px-3 bg-red-400 rounded-2xl text-base text-white">Bios</span>
                 <h3 class="flex font-serif mb-1 text-md text-zinc-500">20 oct 2022 17:00:34</h3>
             </div>
 
@@ -95,7 +95,7 @@
     </a>
 
     <div class="flex flex-row w-full justify-end items-center">
-        <a href="#" class="flex items-center">
+        <a href="log.php" class="flex items-center">
             <span class="flex"><i class="fa fa-plus text-base text-green-500"></i></span>
             <h1 class="flex w-full font-sans text-sm sm:text-md mx-auto px-3 mr-1 py-2 text-slate-800">Ver toda tu actividad</h1>
         </a>

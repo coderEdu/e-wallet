@@ -1,4 +1,4 @@
-<div class="flex flex-row header-rounded bg-yellow-400 w-full h-fit justify-between items-center">
+<div class="flex flex-row header-rounded bg-yellow-200 w-full h-fit justify-between items-center">
     <div class="flex content-between items-center">
 
         <!-- logo -->
@@ -18,7 +18,7 @@
     <nav class="hidden md:flex">
         <ul class="flex flex-row w-fit h-full text-md p-6 space-x-4 items-center">
             <?php include "../partials/header-nav/menu/accounts.php" ?>
-            
+
             <?php include "../partials/header-nav/menu/actions.php" ?>
 
             <?php include "../partials/header-nav/menu/notes.php" ?>
