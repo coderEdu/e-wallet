@@ -1,4 +1,5 @@
 <?php 
+session_start();
 include_once "../partials/header/header.php";
 include_once "../partials/bd/conn.php";
 include_once "colors.html";

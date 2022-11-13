@@ -9,8 +9,8 @@
         </a>
 
         <!-- logged name -->
-        <div class="font-sans text-lg md:text-xl">
-            <span>Hola, Educoder!</span>
+        <div class="font-sans text-base lg:text-lg">
+            <span>Hola, <span class="font-sans font-medium text-blue-800"> <?php echo strtoupper($_SESSION['user-name']); ?>!</span></span>
         </div>
     </div>
 

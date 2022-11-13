@@ -12,7 +12,9 @@ foreach($conn->query('SELECT * from cuentas') as $fila) {
     </div>
     
     <?php
-    foreach($conn->query('SELECT * from cuentas') as $fila) { 
+    $id = $_SESSION['logged_id'];
+    $query = "SELECT * from cuentas where id_user = '$id'";
+    foreach($conn->query($query) as $fila) { 
     ?>            
         <div class="flex w-11/12 h-fit sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 py-4 px-6 rounded-2xl card-box-shadow card-box-shadow:hover bg-white"> <!-- card 1 -->
             <div class="flex flex-col w-[80%]">

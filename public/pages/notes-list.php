@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <?php include "../partials/header/header.php" ?>
 <div class="container flex flex-col w-full h-screen mx-auto bg-default">
     <?php include "../partials/header/header-nav.php"; ?>        
