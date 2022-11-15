@@ -13,7 +13,7 @@ foreach($conn->query('SELECT * from cuentas') as $fila) {
     
     <?php
     $id = $_SESSION['logged_id'];
-    $query = "SELECT * from cuentas where id_user = '$id'";
+    $query = "SELECT * FROM cuentas WHERE id_user = '$id'";
     foreach($conn->query($query) as $fila) { 
     ?>            
         <div class="flex w-11/12 h-fit sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 py-4 px-6 rounded-2xl card-box-shadow card-box-shadow:hover bg-white"> <!-- card 1 -->
@@ -51,7 +51,9 @@ foreach($conn->query('SELECT * from cuentas') as $fila) {
             </div>
         </div>
         <?php //var_dump( MyFx::colorBalance(floatval($fila['saldo']),'border') ) ?>
-    <?php } ?>
+    <?php
+    }
+    ?>
     <!--
     <div class="flex w-full h-32 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 rounded-2xl bg-slate-400"></div>
     <div class="flex w-full h-32 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 rounded-2xl bg-slate-400"></div>
