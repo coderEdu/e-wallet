@@ -20,16 +20,18 @@ $query = "SELECT * FROM movimientos WHERE id_usuario = $id_user limit 10";
 
             <div class="flex w-full justify-between flex-wrap">
                 <div class="flex justify-center items-center h-fit">
-                    <div class="relative w-3 h-3 rounded-full bg-blue-400"></div>
                     <?php
                     // get account name
                     $id_cuenta = $fila['id_cuenta'];
-                    $sql = $conn->query("SELECT nombre FROM cuentas WHERE id = '$id_cuenta'");
+                    $sql = $conn->query("SELECT nombre, saldo FROM cuentas WHERE id = '$id_cuenta'");
                     $rows = $sql->fetchAll();
+                    
                     foreach($rows as $row) {
                     ?>
+                        <div class="relative w-3 h-3 border-dashed border-4 rounded-full <?php echo MyFx::colorBalance($row['saldo'],"border"); ?>"></div>
                         <span class="flex font-serif mt-1 py-0 px-2 text-sm text-zinc-600"><?php printf(strtoupper($row["nombre"])); ?></span>
-                    <?php    
+                        <?php //var_dump(MyFx::colorBalance($row['saldo'],"bg")); ?>                        
+                    <?php
                     }
                     ?>
                 </div>
