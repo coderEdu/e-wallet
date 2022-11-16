@@ -1,6 +1,7 @@
 <?php
 $id_user = $_SESSION['logged_id'];
 $query = "SELECT * from notas where id_user = '$id_user'";
+$notes_count=0;
 ?>
 
 <!-- last notes list -->    
@@ -13,6 +14,7 @@ $query = "SELECT * from notas where id_user = '$id_user'";
 
     <?php
     foreach ($conn->query($query) as $fila) {
+        $notes_count++; // notes counter
     ?>
         <a href="#" class="flex w-full h-auto justify-center items-center py-4 px-6 mb-1 card-box-shadow card-box-shadow:hover bg-white"> 
             <div class="flex w-fit h-fit mr-4">
@@ -36,10 +38,23 @@ $query = "SELECT * from notas where id_user = '$id_user'";
     }
     ?>
 
-    <div class="flex flex-row w-full justify-end items-center">
-        <a href="notes-list.php" class="flex items-center">
-            <span class="flex"><i class="fa fa-plus text-base text-green-500"></i></span>
-            <h1 class="flex w-full font-sans text-sm sm:text-md mx-auto px-3 mr-1 py-2 text-slate-800">Ver todas tus notas</h1>
-        </a>
+    <div class="flex flex-row w-full justify-end items-center">        
+        <?php 
+        if ($notes_count > 0) {
+        ?>
+            <a href="notes-list.php" class="flex items-center">
+                <span class="flex"><i class="fa fa-plus text-base text-green-500"></i></span>
+                <h1 class="flex w-full font-sans text-sm sm:text-md mx-auto px-3 mr-1 py-2 text-slate-800">Ver todas tus notas</h1>
+            </a>
+        <?php
+        } else {
+        ?>
+            <div class="flex items-center">
+                <span class="flex"><i class="fa fa-plus text-base text-gray-500"></i></span>
+                <h1 class="flex w-full font-sans text-sm sm:text-md mx-auto px-3 mr-1 py-2 text-slate-800">No hay notas.</h1>
+            </div>
+        <?php
+        } 
+        ?>
     </div>
 </div>

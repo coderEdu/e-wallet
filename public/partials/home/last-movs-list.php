@@ -2,7 +2,7 @@
 // get movs
 $id_user = $_SESSION['logged_id'];
 $query = "SELECT * FROM movimientos WHERE id_usuario = $id_user limit 10";
-
+$movs_count=0;
 ?>
 <!-- last movements -->
 <div class="flex flex-col w-11/12 h-fit sm:w-[46.5%] md:w-[46.8%] lg:w-[47.4%] xl:w-[47.7%] 2xl:w-[47.9%] m-2 rounded-2xl mov-card-b-shadow bg-white">
@@ -14,6 +14,7 @@ $query = "SELECT * FROM movimientos WHERE id_usuario = $id_user limit 10";
 
     <?php
     foreach ($conn->query($query) as $fila) {
+        $movs_count++;  // movements counter
     ?>    
     <a href="#" class="flex w-full h-auto py-4 px-6 mb-1 card-box-shadow card-box-shadow:hover bg-white"> 
         <div class="flex flex-col w-full divide-y-2">
@@ -57,10 +58,23 @@ $query = "SELECT * FROM movimientos WHERE id_usuario = $id_user limit 10";
     }
     ?>
 
-    <div class="flex flex-row w-full justify-end items-center">
-        <a href="log.php" class="flex items-center">
-            <span class="flex"><i class="fa fa-plus text-base text-green-500"></i></span>
-            <h1 class="flex w-full font-sans text-sm sm:text-md mx-auto px-3 mr-1 py-2 text-slate-800">Ver toda tu actividad</h1>
-        </a>
+    <div class="flex flex-row w-full justify-end items-center">        
+        <?php 
+        if ($movs_count > 0) {
+        ?>
+            <a href="log.php" class="flex items-center">
+                <span class="flex"><i class="fa fa-plus text-base text-green-500"></i></span>
+                <h1 class="flex w-full font-sans text-sm sm:text-md mx-auto px-3 mr-1 py-2 text-slate-800">Ver toda tu actividad</h1>
+            </a>
+        <?php
+        } else {
+        ?>
+            <div class="flex items-center">
+                <span class="flex"><i class="fa fa-plus text-base text-gray-500"></i></span>
+                <h1 class="flex w-full font-sans text-sm sm:text-md mx-auto px-3 mr-1 py-2 text-slate-800">No hay actividad.</h1>
+            </div>
+        <?php
+        } 
+        ?>
     </div>
 </div>
