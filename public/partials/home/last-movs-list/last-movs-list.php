@@ -17,8 +17,7 @@ $movs_count=0;
         $movs_count++;  // movements counter
     ?>    
     <a href="#" class="flex w-full h-auto py-4 px-6 mb-1 card-box-shadow card-box-shadow:hover bg-white"> 
-        <div class="flex flex-col w-full divide-y-2">
-
+        <div class="flex flex-col w-full divide-y-2 space-y-1">
             <div class="flex w-full justify-between flex-wrap">
                 <div class="flex justify-center items-center h-fit">
                     <?php
@@ -39,19 +38,28 @@ $movs_count=0;
                 <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo $fila['fecha']; ?></h3>
             </div>
 
-            <div class="flex flex-col sm:flex-row space-y-1 w-full justify-between">
+            <div class="flex flex-col sm:flex-row py-2 px-2 space-y-2 sm:space-y-0 w-full rounded-sm box-decoration-slice justify-between bg-gray-50">
                 <div class="flex flex-wrap w-3/4 pt-1 gap-2">
                     <span class="text-zinc-600"><?php echo $fila['concepto']; ?></span>
                 </div>
-                <h2 class="def-f-family font-medium text-lg text-end sm:text-xl text-black">
-                    <i class="fa fa-dollar-sign"></i><span class="def-f-family font-medium text-xl text-slate-700"> <?php echo $fila['monto']; ?></span>
-                    <?php if ($fila['tipo']=='ext') { ?>
-                            <i class="flex text-red-700 fa fa-arrow-up"></i>
-                    <?php } elseif ($fila['tipo']=='dep') { ?>
-                            <i class="flex text-green-600 fa fa-arrow-down"></i>
-                    <?php } ?>
-                </h2>
+                <div class="flex flex-row justify-end items-center space-x-2">
+                    <div class="flex">
+                        <h2 class="def-f-family font-medium text-lg text-end sm:text-xl text-black">
+                            <i class="fa fa-dollar-sign"></i><span class="def-f-family font-medium text-xl text-slate-700"> <?php echo $fila['monto']; ?></span>                   
+                        </h2>
+                    </div>
+                    <div class="">
+                        <?php if ($fila['tipo']=='ext') { ?>
+                                <i class="flex text-red-700 fa fa-arrow-up"></i>
+                        <?php } elseif ($fila['tipo']=='dep') { ?>
+                                <i class="flex text-green-600 fa fa-arrow-down"></i>
+                        <?php } else { ?>
+                                <i class="flex font-medium text-yellow-500 fa fa-rotate-right"></i>
+                        <?php } ?>
+                    </div>
+                </div>
             </div>
+            
         </div>
     </a>
     <?php
