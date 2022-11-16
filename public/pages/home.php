@@ -14,11 +14,11 @@ include_once "../classes/functions.php";
     
     <div class="flex flex-col sm:flex-row sm:flex-wrap w-full mt-6 lg:mt-6 xl:mt-8 gap-9 sm:gap-0 justify-between items-center sm:items-start rounded-2xl">
         <!-- last movs list -->
-        <?php include "../partials/home/last-movs-list.php" ?>
+        <?php include "../partials/home/last-movs-list/last-movs-list.php" ?>
 
 
         <!-- list of last notes -->
-        <?php include "../partials/home/last-note-list.php" ?>            
+        <?php include "../partials/home/last-notes-list/last-notes-list.php" ?>            
     </div>
 
     <!-- footer -->
