@@ -21,16 +21,19 @@ $notes_count=0;
                 <i class="fa fa-clipboard flex text-4xl sm:text-5xl text-blue-200"></i>
             </div>
 
-            <div class="flex flex-col w-full divide-y-2">
-                
+            <div class="flex flex-col w-full divide-y-2"> 
+                <div class="flex  w-full justify-between flex-wrap">
+                    <div class="flex">
+                        <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo $fila['fec_crea']; ?></h3>
+                    </div>
+                    <div class="flex">
+                        <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo "m. ". $fila['fec_modif']; ?></h3>
+                    </div>
+                </div>               
                 <div class="flex flex-col sm:flex-row space-y-1 w-full justify-between">
                     <div class="flex flex-wrap w-3/4 pt-1 gap-2">
                         <span class="text-zinc-600"><?php echo $fila['titulo']; ?></span>
-                    </div>
-                    
-                </div>
-                <div class="flex w-full justify-between flex-wrap">
-                    <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo $fila['fec_crea']; ?></h3>
+                    </div>                    
                 </div>
             </div>
         </a>
