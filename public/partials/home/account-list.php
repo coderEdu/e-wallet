@@ -1,9 +1,5 @@
 <?php 
-/*
-foreach($conn->query('SELECT * from cuentas') as $fila) {
-    var_dump($fila);
-}
-*/
+
 ?>
 <div class="flex flex-col mb-2 sm:mb-4 md:mb-5 pt-10 md:pt-12 lg:pt-14 sm:flex-row sm:flex-wrap w-full content-between items-center rounded-2xl">
     <div class="flex w-full sm:ml-2 justify-center sm:justify-start items-center">
@@ -27,8 +23,7 @@ foreach($conn->query('SELECT * from cuentas') as $fila) {
                         <span class="text-sm mr-2 text-zinc-600">c. </span>
                     </div>
                     <div>
-                        <?php //$cDate = $fila['fec_crea']; $cDate = date("F j, Y, g:i a"); ?>
-                        <span class="font-light font-serif text-zinc-500"><?php echo $fila['fec_crea']; ?></span>
+                        <span class="font-light font-serif text-zinc-500"><?php echo MyFx::formatDate($fila['fec_crea']); ?></span>
                     </div>
                 </div>
                 <div class="flex w-1/2 gap-2">
@@ -51,14 +46,7 @@ foreach($conn->query('SELECT * from cuentas') as $fila) {
                 </div>
             </div>
         </div>
-        <?php //var_dump( MyFx::colorBalance(floatval($fila['saldo']),'border') ) ?>
     <?php
     }
-    ?>
-    <!--
-    <div class="flex w-full h-32 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 rounded-2xl bg-slate-400"></div>
-    <div class="flex w-full h-32 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 rounded-2xl bg-slate-400"></div>
-    <div class="flex w-full h-32 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 rounded-2xl bg-slate-400"></div>
-    <div class="flex w-full h-32 sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 rounded-2xl bg-slate-400"></div>  
-    -->        
+    ?>       
 </div>
