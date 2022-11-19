@@ -24,10 +24,11 @@ foreach($conn->query('SELECT * from cuentas') as $fila) {
                 </a>
                 <div class="flex content-center items-start">
                     <div>
-                        <span class="text-sm mr-2 text-zinc-600">Fc:</span>
+                        <span class="text-sm mr-2 text-zinc-600">c. </span>
                     </div>
                     <div>
-                        <span class="text-sm text-blue-500"><?php echo $fila['fec_crea']; ?></span>
+                        <?php //$cDate = $fila['fec_crea']; $cDate = date("F j, Y, g:i a"); ?>
+                        <span class="font-light font-serif text-zinc-500"><?php echo $fila['fec_crea']; ?></span>
                     </div>
                 </div>
                 <div class="flex w-1/2 gap-2">

@@ -1,6 +1,6 @@
 <?php
 $id_user = $_SESSION['logged_id'];
-$query = "SELECT * from notas where id_user = '$id_user'";
+$query = "SELECT * from notas where id_user = '$id_user' LIMIT 8";
 $notes_count=0;
 ?>
 
@@ -24,10 +24,10 @@ $notes_count=0;
             <div class="flex flex-col w-full divide-y-2"> 
                 <div class="flex  w-full justify-between flex-wrap">
                     <div class="flex">
-                        <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo $fila['fec_crea']; ?></h3>
+                        <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo MyFx::formatDate($fila['fec_crea']); ?></h3>
                     </div>
                     <div class="flex">
-                        <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo "m. ". $fila['fec_modif']; ?></h3>
+                        <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo "m. ". MyFx::formatDate($fila['fec_modif']); ?></h3>
                     </div>
                 </div>               
                 <div class="flex flex-col sm:flex-row space-y-1 w-full justify-between">

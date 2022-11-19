@@ -1,7 +1,7 @@
 <?php
 // get movs
 $id_user = $_SESSION['logged_id'];
-$query = "SELECT * FROM movimientos WHERE id_usuario = $id_user limit 10";
+$query = "SELECT * FROM movimientos WHERE id_usuario = $id_user ORDER BY fecha DESC LIMIT 6";
 $movs_count=0;
 ?>
 <!-- last movements -->
@@ -35,7 +35,8 @@ $movs_count=0;
                     }
                     ?>
                 </div>
-                <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo $fila['fecha']; ?></h3>
+                <h3 class="flex font-serif font-light text-sm mb-1 text-zinc-500"><?php echo MyFx::formatDate($fila['fecha']); ?></h3> 
+                <?php //var_dump($fila); ?>
             </div>
 
             <div class="flex flex-col sm:flex-row py-2 px-2 space-y-2 sm:space-y-0 w-full rounded-sm box-decoration-slice justify-between bg-gray-50">

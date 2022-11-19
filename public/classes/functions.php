@@ -25,5 +25,21 @@ class MyFx
         }
         return $color;
     }
+
+    public static function formatDate(string $date) : string
+    {
+        date_default_timezone_set('America/Argentina/San_Luis');
+        $sDate = $date;
+        $tDate = strtotime($sDate);
+        $day = date('d',$tDate);
+        $mon = date('m',$tDate);
+        $yea = date('y',$tDate);
+        $hou = date('h',$tDate);
+        $min = date('i',$tDate);
+        $sec = date('s',$tDate);
+        $intDate = mktime($hou,$min,$sec,$mon,$day,$yea);
+        $fDate = date("F j, Y, g:i a",$intDate);
+        return $fDate; 
+    }
 }
 ?>
