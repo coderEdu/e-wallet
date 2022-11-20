@@ -1,7 +1,5 @@
 <?php
-// get movs
 $id_user = $_SESSION['logged_id'];
-$query = "SELECT * FROM movimientos WHERE id_usuario = $id_user ORDER BY fecha DESC LIMIT 6";
 $movs_count=0;
 ?>
 <!-- last movements -->
@@ -13,46 +11,43 @@ $movs_count=0;
     <div class="flex w-full h-0.5 border-b-2 border-gray-200"></div>
 
     <?php
-    foreach ($conn->query($query) as $fila) {
+    foreach (MyQueries::getLastMovs($conn, $id_user) as $row) {
         $movs_count++;  // movements counter
     ?>    
-    <a href="#" class="flex w-full h-auto py-4 px-6 mb-1 card-box-shadow card-box-shadow:hover bg-white"> 
+        <a href="#" class="flex w-full h-auto py-4 px-6 mb-1 card-box-shadow card-box-shadow:hover bg-white"> 
         <div class="flex flex-col w-full divide-y-2 space-y-1">
             <div class="flex w-full justify-between flex-wrap">
                 <div class="flex justify-center items-center h-fit">
                     <?php
                     // get account name
-                    $id_cuenta = $fila['id_cuenta'];
-                    $sql = $conn->query("SELECT nombre, saldo FROM cuentas WHERE id = '$id_cuenta'");
-                    $rows = $sql->fetchAll();
-                    
-                    foreach($rows as $row) {
+                    $id_account = $row['id_cuenta'];                    
+                    foreach(MyQueries::getAccountName($conn, $id_account) as $sub_row) {
                     ?>
-                        <div class="relative w-3 h-3 border-dashed border-4 rounded-full <?php echo MyFx::colorBalance($row['saldo'],"border"); ?>"></div>
-                        <span class="flex font-serif mt-1 py-0 px-2 text-sm text-zinc-600"><?php printf(strtoupper($row["nombre"])); ?></span>
-                        <?php //var_dump(MyFx::colorBalance($row['saldo'],"bg")); ?>                        
+                        <div class="relative w-3 h-3 border-dashed border-4 rounded-full <?php echo MyFx::colorBalance($sub_row['saldo'],"border"); ?>"></div>
+                        <span class="flex font-serif mt-1 py-0 px-2 text-sm text-zinc-600"><?php printf(strtoupper($sub_row["nombre"])); ?></span>
+                        <?php //var_dump(MyFx::colorBalance($sub_row['saldo'],"bg")); ?>                        
                     <?php
                     }
                     ?>
                 </div>
-                <h3 class="flex font-serif font-light text-sm mb-1 text-zinc-500"><?php echo MyFx::formatDate($fila['fecha']); ?></h3> 
-                <?php //var_dump($fila); ?>
+                <h3 class="flex font-serif font-light text-sm mb-1 text-zinc-500"><?php echo MyFx::formatDate($row['fecha']); ?></h3> 
+                <?php //var_dump($row); ?>
             </div>
 
             <div class="flex flex-col sm:flex-row py-2 px-2 space-y-2 sm:space-y-0 w-full rounded-sm box-decoration-slice justify-between bg-gray-50">
                 <div class="flex flex-wrap w-3/4 pt-1 gap-2">
-                    <span class="text-zinc-600"><?php echo $fila['concepto']; ?></span>
+                    <span class="text-zinc-600"><?php echo $row['concepto']; ?></span>
                 </div>
                 <div class="flex flex-row justify-end items-center space-x-2">
                     <div class="flex">
                         <h2 class="def-f-family font-medium text-lg text-end sm:text-xl text-black">
-                            <i class="fa fa-dollar-sign"></i><span class="def-f-family font-medium text-xl text-slate-700"> <?php echo $fila['monto']; ?></span>                   
+                            <i class="fa fa-dollar-sign"></i><span class="def-f-family font-medium text-xl text-slate-700"> <?php echo $row['monto']; ?></span>                   
                         </h2>
                     </div>
                     <div class="">
-                        <?php if ($fila['tipo']=='ext') { ?>
+                        <?php if ($row['tipo']=='ext') { ?>
                                 <i class="flex text-red-700 fa fa-arrow-up"></i>
-                        <?php } elseif ($fila['tipo']=='dep') { ?>
+                        <?php } elseif ($row['tipo']=='dep') { ?>
                                 <i class="flex text-green-600 fa fa-arrow-down"></i>
                         <?php } else { ?>
                                 <i class="flex font-medium text-yellow-500 fa fa-rotate-right"></i>

@@ -6,14 +6,10 @@ if ($_POST) {
   $user_pass = $_POST['user_pass'];
 
   include_once "../partials/bd/conn.php";
+  include_once "../queries/myQueries.php";
 
-  $sql = "SELECT id, usuario, clave FROM usuarios WHERE usuario = '$user_name' AND clave = '$user_pass'";
-
-  foreach ($conn->query($sql) as $row) {
+  foreach (MyQueries::authLogin($conn, $user_name, $user_pass) as $row) {
     if ($row) {
-        //print $row['usuario'] . "\t";
-        //print $row['clave'] . "\t";
-        //print $row['id'] . "\t";
         $_SESSION['logged_id']=$row['id'];
         $_SESSION['user-name']=$row['usuario'];
         $_SESSION['user-pass']=$row['clave'];
@@ -34,7 +30,7 @@ if ($_POST) {
     <!-- <script src="https://cdn.tailwindcss.com"></script> -->
     <link href="../output.css" rel="stylesheet">
 </head>
-<body background="../img/login.webp">  <!-- body background image (background="../img/login.webp") -->
+<body background="../img/login.webp">
     <div class="flex items-center content-center w-screen min-h-screen">
         <!-- Content here -->    
         <div class="flex text-sm sm:text-xs text-center mx-auto h-1/2 bg-neutral-100 rounded-2xl opacity-80">

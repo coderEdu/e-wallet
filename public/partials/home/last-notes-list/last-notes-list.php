@@ -1,9 +1,7 @@
 <?php
 $id_user = $_SESSION['logged_id'];
-$query = "SELECT * from notas where id_user = '$id_user' LIMIT 8";
 $notes_count=0;
 ?>
-
 <!-- last notes list -->    
 <div class="flex flex-col w-11/12 h-fit sm:w-[46.5%] md:w-[46.8%] lg:w-[47.4%] xl:w-[47.7%] 2xl:w-[47.9%] m-2 rounded-2xl mov-card-b-shadow bg-white">
     <div class="flex flex-row w-full ml-4 justify-center items-center">
@@ -13,7 +11,7 @@ $notes_count=0;
     <div class="flex w-full h-0.5 border-b-2 border-gray-200"></div>
 
     <?php
-    foreach ($conn->query($query) as $fila) {
+    foreach (MyQueries::getLastNotes($conn, $id_user) as $row) {
         $notes_count++; // notes counter
     ?>
         <a href="#" class="flex w-full h-auto justify-center items-center py-4 px-6 mb-1 card-box-shadow card-box-shadow:hover bg-white"> 
@@ -24,15 +22,15 @@ $notes_count=0;
             <div class="flex flex-col w-full divide-y-2"> 
                 <div class="flex  w-full justify-between flex-wrap">
                     <div class="flex">
-                        <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo MyFx::formatDate($fila['fec_crea']); ?></h3>
+                        <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo MyFx::formatDate($row['fec_crea']); ?></h3>
                     </div>
                     <div class="flex">
-                        <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo "m. ". MyFx::formatDate($fila['fec_modif']); ?></h3>
+                        <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo "m. ". MyFx::formatDate($row['fec_modif']); ?></h3>
                     </div>
                 </div>               
                 <div class="flex flex-col sm:flex-row space-y-1 w-full justify-between">
                     <div class="flex flex-wrap w-3/4 pt-1 gap-2">
-                        <span class="text-zinc-600"><?php echo $fila['titulo']; ?></span>
+                        <span class="text-zinc-600"><?php echo $row['titulo']; ?></span>
                     </div>                    
                 </div>
             </div>
