@@ -25,7 +25,8 @@ $notes_count=0;
                         <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo MyFx::formatDate($row['fec_crea']); ?></h3>
                     </div>
                     <div class="flex">
-                        <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo "m. ". MyFx::formatDate($row['fec_modif']); ?></h3>
+                        <div class="mx-1"><img src="../img/Edit-icon.png" alt=""></div>
+                        <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo MyFx::formatDate($row['fec_modif']); ?></h3>
                     </div>
                 </div>               
                 <div class="flex flex-col sm:flex-row space-y-1 w-full justify-between">

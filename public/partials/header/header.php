@@ -13,4 +13,5 @@
     <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
     <title>E-Wallet - Home</title>
 </head>
-<body class="bg-default">
+<body x-data="{'isModalOpen': false}" x-on:keydown.escape="isModalOpen=false" class="bg-default">
+    <?php include_once "new-transact.php"; ?>
