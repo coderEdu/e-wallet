@@ -1,3 +1,7 @@
+<?php
+include_once "transact-validate.php";
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,5 +17,6 @@
     <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
     <title>E-Wallet - Home</title>
 </head>
-<body x-data="{'isModalOpen': false}" x-on:keydown.escape="isModalOpen=false" class="bg-default">
+<body x-data="{'isNewTModalOpen': false, 'isTSuccessModalOpen': false}" x-on:keydown.escape="isNewTModalOpen=false" class="bg-default">
     <?php include_once "new-transact.php"; ?>
+    <?php include_once "transact-success.php"; ?>

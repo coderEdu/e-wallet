@@ -41,5 +41,27 @@ class MyFx
         $fDate = date("F j, Y, g:i a",$intDate);
         return $fDate; 
     }
+
+    static function getBalance(PDO $conn, int $id_user, int $id_account )
+    {
+        $dep = 0;
+        foreach(MyQueries::getMovsSumByType($conn,"dep",$id_user,$id_account) as $sumRow) {
+            $dep = $sumRow['total'];
+        }
+
+        $ext = 0;
+        foreach(MyQueries::getMovsSumByType($conn,"ext",$id_user,$id_account) as $sumRow) {
+            $ext = $sumRow['total'];
+        }
+
+        $tra = 0;
+        foreach(MyQueries::getMovsSumByType($conn,"tra",$id_user,$id_account) as $sumRow) {
+            $tra = $sumRow['total'];
+        }
+
+        $balance = $dep - $ext - $tra;
+        
+        return $balance;
+    }
 }
 ?>

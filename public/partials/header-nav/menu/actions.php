@@ -12,7 +12,7 @@
         <div class="overflow-hidden bg-slate-700 border shadow-xl rounded-2xl dark:bg-neutral-900 border-neutral-200 dark:border-neutral-700">
             <div class="relative w-full flex flex-col px-0 py-3 space-y-8">
                 <ul class="space-y-0 text-sm text-slate-50">
-                    <li><a x-on:click="isModalOpen = true, open = false" href="#" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Depositar</a></li>
+                    <li><a x-on:click="isNewTModalOpen = true, open = false" href="#" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Depositar</a></li>
                     <li><a href="#" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Extraer</a></li>
                     <li><a href="#" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Transferir</a></li>
                     <hr>
