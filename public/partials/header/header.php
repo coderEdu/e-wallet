@@ -17,6 +17,8 @@ include_once "transact-validate.php";
     <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
     <title>E-Wallet - Home</title>
 </head>
-<body x-data="{'isNewTModalOpen': false, 'isTSuccessModalOpen': false}" x-on:keydown.escape="isNewTModalOpen=false" class="bg-default">
-    <?php include_once "new-transact.php"; ?>
-    <?php include_once "transact-success.php"; ?>
+<body x-data="{'isNewTModalOpen': false, 'isNewWithdrawModalOpen': false, 'isNewTransferModalOpen': false, 'isTSuccessModalOpen': false}" x-on:keydown.escape="isNewTModalOpen=false" class="bg-default">
+
+    <?php include_once "new-deposit.php"; ?>
+    <?php include_once "new-withdraw.php"; ?>
+    <?php include_once "new-transfer.php"; ?>

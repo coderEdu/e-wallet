@@ -13,8 +13,8 @@
             <div class="relative w-full flex flex-col px-0 py-3 space-y-8">
                 <ul class="space-y-0 text-sm text-slate-50">
                     <li><a x-on:click="isNewTModalOpen = true, open = false" href="#" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Depositar</a></li>
-                    <li><a href="#" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Extraer</a></li>
-                    <li><a href="#" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Transferir</a></li>
+                    <li><a x-on:click="isNewWithdrawModalOpen = true, open = false" href="#" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Extraer</a></li>
+                    <li><a x-on:click="isNewTransferModalOpen = true, open = false" href="#" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Transferir</a></li>
                     <hr>
                     <li><a href="log.php" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Ver registro</a></li>
                 </ul>
