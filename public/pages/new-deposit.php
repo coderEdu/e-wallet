@@ -7,8 +7,8 @@ $title
       class="modal"
       role="dialog"
       tabindex="-1"
-      x-show="isNewTModalOpen"      
-      x-on:click.away="isNewTModalOpen = false"
+      x-show="isNewDepOpen"      
+      x-on:click.away="isNewDepOpen = false"
       x-cloak
       x-transition
 >
@@ -16,7 +16,7 @@ $title
         <div class="modal-header">
         <script> //document.write(action); </script>
             <h3>Realizar un depósito</h3>
-            <button aria-label="Close" x-on:click="isNewTModalOpen = false">✖</button>
+            <button aria-label="Close" x-on:click="isNewDepOpen = false">✖</button>
         </div>
         <div class="flex flex-col justify-between">
             <form action="" method="post"> <?php //action="transact-validate.php" ?>
@@ -50,7 +50,7 @@ $title
                     <textarea class="border-2 py-2 px-2" name="textarea" id="" cols="32" rows="5" placeholder="En concepto de ..."></textarea>
                 </div>
                 <div class="flex pt-4">
-                    <button x-on:click="isNewTModalOpen = false" type="submit" class="border-2 border-blue-500 bg-blue-800 text-white py-1 px-2">Depositar</button>
+                    <button x-on:click="isNewDepOpen = false" type="submit" class="border-2 border-blue-500 bg-blue-800 text-white py-1 px-2">Depositar</button>
                 </div>
 
                 <div class="flex pt-4">
@@ -60,4 +60,4 @@ $title
         </div>
     </div>
 </div>
-<div class="overlay" x-show="isNewTModalOpen" x-cloak></div>
+<div class="overlay" x-show="isNewDepOpen" x-cloak></div>
