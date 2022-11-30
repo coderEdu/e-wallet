@@ -54,7 +54,7 @@ $title
                 </div>
 
                 <div class="flex pt-4">
-
+                    <input type="hidden" name="transfer">
                 </div>
             </form>
         </div>
