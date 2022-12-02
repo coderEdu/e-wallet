@@ -12,7 +12,7 @@
         <div class="overflow-hidden bg-slate-700 border shadow-xl rounded-2xl dark:bg-neutral-900 border-neutral-200 dark:border-neutral-700">
             <div class="relative w-full flex flex-col px-0 py-3 space-y-8">
                 <ul class="space-y-0 text-sm text-slate-50">
-                    <li><a href="#" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Crear</a></li>
+                    <li><a href="#" x-on:click="isNewNoteOpen = true, open = false" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Crear</a></li>
                     <li><a href="#" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Editar</a></li>
                     <li><a href="#" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Eliminar</a></li>
                     <hr>

@@ -1,6 +1,7 @@
 <?php
 include_once "transact-validate.php";
 include_once "account-validate.php";
+include_once "note-validate.php";
 ?>
 
 <!DOCTYPE html>
@@ -18,9 +19,10 @@ include_once "account-validate.php";
     <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
     <title>E-Wallet - Home</title>
 </head>
-<body x-data="{'isNewDepOpen': false, 'isNewExtOpen': false, 'isNewTraOpen': false, 'isNewAccOpen': false}" class="bg-default">
+<body x-data="{'isNewDepOpen': false, 'isNewExtOpen': false, 'isNewTraOpen': false, 'isNewAccOpen': false, 'isNewNoteOpen': false}" class="bg-default">
 
     <?php include_once "new-deposit.php"; ?>
     <?php include_once "new-withdraw.php"; ?>
     <?php include_once "new-transfer.php"; ?>
     <?php include_once "new-account.php"; ?>
+    <?php include_once "new-note.php"; ?>
