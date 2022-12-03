@@ -31,6 +31,13 @@ class MyQueries {
         return $rows;
     }
 
+    // notes
+    public static function newNote(PDO $conn, string $title, string $note, int $id_user)
+    {
+        $sql = $conn->exec("INSERT INTO notas (titulo,nota,id_user) VALUES ('$title','$note','$id_user')");
+        return $sql;
+    }
+
     // accounts
     public static function createAccount(PDO $conn, string $name, float $balance, int $id_user)
     {

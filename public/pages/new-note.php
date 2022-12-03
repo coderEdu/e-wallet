@@ -29,7 +29,11 @@ $title
                 </div>
 
                 <div class="flex pt-4">
-                    <input type="hidden" name="create">
+                    <button x-on:click="isNewNoteOpen = false" type="submit" class="border-2 border-blue-500 bg-blue-800 text-white py-1 px-2">Crear</button>
+                </div>
+
+                <div class="flex pt-4">
+                    <input type="hidden" name="create-note">
                 </div>
             </form>
         </div>
