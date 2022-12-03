@@ -75,7 +75,7 @@ class MyQueries {
 
     public static function getLastNotes(PDO $conn, int $id_user)
     {
-        $query = "SELECT * from notas where id_user = '$id_user' LIMIT 8";
+        $query = "SELECT * from notas where id_user = '$id_user' ORDER BY fec_crea DESC LIMIT 8";
         $rows = $conn->query($query);
         return $rows;
     }
