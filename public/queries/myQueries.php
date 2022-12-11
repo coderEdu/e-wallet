@@ -17,6 +17,13 @@ class MyQueries {
         return $rows;
     }
 
+    public static function getAllMovsOrdByDateDesc(PDO $conn, int $id_user)
+    {
+        $query = "SELECT * FROM movimientos WHERE id_usuario = $id_user ORDER BY fecha DESC";
+        $rows = $conn->query($query);
+        return $rows;
+    }
+
     public static function getLastMovs(PDO $conn, int $id_user)
     {
         $query = "SELECT * FROM movimientos WHERE id_usuario = $id_user ORDER BY fecha DESC LIMIT 6";
@@ -36,6 +43,13 @@ class MyQueries {
     {
         $sql = $conn->exec("INSERT INTO notas (titulo,nota,id_user) VALUES ('$title','$note','$id_user')");
         return $sql;
+    }
+
+    public static function getNotesByIdLogged(PDO $conn, int $id_user)
+    {
+        $query = "SELECT * FROM notas WHERE id_user = '$id_user'";
+        $rows = $conn->query($query);
+        return $rows;
     }
 
     // accounts

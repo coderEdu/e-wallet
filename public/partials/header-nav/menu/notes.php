@@ -13,7 +13,7 @@
             <div class="relative w-full flex flex-col px-0 py-3 space-y-8">
                 <ul class="space-y-0 text-sm text-slate-50">
                     <li><a href="#" x-on:click="isNewNoteOpen = true, open = false" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Crear</a></li>
-                    <li><a href="#" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Editar</a></li>
+                    <li><a href="#" x-on:click="isEditNoteOpen = true, open = false" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Editar</a></li>
                     <li><a href="#" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Eliminar</a></li>
                     <hr>
                     <li><a href="notes-list.php" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Ver notas</a></li>
