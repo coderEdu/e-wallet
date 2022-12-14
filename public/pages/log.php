@@ -11,19 +11,39 @@ include_once "../queries/myQueries.php";
     <?php include "../partials/header/header-nav.php"; ?>        
     
     <section>
-        <div class="w-full p-5 mx-auto">
+        <div class="w-full p-5 mb-3 mx-auto">
             <h1 class="font-sans font-normal text-2xl text-center text-blue-900">Registro de transacciones.</h1>
         </div>
-        <div>
-            <hr>
+
+        <!-- working here -->
+        <div class="flex mx-2 flex-wrap justify-between items-center">
+            <div class="flex">
+                <div class="mr-4">
+                    <span>filtros de búsqueda:</span>
+                </div>            
+                <div class="flex space-x-5">
+                    <div class="form-check form-switch">
+                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
+                        <label class="form-check-label" for="flexSwitchCheckDefault">Cuentas</label>
+                    </div>
+                </div>
+            </div>
+            <div class="flex mb-2 space-x-2">
+                <input type="text" name="search-line" id="" placeholder="dato a buscar" class="px-2 border-1 border-gray-100 rounded-sm">
+                <button class="py-1 px-2 bg-cyan-700 text-base text-white rounded-sm">Buscar</button>
+            </div>
         </div>
+        
+        <hr>
     </section>
 
     <div class="container w-full md:w-[80%] mt-5">
         <!-- all movements -->
         <div class="flex flex-col w-full space-y-5">
         <?php
-        foreach (MyQueries::getAllMovsOrdByDateDesc($conn, $id_user) as $row) {
+        //var_dump(MyQueries::generalTestQuery($id_user,"2022-11-29","","","",""));
+        
+        foreach (MyQueries::generalQuery($conn, $id_user,"","","","","") as $row) {
             $movs_count++;  // movements counter
         ?>    
             <a href="#" class="flex w-full h-auto py-4 px-6 mb-0 card-box-shadow card-box-shadow:hover rounded-md bg-white"> 

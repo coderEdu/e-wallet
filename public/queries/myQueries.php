@@ -106,4 +106,30 @@ class MyQueries {
         $sql = $conn->exec("INSERT INTO movimientos (tipo,monto,concepto,id_usuario,id_cuenta) VALUES ('$tipo','$monto','$concepto','$id_user','$id_account')");
         return $sql;
     }
+
+    // Queries to use in log.php
+    public static function generalQuery(PDO $conn, int $user_id, string $sDate, string $sType, string $sIdAccount, string $sAmount, string $sConcept)
+    {
+        $startDate = $sDate . " 00:00:00";
+        $endDate = $sDate . " 23:59:59";
+        $andDate = ($sDate != "") ? " AND fecha BETWEEN '$startDate'" . " AND " . "'$endDate'" : "" ;
+        $andType = ($sType != "") ? " AND tipo = '$sType'" : "" ;
+        $andIdAccount = ($sIdAccount != "") ? " AND id_cuenta = '$sIdAccount'" : "" ;
+        $andAmount = ($sAmount != "") ? " AND monto = '$sAmount'" : "" ;
+        $andConcept = ($sConcept != "") ? " AND concepto LIKE '%$sConcept%'" : "" ;
+        
+        $query = "SELECT * FROM movimientos WHERE id_usuario = $user_id" . $andDate . $andType . $andIdAccount . $andAmount . $andConcept;
+        $rows = $conn->query($query);
+        return $rows;
+    }
+
+    public static function generalTestQuery(int $user_id, string $sDate, string $sType, string $sIdAccount, string $sAmount, string $sConcept)
+    {
+        $startDate = $sDate . " 00:00:00";
+        $endDate = $sDate . " 23:59:59";
+        $andDate = ($sDate != "") ? " AND fecha BETWEEN '$startDate'" . " AND " . "'$endDate'" : "" ;
+        $andType = ($sType != "") ? " AND tipo = '$sType'" : "" ;
+        $query = "SELECT * FROM movimientos WHERE id_usuario = $user_id" . $andDate . $andType . $sIdAccount . $sAmount . $sConcept;
+        return $query;
+    }
 }
