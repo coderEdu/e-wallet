@@ -110,8 +110,8 @@ class MyQueries {
     // Queries to use in log.php
     public static function generalQuery(PDO $conn, int $user_id, string $sDate, string $sType, string $sIdAccount, string $sAmount, string $sConcept)
     {
-        $startDate = $sDate . " 00:00:00";
-        $endDate = $sDate . " 23:59:59";
+        $startDate = $sDate . " 00:00:00:000";
+        $endDate = $sDate . " 23:59:59:999";
         $andDate = ($sDate != "") ? " AND fecha BETWEEN '$startDate'" . " AND " . "'$endDate'" : "" ;
         $andType = ($sType != "") ? " AND tipo = '$sType'" : "" ;
         $andIdAccount = ($sIdAccount != "") ? " AND id_cuenta = '$sIdAccount'" : "" ;

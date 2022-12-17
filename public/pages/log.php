@@ -15,17 +15,14 @@ include_once "../queries/myQueries.php";
             <h1 class="font-sans font-normal text-2xl text-center text-blue-900">Registro de transacciones.</h1>
         </div>
 
-        <!-- working here -->
+        <!-- filters block -->
         <div class="flex mx-2 flex-wrap justify-between items-center">
-            <div class="flex">
-                <div class="mr-4">
-                    <span>filtros de búsqueda:</span>
+            <div class="flex items-center">
+                <div class="flex mr-4">
+                    <span>Criterio de búsqueda:</span>
                 </div>            
                 <div class="flex space-x-5">
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="flexSwitchCheckDefault">
-                        <label class="form-check-label" for="flexSwitchCheckDefault">Cuentas</label>
-                    </div>
+                    <?php include("../partials/activityLog/filters.php"); ?>
                 </div>
             </div>
             <div class="flex mb-2 space-x-2">
