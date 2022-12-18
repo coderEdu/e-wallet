@@ -39,8 +39,10 @@ include_once "../queries/myQueries.php";
         <div class="flex flex-col w-full space-y-5">
         <?php
         //var_dump(MyQueries::generalTestQuery($id_user,"2022-11-29","","","",""));
+
+        $type = (isset($_GET['type'])) ? $_GET['type'] : "";
         
-        foreach (MyQueries::generalQuery($conn, $id_user,"","","","","") as $row) {
+        foreach (MyQueries::generalQuery($conn, $id_user,"",$type,"","","") as $row) {  // call the query
             $movs_count++;  // movements counter
         ?>    
             <a href="#" class="flex w-full h-auto py-4 px-6 mb-0 card-box-shadow card-box-shadow:hover rounded-md bg-white"> 
