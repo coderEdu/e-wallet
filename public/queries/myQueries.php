@@ -118,7 +118,7 @@ class MyQueries {
         $andAmount = ($sAmount != "") ? " AND monto = '$sAmount'" : "" ;
         $andConcept = ($sConcept != "") ? " AND concepto LIKE '%$sConcept%'" : "" ;
         
-        $query = "SELECT * FROM movimientos WHERE id_usuario = $user_id" . $andDate . $andType . $andIdAccount . $andAmount . $andConcept;
+        $query = "SELECT * FROM movimientos WHERE id_usuario = $user_id" . $andDate . $andType . $andIdAccount . $andAmount . $andConcept . "ORDER BY fecha DESC";
         $rows = $conn->query($query);
         return $rows;
     }

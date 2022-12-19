@@ -1,8 +1,8 @@
-<div class="hidden space-x-4 lg:flex">    
+<div class="space-x-4 lg:flex">    
     <div x-data="{dropdown: 'close'}">
         <button
             @click="dropdown = 'open'"
-            class="flex items-center justify-center px-4 py-1 bg-white text-base text-blue-800 border rounded-full dark:border-neutral-700 focus:outline-none border-primary-500"
+            class="flex items-center justify-center px-4 py-1 bg-white text-base text-green-900 border rounded-md dark:border-neutral-700 focus:outline-none border-primary-500"
             id="headlessui-popover-button-18"
             type="button"
             aria-expanded="true"
@@ -18,7 +18,7 @@
                 <!-- begin form -->
                 <form       
                     x-on:click.away="dropdown = 'close'"
-                    class="relative inline-block overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-3xl sm:my-8 sm:align-middle sm:max-w-4xl sm:w-full"
+                    class="relative inline-block overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-3xl sm:my-8 sm:align-middle sm:max-w-xl sm:w-fit"
                     action=""
                 >
                     <div class="relative flex-shrink-0 px-6 py-4 text-center border-b border-neutral-200 dark:border-neutral-800">
@@ -45,82 +45,56 @@
                         <div class="px-10 divide-y divide-neutral-200 dark:divide-neutral-800">
 
                             <div class="py-7"> <!-- first -->
-                                <h3 class="text-lg font-medium">Entre fechas:</h3>
+                                <h3 class="text-base font-medium">Rango de fechas:</h3>
                                 <div class="relative mt-6">
-                                    <div class="grid grid-cols-2 gap-8">
+                                    <div class="flex justify-between items-center">
+        
                                         <?php include("filterByDate.php"); ?>
-                                        <div class="flex flex-col space-y-5">
-                                            <div class="flex text-sm sm:text-base">
-                                                <input
-                                                    id="f-1"
-                                                    name="facilities[]"
-                                                    value="1"
-                                                    type="checkbox"
-                                                    class="w-6 h-6 bg-white rounded focus:ring-action-primary text-primary-500 border-primary border-neutral-500 dark:bg-neutral-700 dark:checked:bg-primary-500 focus:ring-primary-500"
-                                                />
-                                                <label for="f-1" class="ml-3.5 flex flex-col flex-1 justify-center">
-                                                    <span class="text-neutral-900 dark:text-neutral-100">Cochera cubierta</span>
-                                                    <p class="mt-1 text-sm font-light text-neutral-500 dark:text-neutral-400">Lugar donde se encierran y guardan todo tipo de vehículos. En este caso totalmente cubierta. Garage.</p>
-                                                </label>
-                                            </div>
-                                        </div>                                       
+                             
                                     </div>
                                 </div>
                             </div>
 
                             <div class="py-7"> <!-- second -->
-                                <h3 class="text-lg font-medium">Tipo:</h3>
+                                <h3 class="text-base font-medium">Tipo:</h3>
                                 <div class="relative mt-6">
-                                    <div class="flex flex-row gap-8 mb-5">
+                                    <div class="flex flex-row gap-8">
 
                                         <?php include("filterByType.php"); ?>
-                                        
-                                    </div>
-                                    <div class="grid grid-cols-2 gap-8">
-                                        <div class="flex flex-col space-y-5">
-                                            <div class="flex text-sm sm:text-base">
-                                                <input
-                                                    id="f-1"
-                                                    name="facilities[]"
-                                                    value="1"
-                                                    type="checkbox"
-                                                    class="w-6 h-6 bg-white rounded focus:ring-action-primary text-primary-500 border-primary border-neutral-500 dark:bg-neutral-700 dark:checked:bg-primary-500 focus:ring-primary-500"
-                                                />
-                                                <label for="f-1" class="ml-3.5 flex flex-col flex-1 justify-center">
-                                                    <span class="text-neutral-900 dark:text-neutral-100">Cochera cubierta</span>
-                                                    <p class="mt-1 text-sm font-light text-neutral-500 dark:text-neutral-400">Lugar donde se encierran y guardan todo tipo de vehículos. En este caso totalmente cubierta. Garage.</p>
-                                                </label>
-                                            </div>
-                                        </div>
-
                                         
                                     </div>
                                 </div>
                             </div>
 
                             <div class="py-7"> <!-- third -->
-                                <h3 class="text-xl font-medium">Generales</h3>
+                                <h3 class="text-base font-medium">Monto:</h3>
                                 <div class="relative mt-6">
-                                    <div class="grid grid-cols-2 gap-8">
-                                        <div class="flex flex-col space-y-5">
-                                            <!--
-                                            <div class="flex text-sm sm:text-base">
-                                                <input
-                                                    id="f-21"
-                                                    name="facilities[]"
-                                                    value="21"
-                                                    type="checkbox"
-                                                    class="w-6 h-6 bg-white rounded focus:ring-action-primary text-primary-500 border-primary border-neutral-500 dark:bg-neutral-700 dark:checked:bg-primary-500 focus:ring-primary-500"
-                                                />
-                                                <label for="f-21" class="ml-3.5 flex flex-col flex-1 justify-center">
-                                                    <span class="text-neutral-900 dark:text-neutral-100">Amenities</span>
-                                                    <p class="mt-1 text-sm font-light text-neutral-500 dark:text-neutral-400">
-                                                        Se refiere a los objetos que el hotel pone a disposición del huésped para su estancia, tales como: útiles de baño como jabones y geles o productos de bienvenida.
-                                                    </p>
-                                                </label>
-                                            </div>
--->
-                                        </div>                                        
+                                    <div class="flex flex-row justify-center gap-8">
+
+                                        <?php include("filterByAmount.php"); ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="py-7"> <!-- fourth -->
+                                <h3 class="text-base font-medium">Concepto:</h3>
+                                <div class="relative mt-6">
+                                    <div class="flex flex-row justify-center gap-8">
+
+                                        <?php include("filterByConcept.php"); ?>
+                                        
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="py-7"> <!-- sixth -->
+                                <h3 class="text-base font-medium">Cuenta:</h3>
+                                <div class="relative mt-6">
+                                    <div class="flex flex-row gap-8">
+
+                                        <?php include("filterByAccount.php"); ?>
+                                                                        
                                     </div>
                                 </div>
                             </div>

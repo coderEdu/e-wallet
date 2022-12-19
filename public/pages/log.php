@@ -16,7 +16,7 @@ include_once "../queries/myQueries.php";
         </div>
 
         <!-- filters block -->
-        <div class="flex mx-2 flex-wrap justify-between items-center">
+        <div class="flex mx-2 flex-wrap justify-start items-center pb-2">
             <div class="flex items-center">
                 <div class="flex mr-4">
                     <span>Criterio de búsqueda:</span>
@@ -24,10 +24,6 @@ include_once "../queries/myQueries.php";
                 <div class="flex space-x-5">
                     <?php include("../partials/activityLog/filters.php"); ?>
                 </div>
-            </div>
-            <div class="flex mb-2 space-x-2">
-                <input type="text" name="search-line" id="" placeholder="dato a buscar" class="px-2 border-1 border-gray-100 rounded-sm">
-                <button class="py-1 px-2 bg-cyan-700 text-base text-white rounded-sm">Buscar</button>
             </div>
         </div>
         
@@ -41,8 +37,11 @@ include_once "../queries/myQueries.php";
         //var_dump(MyQueries::generalTestQuery($id_user,"2022-11-29","","","",""));
 
         $type = (isset($_GET['type'])) ? $_GET['type'] : "";
+        $amount = (isset($_GET['amount'])) ? $_GET['amount'] : "";
+        $account = (isset($_GET['account'])) ? $_GET['account'] : "";
+        $concept = (isset($_GET['concept'])) ? $_GET['concept'] : "";
         
-        foreach (MyQueries::generalQuery($conn, $id_user,"",$type,"","","") as $row) {  // call the query
+        foreach (MyQueries::generalQuery($conn, $id_user,"",$type,$account,$amount, $concept) as $row) {  // call the query
             $movs_count++;  // movements counter
         ?>    
             <a href="#" class="flex w-full h-auto py-4 px-6 mb-0 card-box-shadow card-box-shadow:hover rounded-md bg-white"> 
