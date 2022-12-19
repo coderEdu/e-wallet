@@ -40,8 +40,11 @@ include_once "../queries/myQueries.php";
         $amount = (isset($_GET['amount'])) ? $_GET['amount'] : "";
         $account = (isset($_GET['account'])) ? $_GET['account'] : "";
         $concept = (isset($_GET['concept'])) ? $_GET['concept'] : "";
+
+        $startDate = (isset($_GET['desde'])) ? $_GET['desde'] : "";
+        $endDate = (isset($_GET['hasta'])) ? $_GET['hasta'] : "";
         
-        foreach (MyQueries::generalQuery($conn, $id_user,"",$type,$account,$amount, $concept) as $row) {  // call the query
+        foreach (MyQueries::generalQuery($conn, $id_user, $startDate, $endDate, $type, $account, $amount, $concept) as $row) {  // call the query
             $movs_count++;  // movements counter
         ?>    
             <a href="#" class="flex w-full h-auto py-4 px-6 mb-0 card-box-shadow card-box-shadow:hover rounded-md bg-white"> 
