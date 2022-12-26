@@ -19,7 +19,7 @@ $notes_count=0;
                 <i class="fa fa-clipboard flex text-4xl sm:text-5xl text-blue-200"></i>
             </div>
 
-            <div class="flex flex-col w-full divide-y-2"> 
+            <div class="flex flex-col w-full"> 
                 <div class="flex  w-full justify-between flex-wrap">
                     <div class="flex">
                         <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo MyFx::formatDate($row['fec_crea']); ?></h3>
@@ -30,7 +30,7 @@ $notes_count=0;
                     </div>
                 </div>               
                 <div class="flex flex-col sm:flex-row space-y-1 w-full justify-between">
-                    <div class="flex flex-wrap w-3/4 pt-1 gap-2">
+                    <div class="flex flex-wrap w-full rounded-md py-1 gap-2 bg-slate-50">
                         <span class="text-zinc-600"><?php echo $row['titulo']; ?></span>
                     </div>                    
                 </div>

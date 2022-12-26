@@ -4,8 +4,8 @@
             type="text"
             id="amount"
             name="amount"
-            placeholder="10000.00"
-            value=""
+            placeholder="0.00"
+            value="<?php echo $_SESSION['monto']; ?>"
             class="p-2 border-1 border-gray-400 rounded-md text-right"
         />        
     </div>

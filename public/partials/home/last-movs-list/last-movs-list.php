@@ -15,7 +15,7 @@ $movs_count=0;
         $movs_count++;  // movements counter
     ?>    
         <a href="#" class="flex w-full h-auto py-4 px-6 mb-1 card-box-shadow card-box-shadow:hover bg-white"> 
-        <div class="flex flex-col w-full divide-y-2 space-y-1">
+        <div class="flex flex-col w-full space-y-1">
             <div class="flex w-full justify-between flex-wrap">
                 <div class="flex justify-center items-center h-fit">
                     <?php
@@ -34,7 +34,7 @@ $movs_count=0;
                 <?php //var_dump($row); ?>
             </div>
 
-            <div class="flex flex-col sm:flex-row py-2 px-2 space-y-2 sm:space-y-0 w-full rounded-sm box-decoration-slice justify-between bg-gray-50">
+            <div class="flex flex-col sm:flex-row py-2 px-2 space-y-2 sm:space-y-0 w-full rounded-md box-decoration-slice justify-between bg-gray-50">
                 <div class="flex flex-wrap w-3/4 pt-1 gap-2">
                     <span class="text-zinc-600"><?php echo $row['concepto']; ?></span>
                 </div>

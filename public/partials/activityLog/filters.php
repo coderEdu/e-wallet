@@ -2,13 +2,13 @@
     <div x-data="{dropdown: 'close'}">
         <button
             @click="dropdown = 'open'"
-            class="flex items-center justify-center px-4 py-1 bg-white text-base text-green-900 border rounded-md dark:border-neutral-700 focus:outline-none border-primary-500"
+            class="flex items-center justify-center px-4 py-1 bg-white text-base text-green-900 border rounded-2xl dark:border-neutral-700 shadow-md hover:shadow-lg hover:transition-all focus:outline-none border-primary-500"
             id="headlessui-popover-button-18"
             type="button"
             aria-expanded="true"
             aria-controls="headlessui-popover-panel-19"
         >
-            <span>Ver filtros</span><i class="ml-2 las la-angle-down"></i>
+            <span>Filtros</span><i class="ml-2 las la-angle-down"></i>
         </button>
         <div x-show="dropdown === 'open'" style="display: none;" class="fixed inset-0 z-50 overflow-y-auto">
             <div class="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">

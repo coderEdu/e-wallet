@@ -7,7 +7,7 @@
             type="date"
             id="desde"
             name="desde"
-            value=""
+            value=<?php echo $_SESSION['desde']; ?>
         />        
     </div>
 </div>
@@ -21,7 +21,7 @@
             type="date"
             id="hasta"
             name="hasta"
-            value=""
+            value=<?php echo $_SESSION['hasta']; ?>
         />        
     </div>
 </div>

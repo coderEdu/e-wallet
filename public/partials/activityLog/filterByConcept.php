@@ -5,7 +5,7 @@
             id="concept"
             name="concept"
             placeholder="Palabra o frase"
-            value=""
+            value="<?php echo $_SESSION['concepto']; ?>"
             class="p-2 border-1 border-gray-400 rounded-md text-right"
         />        
     </div>

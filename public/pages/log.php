@@ -1,5 +1,5 @@
 <?php 
-session_start(); 
+session_start();
 include_once "../partials/header/header.php";
 include_once "../partials/bd/conn.php";
 //include_once "colors.html";
@@ -36,6 +36,14 @@ include_once "../queries/myQueries.php";
         <?php
         //var_dump(MyQueries::generalTestQuery($id_user,"2022-11-29","","","",""));
 
+        // session variables
+        if (isset($_GET['desde'])) {$_SESSION['desde'] = $_GET['desde'];}
+        if (isset($_GET['hasta'])) {$_SESSION['hasta'] = $_GET['hasta'];}
+        if (isset($_GET['type'])) {$_SESSION['tipo'] = $_GET['type'];}
+        if (isset($_GET['amount'])) {$_SESSION['monto'] = $_GET['amount'];}
+        if (isset($_GET['concept'])) {$_SESSION['concepto'] = $_GET['concept'];}
+        if (isset($_GET['account'])) {$_SESSION['cuenta'] = $_GET['account'];}
+
         $type = (isset($_GET['type'])) ? $_GET['type'] : "";
         $amount = (isset($_GET['amount'])) ? $_GET['amount'] : "";
         $account = (isset($_GET['account'])) ? $_GET['account'] : "";
@@ -48,7 +56,7 @@ include_once "../queries/myQueries.php";
             $movs_count++;  // movements counter
         ?>    
             <a href="#" class="flex w-full h-auto py-4 px-6 mb-0 card-box-shadow card-box-shadow:hover rounded-md bg-white"> 
-                <div class="flex flex-col w-full divide-y-2 space-y-1">
+                <div class="flex flex-col w-full space-y-1">
                     <div class="flex w-full justify-between flex-wrap">
                         <div class="flex justify-center items-center h-fit">
                             <?php
@@ -67,7 +75,7 @@ include_once "../queries/myQueries.php";
                         <?php //var_dump($row); ?>
                     </div>
 
-                    <div class="flex flex-col sm:flex-row py-2 px-2 space-y-2 sm:space-y-0 w-full rounded-sm box-decoration-slice justify-between bg-gray-50">
+                    <div class="flex flex-col sm:flex-row py-2 px-2 space-y-2 sm:space-y-0 w-full rounded-md box-decoration-slice justify-between bg-gray-50">
                         <div class="flex flex-wrap w-3/4 pt-1 gap-2">
                             <span class="text-zinc-600"><?php echo $row['concepto']; ?></span>
                         </div>
