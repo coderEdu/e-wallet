@@ -36,14 +36,6 @@ include_once "../queries/myQueries.php";
         <?php
         //var_dump(MyQueries::generalTestQuery($id_user,"2022-11-29","","","",""));
 
-        // session variables
-        if (isset($_GET['desde'])) {$_SESSION['desde'] = $_GET['desde'];}
-        if (isset($_GET['hasta'])) {$_SESSION['hasta'] = $_GET['hasta'];}
-        if (isset($_GET['type'])) {$_SESSION['tipo'] = $_GET['type'];}
-        if (isset($_GET['amount'])) {$_SESSION['monto'] = $_GET['amount'];}
-        if (isset($_GET['concept'])) {$_SESSION['concepto'] = $_GET['concept'];}
-        if (isset($_GET['account'])) {$_SESSION['cuenta'] = $_GET['account'];}
-
         $type = (isset($_GET['type'])) ? $_GET['type'] : "";
         $amount = (isset($_GET['amount'])) ? $_GET['amount'] : "";
         $account = (isset($_GET['account'])) ? $_GET['account'] : "";

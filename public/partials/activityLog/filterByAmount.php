@@ -5,7 +5,7 @@
             id="amount"
             name="amount"
             placeholder="0.00"
-            value="<?php echo $_SESSION['monto']; ?>"
+            value="<?php echo $_GET['amount']; ?>"
             class="p-2 border-1 border-gray-400 rounded-md text-right"
         />        
     </div>

@@ -5,7 +5,7 @@
             name="type"
             value="dep"
             type="radio"
-            <?php if ($_SESSION['tipo'] == 'dep') { echo 'checked'; } ?>
+            <?php if ($_GET['type'] == 'dep') { echo 'checked'; } ?>
             class="w-6 h-6 bg-white rounded focus:ring-action-primary text-primary-500 border-primary border-neutral-500 dark:bg-neutral-700 dark:checked:bg-primary-500 focus:ring-primary-500"
         />
         <label for="dep" class="ml-3.5 flex flex-col flex-1 justify-center">
@@ -21,7 +21,7 @@
             name="type"
             value="ext"
             type="radio"
-            <?php if ($_SESSION['tipo'] == 'ext') { echo 'checked'; } ?>
+            <?php if ($_GET['type'] == 'ext') { echo 'checked'; } ?>
             class="w-6 h-6 bg-white rounded focus:ring-action-primary text-primary-500 border-primary border-neutral-500 dark:bg-neutral-700 dark:checked:bg-primary-500 focus:ring-primary-500"
         />
         <label for="ext" class="ml-3.5 flex flex-col flex-1 justify-center">
@@ -37,7 +37,7 @@
             name="type"
             value="tra"
             type="radio"
-            <?php if ($_SESSION['tipo'] == 'tra') { echo 'checked'; } ?>
+            <?php if ($_GET['type'] == 'tra') { echo 'checked'; } ?>
             class="w-6 h-6 bg-white rounded focus:ring-action-primary text-primary-500 border-primary border-neutral-500 dark:bg-neutral-700 dark:checked:bg-primary-500 focus:ring-primary-500"
         />
         <label for="tra" class="ml-3.5 flex flex-col flex-1 justify-center">

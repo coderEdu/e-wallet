@@ -7,7 +7,7 @@
             type="date"
             id="desde"
             name="desde"
-            value=<?php echo $_SESSION['desde']; ?>
+            value=<?php echo $_GET['desde']; ?>
         />        
     </div>
 </div>
@@ -21,7 +21,7 @@
             type="date"
             id="hasta"
             name="hasta"
-            value=<?php echo $_SESSION['hasta']; ?>
+            value=<?php echo $_GET['hasta']; ?>
         />        
     </div>
 </div>
