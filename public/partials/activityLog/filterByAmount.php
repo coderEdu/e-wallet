@@ -9,4 +9,13 @@
             class="p-2 border-1 border-gray-400 rounded-md text-right"
         />        
     </div>
+    <div class="flex">
+        <button onclick="fnResetAmount()" class="bg-red-600 text-white ml-2 px-2 py-1 rounded-md">Q</button>
+    </div>
+
+    <script>
+        function fnResetAmount() {
+            document.getElementById('amount').value = "";
+        }
+    </script>
 </div>
