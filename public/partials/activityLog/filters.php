@@ -66,26 +66,12 @@
                                 </div>
                             </div>
 
-                            <div class="py-3"> <!-- third -->
-                                <h3 class="text-base font-medium">Monto:</h3>
-                                <div class="relative mt-6">
-                                    <div class="flex flex-row justify-center gap-8">
-
-                                        <?php include("filterByAmount.php"); ?>
-                                        
-                                    </div>
-                                </div>
+                            <div class="py-3"> <!-- third - monto -->
+                                <?php include("filterByAmount.php"); ?>
                             </div>
 
-                            <div class="py-3"> <!-- fourth -->
-                                <h3 class="text-base font-medium">Concepto:</h3>
-                                <div class="relative mt-6">
-                                    <div class="flex flex-row justify-center gap-8">
-
-                                        <?php include("filterByConcept.php"); ?>
-                                        
-                                    </div>
-                                </div>
+                            <div class="py-3"> <!-- concepto -->
+                                <?php include("filterByConcept.php"); ?>
                             </div>
 
                             <div class="py-3"> <!-- sixth -->
