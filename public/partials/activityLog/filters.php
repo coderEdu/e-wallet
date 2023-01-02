@@ -102,15 +102,7 @@
                     </div>
 
                     <!-- buttons -->
-                    <div class="flex items-center justify-between p-3 space-x-4 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800">
-                        <button
-                            type="submit"
-                            data-request="FilterFacilities::onRemove"
-                            data-request-data="{filters: ['facilities'], redirect: true}"
-                            class="relative inline-flex items-center justify-center h-auto px-4 py-2 bg-red-700 text-xs text-white font-medium transition-colors border rounded-full sm:text-base sm:px-5 ttnc-ButtonThird border-neutral-200 dark:text-neutral-200 dark:border-neutral-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-600 dark:focus:ring-offset-0"
-                        >
-                            Quitar
-                        </button>
+                    <div class="flex items-center justify-end p-3 space-x-4 bg-neutral-50 dark:bg-neutral-900 dark:border-t dark:border-neutral-800">
                         <button
                             type="submit"
                             class="relative inline-flex items-center justify-center h-auto px-4 py-2 bg-cyan-700 text-xs text-white font-medium transition-colors rounded-full sm:text-base sm:px-5 ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-600 dark:focus:ring-offset-0"

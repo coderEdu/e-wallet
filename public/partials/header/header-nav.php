@@ -25,7 +25,7 @@
     </nav>
 
     <!-- burger icon -->
-    <div class="flex px-6 md:hidden">
+    <div class="flex px-6 lg:hidden">
         <img src="../img/icons8-menú-24.png" alt="">
     </div>
 </div>
