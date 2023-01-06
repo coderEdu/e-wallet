@@ -79,7 +79,7 @@ include_once "../queries/myQueries.php";
                                 $id_account = $row['id_cuenta'];                    
                                 foreach(MyQueries::getAccountName($conn, $id_account) as $sub_row) {
                                 ?>
-                                    <div class="relative w-3 h-3 border-dashed border-4 rounded-full <?php echo MyFx::colorBalance($sub_row['saldo'],"border"); ?>"></div>
+                                    <div class="relative w-3 h-3 border-dashed border-4 rounded-full" style="border-color: <?php echo MyFx::colorBalance($sub_row['saldo']); ?>;"></div>
                                     <span class="flex font-serif mt-1 py-0 px-2 text-sm text-zinc-600"><?php printf(strtoupper($sub_row["nombre"])); ?></span>
                                     <?php //var_dump(MyFx::colorBalance($sub_row['saldo'],"bg")); ?>                        
                                 <?php

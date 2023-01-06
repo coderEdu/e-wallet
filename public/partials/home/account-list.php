@@ -45,9 +45,9 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col w-[15%] items-end">
-                <div class="flex border-2 <?php echo MyFx::colorBalance(floatval($fila['saldo']),'border') ?> w-10 h-10 md:w-12 md:h-12 rounded-full items-center">
-                    <i class="fa fa-wallet text-[1.3rem] xl:text-[1.5rem] <?php echo MyFx::colorBalance(floatval($fila['saldo']),'text') ?> mx-auto"></i>
+            <div class="flex flex-col w-[15%] items-end"> <!-- call colorBalance -->
+                <div class="flex border-2 w-10 h-10 md:w-12 md:h-12 rounded-full items-center" style="border-color: <?php echo MyFx::colorBalance(floatval($fila['saldo'])) ?> ;">
+                    <i class="fa fa-wallet text-[1.3rem] xl:text-[1.5rem] mx-auto" style="color: <?php echo MyFx::colorBalance(floatval($fila['saldo'])) ?> ;"></i>
                 </div>
             </div>
         </div>
