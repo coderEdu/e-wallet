@@ -61,7 +61,7 @@ class MyQueries {
 
     public static function getAccountsByLogged(PDO $conn, int $id_user)
     {
-        $query = "SELECT * FROM cuentas WHERE id_user = '$id_user'";
+        $query = "SELECT * FROM cuentas WHERE id_user = '$id_user' ORDER BY nombre ASC";
         $rows = $conn->query($query);
         return $rows;
     }
