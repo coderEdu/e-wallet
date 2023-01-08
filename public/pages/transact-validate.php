@@ -4,9 +4,10 @@ include_once "../queries/myQueries.php";
 ?>
 
 <?php
+// logic for deposit
 if (isset($_POST['deposit'])) {
     if (isset($_POST['monto']) && isset($_POST['textarea']) && isset($_POST['account'])) {
-        $amount = $_POST['monto'];
+        $amount = floatval( $_POST['monto'] );
         $concept = $_POST['textarea'];
         $id_account = $_POST['account'];
         $id_user = $_SESSION['logged_id'];
@@ -29,7 +30,7 @@ if (isset($_POST['deposit'])) {
 // logic for withdraw
 if (isset($_POST['withdraw'])) {    
     if (isset($_POST['monto']) && isset($_POST['textarea']) && isset($_POST['account'])) {
-        $amount = $_POST['monto'];
+        $amount = floatval( $_POST['monto'] );
         $concept = $_POST['textarea'];
         $id_account = $_POST['account'];
         $id_user = $_SESSION['logged_id'];
@@ -41,7 +42,7 @@ if (isset($_POST['withdraw'])) {
             $balance = $row['saldo'];
         }
     
-        if ($balance>=$amount) {
+        if (floatval( $balance ) >= $amount) {
             if ( MyQueries::newTInsertQuery($conn,$tipo,$amount,$concept,$id_user,$id_account) == 1 ) {
                 $balance -= $amount;
                 MyQueries::updateBalanceByTrans($conn,$balance,$id_user,$id_account);

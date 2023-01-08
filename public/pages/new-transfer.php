@@ -21,7 +21,7 @@ $title
         <div class="flex flex-col justify-between">
             <form action="" method="post"> <?php //action="transact-validate.php" ?>
                 <div class="flex flex-col space-y-6">
-                    <input type="number" name="monto" placeholder="Ingrese monto en pesos" autofocus required class="border-2 py-2 px-2 text-right">
+                    <input type="text" name="monto" placeholder="Ingrese monto en pesos" autofocus required class="border-2 py-2 px-2 text-right">
                    
                     <div class="flex justify-between items-center">
                         <label for="account" class="flex w-[40%] pr-2 font-sans font-normal text-base text-gray-500">De la cuenta:</label>
