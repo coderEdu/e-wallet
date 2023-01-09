@@ -70,7 +70,7 @@ include_once "../queries/myQueries.php";
             foreach (MyQueries::generalQuery($conn, $id_user, $startDate, $endDate, $type, $account, $amount, $concept) as $row) {  // call the query
                 $movs_count++;  // movements counter
             ?>    
-                <a href="#" class="flex w-full h-auto py-4 px-6 mb-0 card-box-shadow card-box-shadow:hover rounded-md bg-white"> 
+                <a href="#" class="flex w-full h-auto py-4 px-6 mb-0 card-box-shadow card-box-shadow:hover rounded-md <?php echo $aColor = ($row['concepto']!='$correctivo') ? "bg-white" : "bg-amber-50"; ?>"> 
                     <div class="flex flex-col w-full space-y-1">
                         <div class="flex w-full justify-between flex-wrap">
                             <div class="flex justify-center items-center h-fit">
@@ -102,9 +102,9 @@ include_once "../queries/myQueries.php";
                                 </div>
                                 <div class="">
                                     <?php if ($row['tipo']=='ext') { ?>
-                                            <i class="flex text-red-700 fa fa-arrow-up"></i>
+                                            <i class="flex fa fa-arrow-up" style="color: <?php echo $color = ($row['concepto']!='$correctivo') ? "#E30000" : "#B6B6B6"; ?>;"></i>
                                     <?php } elseif ($row['tipo']=='dep') { ?>
-                                            <i class="flex text-green-600 fa fa-arrow-down"></i>
+                                            <i class="flex fa fa-arrow-down" style="color: <?php echo $icolor = ($row['concepto']!='$correctivo') ? "#0CA002" : "#B6B6B6"; ?>;"></i>
                                     <?php } else { ?>
                                             <i class="flex font-medium text-yellow-500 fa fa-rotate-right"></i>
                                     <?php } ?>
