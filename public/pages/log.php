@@ -70,7 +70,7 @@ include_once "../queries/myQueries.php";
             foreach (MyQueries::generalQuery($conn, $id_user, $startDate, $endDate, $type, $account, $amount, $concept) as $row) {  // call the query
                 $movs_count++;  // movements counter
             ?>    
-                <a href="#" class="flex w-full h-auto py-4 px-6 mb-0 card-box-shadow card-box-shadow:hover rounded-md <?php echo $aColor = ($row['concepto']!='$correctivo') ? "bg-white" : "bg-amber-50"; ?>"> 
+                <a href="#" class="flex w-full h-auto py-4 px-6 mb-0 card-box-shadow card-box-shadow:hover rounded-md <?php echo $aColor = ($row['concepto']!='$correctivo') ? "bg-white" : "bg-emerald-50"; ?>"> 
                     <div class="flex flex-col w-full space-y-1">
                         <div class="flex w-full justify-between flex-wrap">
                             <div class="flex justify-center items-center h-fit">
