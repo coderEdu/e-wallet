@@ -89,28 +89,7 @@ include_once "../queries/myQueries.php";
                             <h3 class="flex font-serif font-light text-sm mb-1 text-zinc-500"><?php echo MyFx::formatDate($row['fecha']); ?></h3> 
                             <?php //var_dump($row); ?>
                         </div>
-
-                        <div class="flex flex-col sm:flex-row py-2 px-2 space-y-2 sm:space-y-0 w-full rounded-md box-decoration-slice justify-between bg-gray-50">
-                            <div class="flex flex-wrap w-3/4 pt-1 gap-2">
-                                <span class="text-zinc-600"><?php echo $row['concepto']; ?></span>
-                            </div>
-                            <div class="flex flex-row justify-end items-center space-x-2">
-                                <div class="flex">
-                                    <h2 class="def-f-family font-medium text-lg text-end sm:text-xl text-black">
-                                        <i class="fa fa-dollar-sign"></i><span class="def-f-family font-medium text-xl text-slate-700"> <?php echo $row['monto']; ?></span>                   
-                                    </h2>
-                                </div>
-                                <div class="">
-                                    <?php if ($row['tipo']=='ext') { ?>
-                                            <i class="flex fa fa-arrow-up" style="color: <?php echo $color = ($row['concepto']!='$correctivo') ? "#E30000" : "#B6B6B6"; ?>;"></i>
-                                    <?php } elseif ($row['tipo']=='dep') { ?>
-                                            <i class="flex fa fa-arrow-down" style="color: <?php echo $icolor = ($row['concepto']!='$correctivo') ? "#0CA002" : "#B6B6B6"; ?>;"></i>
-                                    <?php } else { ?>
-                                            <i class="flex font-medium text-yellow-500 fa fa-rotate-right"></i>
-                                    <?php } ?>
-                                </div>
-                            </div>
-                        </div>                        
+                        <?php include("../partials/activityLog/tr-detail.php"); ?>                
                     </div>
                 </a>
             <?php
