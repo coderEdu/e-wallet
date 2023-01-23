@@ -13,7 +13,7 @@
                 
                 <div class="flex justify-between items-end py-1">
                     <div class="flex">
-                        <p class="font-serif mb-1 text-sm text-zinc-800"><?php echo strtoupper($fila[('nombre')]); ?></p>
+                        <p class="font-serif mb-1 text-lg text-zinc-800"><?php echo strtoupper($fila[('nombre')]); ?></p>
                     </div>
                     <div class="flex border-2 w-10 h-10 md:w-12 md:h-12 rounded-full items-center" style="border-color: <?php echo MyFx::colorBalance(floatval($fila['saldo'])) ?> ;">
                         <i class="fa fa-wallet text-[1.3rem] xl:text-[1.5rem] mx-auto" style="color: <?php echo MyFx::colorBalance(floatval($fila['saldo'])) ?> ;"></i>
