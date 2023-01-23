@@ -32,23 +32,23 @@ $title
                     />
                    
                     <div class="flex justify-between items-center">
-                        <label for="account" class="flex w-[40%] pr-2 font-sans font-normal text-base text-gray-500">De la cuenta:</label>
-                        <select id="account" class="flex w-full py-2" name="account"> <!-- working here -->
+                        <label for="account1" class="flex w-[40%] pr-2 font-sans font-normal text-base text-gray-500">De la cuenta:</label>
+                        <select id="account1" class="flex w-full py-2" name="account1"> <!-- working here -->
                             <?php $id_user = $_SESSION['logged_id']; ?>
                             
                             <?php foreach (MyQueries::getAccountsByLogged($conn,$id_user) as $row) { ?>
-                                <option value="<?php echo $row['nombre']; ?>"><?php echo $row['nombre']; ?></option>
+                                <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></option>
                             <?php } ?>
                         </select>
                     </div>
 
                     <div class="flex justify-between items-center">
-                        <label for="account" class="flex w-[40%] pr-2 font-sans font-normal text-base text-gray-500">A la cuenta:</label>
-                        <select id="account" class="flex w-full py-2" name="account"> <!-- working here -->
+                        <label for="account2" class="flex w-[40%] pr-2 font-sans font-normal text-base text-gray-500">A la cuenta:</label>
+                        <select id="account2" class="flex w-full py-2" name="account2"> <!-- working here -->
                             <?php $id_user = $_SESSION['logged_id']; ?>
                             
                             <?php foreach (MyQueries::getAccountsByLogged($conn,$id_user) as $row) { ?>
-                                <option value="<?php echo $row['nombre']; ?>"><?php echo $row['nombre']; ?></option>
+                                <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></option>
                             <?php } ?>
                         </select>
                     </div>
