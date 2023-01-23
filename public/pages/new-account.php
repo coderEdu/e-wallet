@@ -22,7 +22,14 @@ $title
             <form action="" method="post"> <?php //action="account-validate.php" ?>
                 <div class="flex flex-col space-y-6">
                     <input type="text" name="nombre" placeholder="Ingrese un nombre" autofocus required class="border-2 py-2 px-2 text-right">
-                    <input type="number" name="monto" placeholder="Ingrese monto en pesos" autofocus class="border-2 py-2 px-2 text-right">     
+                    <input
+                        type="text"
+                        name="monto"
+                        placeholder="Ingrese monto en pesos"
+                        autofocus
+                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
+                        class="border-2 py-2 px-2 text-right"
+                    >     
                 </div>
 
                 <div class="flex pt-4">

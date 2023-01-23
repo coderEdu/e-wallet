@@ -6,7 +6,7 @@ include_once "../queries/myQueries.php";
 <?php
 if (isset($_POST['nombre']) && isset($_POST['monto']) && isset($_POST['create'])) {
     $name = $_POST['nombre'];
-    $balance = $_POST['monto'];
+    $balance = floatval( $_POST['monto'] );
     $id_user = $_SESSION['logged_id'];
 
     if ( MyQueries::createAccount($conn,$name,$balance,$id_user ) == 1 ) {
@@ -14,6 +14,5 @@ if (isset($_POST['nombre']) && isset($_POST['monto']) && isset($_POST['create'])
     } else {
         echo "<script> alert('Error: No se pudo crear la cuenta.'); </script>";
     }
-
 }
 ?>
