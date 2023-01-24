@@ -1,4 +1,4 @@
-<div class="flex flex-col mb-2 sm:mb-4 md:mb-5 pt-10 md:pt-12 lg:pt-14 sm:flex-row sm:flex-wrap w-full content-between items-center rounded-2xl">
+<div class="flex flex-col mb-2 sm:mb-4 md:mb-5 pt-10 md:pt-12 lg:pt-14 sm:flex-row sm:flex-wrap w-full justify-between items-center rounded-2xl">
     <div class="flex w-full sm:ml-2 justify-center sm:justify-start items-center">
         <span class="flex text-left"><i class="fa fa-wallet text-xl text-lime-700"></i></span>
         <h1 class="flex def-f-family text-base text-left px-3 py-4 text-slate-900">Tus cuentas</h1>
@@ -8,7 +8,7 @@
     $id = $_SESSION['logged_id'];
     foreach(MyQueries::getAccountsByLogged($conn, $id) as $fila) { 
     ?>            
-        <div class="flex w-11/12 h-fit sm:w-[47.5%] md:w-[31.2%] lg:w-[23.4%] xl:w-[23.7%] 2xl:w-[23.9%] m-2 py-4 px-6 rounded-2xl card-box-shadow card-box-shadow:hover bg-white"> <!-- card 1 -->
+        <div class="flex w-11/12 h-fit sm:w-[48.05%] md:w-[48.35%] lg:w-[32.1%] xl:w-[23.7%] 2xl:w-[24.1%] m-1.5 py-3 px-4 rounded-2xl card-box-shadow card-box-shadow:hover bg-white"> <!-- card 1 -->
             <div class="flex flex-col w-full">
                 
                 <div class="flex justify-between items-end py-1">

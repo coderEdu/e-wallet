@@ -1,4 +1,4 @@
-<div class="flex flex-row header-rounded bg-yellow-200 w-full h-fit justify-between items-center">
+<div class="flex flex-row flex-wrap header-rounded bg-yellow-200 w-full h-fit justify-between items-center">
     <div class="flex content-between items-center">
 
         <!-- logo -->
@@ -16,7 +16,7 @@
     </div>
 
     <!-- navbar mainmenu -->
-    <nav class="hidden md:flex">
+    <nav class="hidden xl:flex">
         <ul class="flex flex-row w-fit h-full text-md p-6 space-x-4 items-center">
             <?php include "../partials/header-nav/menu/accounts.php" ?>
             <?php include "../partials/header-nav/menu/actions.php" ?>
@@ -25,7 +25,7 @@
     </nav>
 
     <!-- burger icon -->
-    <div class="flex px-6 lg:hidden">
+    <div class="flex px-6 xl:hidden">
         <img src="../img/icons8-menú-24.png" alt="">
     </div>
 </div>

@@ -6,7 +6,7 @@
         aria-expanded="true"
         aria-controls="headlessui-popover-panel-19"
     >
-        <span>Transacciones</span><i class="ml-2 fa fa-angle-down"></i>
+        <span>Movimientos</span><i class="ml-2 fa fa-angle-down"></i>
     </button>
     <div  x-show="open" x-transition class="absolute left-0 z-10 w-full max-w-sm px-0 mt-0 sm:px-0" id="headlessui-popover-panel-21">
         <div class="overflow-hidden bg-slate-700 border shadow-xl rounded-2xl dark:bg-neutral-900 border-neutral-200 dark:border-neutral-700">
