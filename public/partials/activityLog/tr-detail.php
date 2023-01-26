@@ -10,7 +10,7 @@
         <?php } elseif ($row['tipo']=='dep') { ?>
                 <i class="flex fa fa-arrow-down" style="color: <?php echo ($row['concepto']!='$correctivo') ? "#0CA002" : "#B6B6B6"; ?>;"></i>
         <?php } else { ?>
-                <i class="flex font-medium text-yellow-500 fa fa-rotate-right"></i>
+                <i class="flex font-medium text-lg text-yellow-500 fa fa-retweet"></i>
         <?php } ?>
     </div>
     <div class="flex">
