@@ -18,7 +18,7 @@ include_once "../queries/myQueries.php";
         <?php include "../partials/home/last-movs-list/last-movs-list.php" ?>
 
 
-        <!-- list of last notes -->
+        <!-- last notes list -->
         <?php include "../partials/home/last-notes-list/last-notes-list.php" ?>            
     </div>
 
