@@ -8,20 +8,19 @@
     $id = $_SESSION['logged_id'];
     foreach(MyQueries::getAccountsByLogged($conn, $id) as $fila) { 
     ?>            
-        <div class="flex w-11/12 h-fit sm:w-[48.05%] md:w-[48.35%] lg:w-[32.1%] xl:w-[23.7%] 2xl:w-[24.1%] m-1.5 py-3 px-4 rounded-2xl card-box-shadow card-box-shadow:hover bg-white"> <!-- card 1 -->
+        <div class="flex w-11/12 h-fit sm:w-[48.05%] md:w-[48.35%] lg:w-[32.1%] xl:w-[23.7%] 2xl:w-[24.1%] m-1.5 py-3 px-4 rounded-2xl rounded-tr-3xl card-box-shadow card-box-shadow:hover bg-white"> <!-- card 1 -->
             <div class="flex flex-col w-full">
                 
-                <div class="flex justify-between items-end py-1">
+                <div class="relative flex justify-between items-end py-1">
                     <div class="flex">
                         <p class="font-serif mb-1 text-lg text-zinc-800"><?php echo strtoupper($fila[('nombre')]); ?></p>
                     </div>
-                    <div class="flex border-2 w-10 h-10 md:w-12 md:h-12 rounded-full items-center" style="border-color: <?php echo MyFx::colorBalance(floatval($fila['saldo'])) ?> ;">
-                        <i class="fa fa-wallet text-[1.3rem] xl:text-[1.5rem] mx-auto" style="color: <?php echo MyFx::colorBalance(floatval($fila['saldo'])) ?> ;"></i>
-                    </div>    
+                    <!-- a circle with a wallet icon inside it -->   
+                    <i class="absolute -top-3 -right-5 fa fa-wallet text-[1.3rem] xl:text-[1.5rem] mx-auto p-2 border-2 rounded-full" style="color: <?php echo MyFx::colorBalance(floatval($fila['saldo'])) ?> ; border-color: <?php echo MyFx::colorBalance(floatval($fila['saldo'])) ?> ;"></i>
                 </div>
 
                 <a href="#">
-                    <h2 class="def-f-family font-medium text-xl py-2 pr-4 mr-3 text-right text-slate-700 bg-slate-50 rounded-r-xl"><i class="fa fa-dollar-sign pr-1"></i><?php echo $fila['saldo']; ?></i></h2>
+                    <h2 class="w-full def-f-family font-medium text-xl py-2 pr-4 mr-3 text-right text-slate-700 bg-slate-50 rounded-r-xl"><i class="fa fa-dollar-sign pr-1"></i><?php echo $fila['saldo']; ?></i></h2>
                 </a>
                 <div class="flex pt-1 content-center items-start">
                     <div>
