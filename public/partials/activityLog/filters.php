@@ -12,7 +12,7 @@
         </button>
         <div x-show="dropdown === 'open'" style="display: none;" class="fixed inset-0 z-50 overflow-y-auto">
             <div class="flex items-end justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
-                <div class="fixed inset-0 transition-opacity bg-gray-900 bg-opacity-30" aria-hidden="true"></div>
+                <div class="fixed inset-0 transition-opacity overlay" aria-hidden="true"></div>
                 <span class="hidden sm:inline-block sm:align-middle sm:h-screen" aria-hidden="true">​</span>
 
                 <!-- begin form -->
