@@ -5,23 +5,23 @@ class MyFx
     public static function colorBalance(float $balance): string {
         $color=''; // you must initialize var to avoid function crash
         if (floatval($balance) > 100000) { 
-            $color = "#0277BD";
+            $color = "#01579B";
         } else if (floatval($balance) > 50000) { 
-            $color = "#0288D1";
+            $color = "#0277BD";
         } else if (floatval($balance) > 20000) {
-            $color = "#039BE5";
+            $color = "#0288D1";
         } else if (floatval($balance) > 10000) {
-            $color = "#03A9F4";
+            $color = "#039BE5";
         } else if (floatval($balance) > 5000) {
-            $color = "#29B6F6";
+            $color = "#03A9F4";
         } else if (floatval($balance) > 2500) {
-            $color = "#4FC3F7";
+            $color = "#29B6F6";
         } else if (floatval($balance) > 1000) {
-            $color = "#81D4FA";
+            $color = "#4FC3F7";
         } else if (floatval($balance) > 500) {
-            $color = "#B3E5FC";
+            $color = "#81D4FA";
         } else if (floatval($balance) >= 0) {
-            $color = "#E1F5FE";
+            $color = "#B3E5FC";
         }
         return $color;
     }
