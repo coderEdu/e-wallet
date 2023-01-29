@@ -28,10 +28,7 @@
                     </div>
                 </div>
                 <div class="flex w-full py-1">
-                    <div class="flex">
-                        <span class="text-sm text-zinc-600">Movs:</span>
-                    </div>
-                    <div class="flex w-full px-4 justify-between">
+                    <div class="flex w-full justify-between">
                         <div class="flex">
                             <span class="font-bold text-sm mr-1 text-green-700"><i class="fa fa-arrow-down"></i></span>
                             <?php foreach($ext=MyQueries::getTotMovsByType($conn,'dep',$id,$fila['id']) as $row) { ?>

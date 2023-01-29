@@ -6,11 +6,11 @@
 <div class="flex flex-row pt-1 justify-between items-center space-x-2">
     <div class="">
         <?php if ($row['tipo']=='ext') { ?>
-                <i class="flex fa fa-arrow-up" style="color: <?php echo ($row['concepto']!='$correctivo') ? "#E30000" : "#B6B6B6"; ?>;"></i>
+                <i class="flex fa fa-arrow-up font-bold text-sm py-1 px-1.5 rounded-md text-white opacity-50" style="background-color: <?php echo ($row['concepto']!='$correctivo') ? "#E30000" : "#B6B6B6"; ?>;"></i>
         <?php } elseif ($row['tipo']=='dep') { ?>
-                <i class="flex fa fa-arrow-down" style="color: <?php echo ($row['concepto']!='$correctivo') ? "#0CA002" : "#B6B6B6"; ?>;"></i>
+                <i class="flex fa fa-arrow-down font-bold text-sm py-1 px-1.5 rounded-md text-white opacity-50" style="background-color: <?php echo ($row['concepto']!='$correctivo') ? "#0CA002" : "#B6B6B6"; ?>;"></i>
         <?php } else { ?>
-                <i class="flex font-medium text-lg text-yellow-500 fa fa-retweet"></i>
+                <i class="flex font-bold text-sm py-1 px-1.5 rounded-md text-white opacity-60 bg-yellow-500 fa fa-retweet"></i>
         <?php } ?>
     </div>
     <div class="flex">
