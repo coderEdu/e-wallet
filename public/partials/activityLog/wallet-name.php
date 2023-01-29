@@ -1,0 +1,2 @@
+<div class="relative"><i class="fa fa-wallet text-lg" style="color: <?php echo MyFx::colorBalance($sub_row['saldo']); ?>;"></i></div>
+<span class="flex font-serif mt-1 py-0 px-2 text-sm text-zinc-600"><?php printf(strtoupper($sub_row["nombre"])); ?></span> 
