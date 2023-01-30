@@ -14,11 +14,10 @@ $notes_count=0;
     foreach (MyQueries::getLastNotes($conn, $id_user) as $row) {
         $notes_count++; // notes counter
     ?>
-        <a href="#" class="flex w-full h-auto justify-center items-center py-4 px-6 mb-1 card-box-shadow card-box-shadow:hover bg-white"> 
+        <a href="#" x-on:click="isNoteOpenedOpen = true, open = false" class="flex w-full h-auto justify-center items-center py-4 px-6 mb-1 card-box-shadow card-box-shadow:hover bg-white"> 
             <div class="flex w-fit h-fit mr-4">
                 <i class="fa fa-clipboard flex text-4xl sm:text-5xl text-blue-200"></i>
             </div>
-
             <div class="flex flex-col w-full"> 
                 <div class="flex  w-full justify-between flex-wrap">
                     <div class="flex">

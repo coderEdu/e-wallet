@@ -31,7 +31,8 @@ include_once "note-validate.php";
     'isNewTraOpen': false,
     'isNewAccOpen': false,
     'isNewNoteOpen': false,
-    'isEditNoteOpen': false
+    'isEditNoteOpen': false,
+    'isNoteOpenedOpen': false
 }" class="bg-default">
 
     <?php include_once "new-deposit.php"; ?>
@@ -40,3 +41,5 @@ include_once "note-validate.php";
     <?php include_once "new-account.php"; ?>
     <?php include_once "new-note.php"; ?>
     <?php include_once "edit-note.php"; ?>
+    <?php include_once "note-opened.php"; ?>
+    
