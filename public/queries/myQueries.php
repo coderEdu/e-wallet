@@ -52,6 +52,13 @@ class MyQueries {
         return $rows;
     }
 
+    public static function getNoteByIdNote(PDO $conn, int $id_note)
+    {
+        $query = "SELECT * FROM notas WHERE id = '$id_note'";
+        $rows = $conn->query($query);
+        return $rows;
+    }
+
     // accounts
     public static function createAccount(PDO $conn, string $name, float $balance, int $id_user)
     {
