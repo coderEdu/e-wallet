@@ -14,7 +14,7 @@ $movs_count=0;
     foreach (MyQueries::getLastMovs($conn, $id_user) as $row) {
         $movs_count++;  // movements counter
     ?>    
-    <a href="#" class="flex w-full h-auto py-4 px-6 mb-1 card-box-shadow card-box-shadow:hover <?php echo $aColor = ($row['concepto']!='$correctivo') ? "bg-white" : "bg-sky-50"; ?>"> 
+    <a href="#" class="flex w-full h-auto py-3 px-6 mb-1 card-box-shadow card-box-shadow:hover <?php echo $aColor = ($row['concepto']!='$correctivo') ? "bg-white" : "bg-sky-50"; ?>"> 
         <div class="flex flex-col w-full space-y-1">
             <div class="flex w-full justify-between flex-wrap">
                 <div class="flex justify-center items-center h-fit">

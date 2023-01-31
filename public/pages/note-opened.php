@@ -34,10 +34,10 @@ $title
                     </div>
                     <div class="flex justify-between items-center space-x-2">
                         <div class="flex">
-                            <button class="w-8 h-8"><img src="../img/Actions-document-edit-icon.png" alt=""></button>
+                            <button class="w-8 h-8"><img src="../img/Actions-document-edit-icon.png" alt="edit-icon"></button>
                         </div>
                         <div class="flex">
-                            <button class="w-8 h-8"><img src="../img/Actions-document-close-icon.png" alt=""></button>
+                            <button class="w-8 h-8"><img src="../img/Actions-document-close-icon.png" alt="delete-icon"></button>
                         </div>
                     </div>
                 </div>
