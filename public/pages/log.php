@@ -17,8 +17,8 @@ include_once "../queries/myQueries.php";
         $endDate = (isset($_GET['hasta'])) ? $_GET['hasta'] : "";
 ?>
 
-<div class="container flex flex-col w-full h-screen mx-auto bg-default">
-    <?php include "../partials/header/header-nav.php"; ?>        
+<?php include "../partials/header/header-nav.php"; ?>        
+<div class="container flex flex-col w-full mx-auto bg-default">
     
     <section>
         <div class="w-full p-5 mb-3 mx-auto">
@@ -63,7 +63,7 @@ include_once "../queries/myQueries.php";
         <hr>
     </section>
  
-    <div class="container w-full md:w-[80%] mt-5">
+    <div class="container w-full md:w-[80%] mt-5 mb-12">
         <!-- all movements -->
         <div class="flex flex-col w-full space-y-3">
             <?php        
@@ -95,6 +95,6 @@ include_once "../queries/myQueries.php";
             ?>
         </div>
     </div>
-    <!-- footer -->
-    <?php include "../partials/footer/footer.php"; ?>
 </div>
+<!-- footer -->
+<?php include "../partials/footer/footer.php"; ?>

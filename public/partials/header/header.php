@@ -33,7 +33,7 @@ include_once "note-validate.php";
     'isNewNoteOpen': false,
     'isEditNoteOpen': false,
     'isNoteOpenedOpen': false
-}" class="bg-default">
+}" class="flex flex-col body-h bg-default">
 
     <?php include_once "new-deposit.php"; ?>
     <?php include_once "new-withdraw.php"; ?>
