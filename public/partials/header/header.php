@@ -32,7 +32,7 @@ include_once "note-validate.php";
     'isNewAccOpen': false,
     'isNewNoteOpen': false,
     'isEditNoteOpen': false,
-    'isNoteOpenedOpen': false
+    'isNoteOpenedOpen': <?php echo $_SESSION['open-note']; ?>
 }" class="flex flex-col body-h bg-default">
 
     <?php include_once "new-deposit.php"; ?>

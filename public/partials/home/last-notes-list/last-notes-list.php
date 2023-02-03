@@ -7,14 +7,18 @@ $notes_count=0;
     <div class="flex flex-row w-full ml-4 justify-center items-center">
         <span class="flex "><i class="fa fa-clipboard text-xl text-lime-700"></i></span>
         <h1 class="flex def-f-family text-base w-full mx-auto content-start px-3 py-3 text-slate-800">Tus últimas notas</h1>
+        <?php echo $_SESSION['id_note']; ?>
     </div>
     <div class="flex w-full h-0.5 border-b-2 border-gray-200"></div>
 
     <?php
+    $id_note = array();
     foreach (MyQueries::getLastNotes($conn, $id_user) as $row) {
         $notes_count++; // notes counter
+        //$_SESSION['id_note'][] = $row['id'];
+        array_push( $id_note, intval( $row['id'] ));
     ?>
-        <a href="#" x-on:click="isNoteOpenedOpen = true, open = false" class="flex w-full h-auto justify-center items-center py-4 px-6 mb-1 card-box-shadow card-box-shadow:hover bg-white"> 
+        <a href="../partials/home/last-notes-list/process-note.php?id=<?php echo $row['id']; ?>" x-on:click="isNoteOpenedOpen = true, open = false" class="flex w-full h-auto justify-center items-center py-4 px-6 mb-1 card-box-shadow card-box-shadow:hover bg-white"> 
             <div class="flex w-fit h-fit mr-4">
                 <i class="fa fa-clipboard flex text-4xl sm:text-5xl text-blue-200"></i>
             </div>
