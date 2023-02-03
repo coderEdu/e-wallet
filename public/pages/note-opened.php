@@ -31,11 +31,11 @@ $title
         <div class="flex flex-col justify-between">
             <form action="" method="post"> <?php //action="account-validate.php" ?>
                 <div class="flex flex-col space-y-6">
-                    <input type="text" name="title" placeholder="Título de la nota" value="<?php echo $row['titulo']; ?>" class="border-2 py-2 px-2 text-right">    
+                    <input type="text" name="title" placeholder="Título de la nota" value="<?php echo $row['titulo']; ?>" readonly class="border-2 py-2 px-2 text-right">    
                 </div>
 
                 <div class="flex pt-4">
-                    <textarea class="border-2 py-2 px-2" name="note" id="" cols="32" rows="8" placeholder="Texto de la nota"><?php echo $row['nota']; ?></textarea>
+                    <textarea class="border-2 py-2 px-2" name="note" id="" cols="32" rows="8" readonly placeholder="Texto de la nota"><?php echo $row['nota']; ?></textarea>
                 </div>
                 
                 <div class="flex justify-between pt-4 items-center">
