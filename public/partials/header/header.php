@@ -2,6 +2,7 @@
 include_once "transact-validate.php";
 include_once "account-validate.php";
 include_once "note-validate.php";
+include_once "password-validate.php";
 ?>
 
 <!DOCTYPE html>
@@ -32,6 +33,7 @@ include_once "note-validate.php";
     'isNewAccOpen': false,
     'isNewNoteOpen': false,
     'isEditNoteOpen': false,
+    'isChangePasswordOpen': false,
     'isNoteOpenedOpen': <?php echo $_SESSION['open-note']; ?>
 }" class="flex flex-col body-h bg-default">
 
@@ -42,4 +44,5 @@ include_once "note-validate.php";
     <?php include_once "new-note.php"; ?>
     <?php include_once "edit-note.php"; ?>
     <?php include_once "note-opened.php"; ?>
+    <?php include_once "change-password.php"; ?>
     

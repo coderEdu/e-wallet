@@ -13,10 +13,8 @@
             <div class="relative flex flex-col px-0 py-3 space-y-8">
                 <ul class="space-y-0 text-sm text-slate-50">
                     <li><a href="close-session.php" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Cerrar sesión</a></li>
-                    <li><a href="#" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Cambiar clave</a></li>
+                    <li><a href="#" x-on:click="isChangePasswordOpen = true, open = false" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Cambiar clave</a></li>
                     <li><a href="#" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Editar perfil</a></li>
-                    <hr>
-                    <li><a href="#" class="block pl-4 hover:bg-slate-50 hover:text-black py-2">Nuevo usuario</a></li>
                 </ul>
             </div>
         </div>

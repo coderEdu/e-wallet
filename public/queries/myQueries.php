@@ -2,10 +2,18 @@
 
 class MyQueries {
 
+    // session
     public static function authLogin(PDO $conn, string $user_name, string $user_pass)
     {
         $sql = "SELECT id, usuario, clave FROM usuarios WHERE usuario = '$user_name' AND clave = '$user_pass'";
         $rows = $conn->query($sql);
+        return $rows;
+    }
+
+    public static function updatePassword(PDO $conn, string $user_name, string $user_pass)
+    {
+        $query = "UPDATE usuarios SET clave='$user_pass' WHERE usuario='$user_name'";
+        $rows = $conn->query($query);
         return $rows;
     }
     
