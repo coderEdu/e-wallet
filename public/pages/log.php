@@ -12,7 +12,6 @@ include_once "../queries/myQueries.php";
         $amount = (isset($_GET['amount'])) ? $_GET['amount'] : "";
         $account = (isset($_GET['account'])) ? $_GET['account'] : "";
         $concept = (isset($_GET['concept'])) ? $_GET['concept'] : "";
-
         $startDate = (isset($_GET['desde'])) ? $_GET['desde'] : "";
         $endDate = (isset($_GET['hasta'])) ? $_GET['hasta'] : "";
 ?>
@@ -36,7 +35,6 @@ include_once "../queries/myQueries.php";
                     </div>
                 </div>
                 <?php
-
                 if ($type=="" && $amount=="" && $account=="" && $concept=="" && $startDate=="" && $endDate=="") {
                 ?>
                     <div class="flex">
@@ -63,22 +61,22 @@ include_once "../queries/myQueries.php";
         <hr>
     </section>
  
+    <?php if (isset($movs_count)) { ?>
     <div class="container w-full md:w-[80%] mt-5 mb-12">
         <!-- all movements -->
         <div class="flex flex-col w-full space-y-3">
-            <?php        
-            foreach (MyQueries::generalQuery($conn, $id_user, $startDate, $endDate, $type, $account, $amount, $concept) as $row) {  // call the query
-                $movs_count++;  // movements counter
-            ?>    
-                <a href="#" class="flex w-full h-auto py-3 px-6 mb-0 card-box-shadow card-box-shadow:hover rounded-lg <?php echo $aColor = ($row['concepto']!='$correctivo') ? "bg-white" : "bg-sky-50"; ?>"> 
+            <?php foreach (MyQueries::generalQuery($conn, $id_user, $startDate, $endDate, $type, $account, $amount, $concept) as $row) { // call the query
+                $movs_count++; // movements counter
+                ?>    
+                <a href="#" class="flex w-full h-auto py-3 px-6 mb-0 card-box-shadow card-box-shadow:hover rounded-lg <?php echo $aColor = ($row['concepto'] != '$correctivo') ? "bg-white" : "bg-sky-50"; ?>"> 
                     <div class="flex flex-col w-full space-y-1">
                         <div class="flex w-full justify-between flex-wrap">
                             <div class="flex justify-center items-center h-fit">
                                 <?php
                                 // get account name
-                                $id_account = $row['id_cuenta'];                    
-                                foreach(MyQueries::getAccountName($conn, $id_account) as $sub_row) {
-                                ?>
+                                $id_account = $row['id_cuenta'];
+                                foreach (MyQueries::getAccountName($conn, $id_account) as $sub_row) {
+                                    ?>
                                     <?php include("../partials/activityLog/wallet-name.php"); ?>                        
                                 <?php
                                 }
@@ -90,11 +88,10 @@ include_once "../queries/myQueries.php";
                         <?php include("../partials/activityLog/tr-detail.php"); ?>                
                     </div>
                 </a>
-            <?php
-            }
-            ?>
+            <?php } ?>
         </div>
     </div>
+    <?php } ?>
 </div>
 <!-- footer -->
 <?php include "../partials/footer/footer.php"; ?>
