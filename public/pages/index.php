@@ -13,6 +13,7 @@ if ($_POST) {
         $_SESSION['logged_id']=$row['id'];
         $_SESSION['user-name']=$row['usuario'];
         $_SESSION['user-pass']=$row['clave'];
+        $_SESSION['open-note']='false';
 
         header("Location: home.php");
     }
