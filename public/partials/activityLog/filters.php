@@ -21,17 +21,16 @@
                     class="relative inline-block overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-3xl sm:my-8 sm:align-middle sm:max-w-xl sm:w-fit"
                     action=""
                 >
-                    <div class="relative flex-shrink-0 px-6 py-4 text-center border-b border-neutral-200 dark:border-neutral-800">
-                        <h3 class="text-lg font-medium leading-6 text-gray-900" id="headlessui-dialog-title-132">Filtros de búsqueda</h3>
-                        <span class="absolute left-[848px] top-3">
+                    <div class="relative flex flex-shrink-0 justify-between items-center px-6 py-4 text-center border-b border-neutral-200 dark:border-neutral-800">
+                        <h3 class="flex text-lg font-medium leading-6 text-gray-900" id="headlessui-dialog-title-132">Filtros de búsqueda</h3>
+                        <span class="flex">
                             <button
                                 x-on:click="dropdown = 'close'"
                                 type="button"
                                 class="flex items-center justify-center w-8 h-8 rounded-full text-neutral-700 dark:text-neutral-300 hover:bg-neutral-100 dark:hover:bg-neutral-700 focus:outline-none"
                                 tabindex="0"
                             >
-                                <span class="sr-only">Cerrar</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="w-5 h-5">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="w-6 h-6">
                                     <path
                                         fill-rule="evenodd"
                                         d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"

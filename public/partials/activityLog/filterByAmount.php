@@ -3,7 +3,7 @@
         <h3 class="text-base font-medium">Monto:</h3>
     </div>
     <div class="flex">
-        <button onclick="fnResetAmount()" class="bg-red-600 text-white ml-2 px-2 py-1 rounded-md">Q</button>
+        <button onclick="fnResetAmount()" class="bg-red-600 text-xs sm:text-sm text-white ml-2 px-2 py-1 rounded-md">Q</button>
     </div>
 </div>
 <div class="relative mt-6">

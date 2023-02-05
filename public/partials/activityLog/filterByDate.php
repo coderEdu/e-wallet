@@ -1,5 +1,5 @@
 <div class="flex flex-col items-start">
-    <div class="flex text-xs sm:text-base pr-2">
+    <div class="flex text-xs sm:text-base">
         <label for="desde">Desde</label>
     </div>
     <div class="flex border-1 border-gray-400 rounded-md text-slate-700 p-2">
@@ -13,7 +13,7 @@
 </div>
 
 <div class="flex flex-col items-start">
-    <div class="flex text-xs sm:text-base px-2">
+    <div class="flex text-xs sm:text-base">
         <label for="desde">Hasta</label>
     </div>
     <div class="flex border-1 border-gray-400 rounded-md text-slate-700 p-2">
