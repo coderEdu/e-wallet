@@ -1,4 +1,4 @@
-<div class="flex flex-row items-center">
+<div class="flex flex-col items-start">
     <div class="flex text-xs sm:text-base pr-2">
         <label for="desde">Desde</label>
     </div>
@@ -12,7 +12,7 @@
     </div>
 </div>
 
-<div class="flex flex-row items-center">
+<div class="flex flex-col items-start">
     <div class="flex text-xs sm:text-base px-2">
         <label for="desde">Hasta</label>
     </div>
