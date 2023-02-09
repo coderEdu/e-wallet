@@ -2,7 +2,6 @@
 session_start();
 include_once "../partials/header/header.php";
 include_once "../partials/bd/conn.php";
-include_once "colors.html";
 include_once "../classes/functions.php";
 include_once "../queries/myQueries.php";
 ?>

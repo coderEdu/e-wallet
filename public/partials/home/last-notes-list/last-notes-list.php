@@ -40,3 +40,8 @@ $notes_count=0;
     ?>
     <?php include "all-notes-list.php" ?>
 </div>
+
+<script>    
+    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+    //alert(winScroll);
+</script>
