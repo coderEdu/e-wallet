@@ -42,6 +42,7 @@ include_once "../queries/myQueries.php";
                     </div>
                 <?php
                 } else {
+                    $movs_count=0;
                     foreach (MyQueries::generalQuery($conn, $id_user, $startDate, $endDate, $type, $account, $amount, $concept) as $row) { // call the query
                         $movs_count++; // movements counter
                     }

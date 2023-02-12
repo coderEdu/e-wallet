@@ -5,7 +5,7 @@
             
             <option value=""></option>
             <?php foreach (MyQueries::getAccountsByLogged($conn,$id_user) as $row) { ?>
-                <option value="<?php echo $row['id']; ?>" <?php echo $sel = ($row['id'] == $_GET['account']) ? "selected" : "" ; ?>><?php echo $row['nombre']; ?></option>
+                <option value="<?php echo $row['id']; ?>" <?php echo $sel = (isset($_GET['account']) && $row['id'] == $_GET['account']) ? "selected" : "" ; ?>><?php echo $row['nombre']; ?></option>
             <?php } ?>
 
         </select>

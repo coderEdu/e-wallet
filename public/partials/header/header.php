@@ -42,7 +42,6 @@ include_once "password-validate.php";
     <?php include_once "new-transfer.php"; ?>
     <?php include_once "new-account.php"; ?>
     <?php include_once "new-note.php"; ?>
-    <?php include_once "edit-note.php"; ?>
     <?php include_once "note-opened.php"; ?>
     <?php include_once "change-password.php"; ?>
     

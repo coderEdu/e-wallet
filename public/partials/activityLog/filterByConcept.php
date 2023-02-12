@@ -15,7 +15,7 @@
                     id="concept"
                     name="concept"
                     placeholder="Palabra o frase"
-                    value="<?php echo $_GET['concept']; ?>"
+                    value="<?php echo (isset($_GET['concept']) ? $_GET['concept'] : ''); ?>"
                     class="p-2 border-1 border-gray-400 rounded-md text-right"
                 />        
             </div>        
