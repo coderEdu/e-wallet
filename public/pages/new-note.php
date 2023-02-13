@@ -1,7 +1,6 @@
 <?php
 include_once "../partials/bd/conn.php";
 include_once "../queries/myQueries.php";
-$title
 ?>
 <div
       class="modal"

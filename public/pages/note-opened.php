@@ -2,7 +2,6 @@
 include_once "../partials/bd/conn.php";
 include_once "../queries/myQueries.php";
 include_once "../classes/functions.php";
-$title
 ?>
 <div
       class="modal"
@@ -17,7 +16,7 @@ $title
         <div class="modal-header">
         <script> //document.write(action); </script>
         <?php foreach (MyQueries::getNoteByIdNote($conn, intval($_SESSION['id_note'])) as $row) { ?>
-            <h3><?php echo MyFx::formatDate($row['fec_crea']); ?></h3>
+            <h3><?php echo (isset($row['fec_crea'])) ? MyFx::formatDate($row['fec_crea']) : ''; ?></h3>
         <?php } ?>
             <button aria-label="Close" x-on:click="isNoteOpenedOpen = false" x-on:closed='<?php $_SESSION['id_note']='false'; ?>'>✖</button>
 
@@ -31,11 +30,11 @@ $title
         <div class="flex flex-col justify-between">
             <form action="" method="post"> <?php //action="account-validate.php" ?>
                 <div class="flex flex-col space-y-6">
-                    <input type="text" name="title" placeholder="Título de la nota" value="<?php echo $row['titulo']; ?>" readonly class="border-2 py-2 px-2 text-right">    
+                    <input type="text" name="title" placeholder="Título de la nota" value="<?php echo (isset($row['titulo'])) ? $row['titulo'] : ''; ?>" readonly class="border-2 py-2 px-2 text-right">    
                 </div>
 
                 <div class="flex pt-4">
-                    <textarea class="border-2 py-2 px-2" name="note" id="" cols="32" rows="8" readonly placeholder="Texto de la nota"><?php echo $row['nota']; ?></textarea>
+                    <textarea class="border-2 py-2 px-2" name="note" id="" cols="32" rows="8" readonly placeholder="Texto de la nota"><?php echo (isset($row['nota'])) ? $row['nota'] : ''; ?></textarea>
                 </div>
                 
                 <div class="flex justify-between pt-4 items-center">
