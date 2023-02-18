@@ -14,7 +14,7 @@
                 <i class="flex fa fa-arrow-up font-bold text-xs py-1 px-1 rounded-md text-white opacity-60" style="background-color: <?php echo ($row['concepto']!='$correctivo') ? "#E30000" : "#B6B6B6"; ?>;"></i>
         <?php } elseif ($row['tipo']=='dep') { ?>
                 <i class="flex fa fa-arrow-down font-bold text-xs py-1 px-1 rounded-md text-white opacity-50" style="background-color: <?php echo ($row['concepto']!='$correctivo') ? "#0CA002" : "#B6B6B6"; ?>;"></i>
-        <?php } else { ?>
+        <?php }  elseif ($row['tipo']=='tra') { ?>
                 <i class="flex font-bold text-xs py-1 px-1 rounded-md text-white opacity-70 bg-yellow-500 fa fa-retweet"></i>
         <?php } ?>
     </div>
