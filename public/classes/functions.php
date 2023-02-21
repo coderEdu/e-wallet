@@ -38,8 +38,23 @@ class MyFx
         $min = date('i',$tDate);
         $sec = date('s',$tDate);
         $intDate = mktime($hou,$min,$sec,$mon,$day,$yea);
-        //$fDate = date("F j, Y, g:i a",$intDate);
         $fDate = date(DateTimeInterface::RFC2822,$intDate);
+        return $fDate; 
+    }
+
+    public static function formatDateToAccount(string $date) : string
+    {
+        date_default_timezone_set('America/Argentina/San_Luis');
+        $sDate = $date;
+        $tDate = strtotime($sDate);
+        $day = date('d',$tDate);
+        $mon = date('m',$tDate);
+        $yea = date('y',$tDate);
+        $hou = date('H',$tDate);
+        $min = date('i',$tDate);
+        $sec = date('s',$tDate);
+        $intDate = mktime($hou,$min,$sec,$mon,$day,$yea);
+        $fDate = date("F j, Y",$intDate);
         return $fDate; 
     }
 

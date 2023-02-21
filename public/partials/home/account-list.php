@@ -22,30 +22,32 @@
                 <a href="#">
                     <h2 class="w-full def-f-family font-medium text-xl py-2 pr-4 mr-3 text-right text-slate-700 bg-slate-50 rounded-r-xl"><i class="fa fa-dollar-sign pr-1"></i><?php echo $fila['saldo']; ?></i></h2>
                 </a>
-                <div class="flex pt-1 content-center items-start">
-                    <div>
-                        <span class="font-light text-sm font-serif text-zinc-500"><?php echo MyFx::formatDate($fila['fec_crea']); ?></span>
+                <div class="flex w-full justify-between items-center">
+                    <div class="flex w-full">
+                        <div>
+                            <span class="font-light text-sm font-serif text-zinc-500"><?php echo MyFx::formatDateToAccount($fila['fec_crea']); ?></span>
+                        </div>
                     </div>
-                </div>
-                <div class="flex w-full py-1">
-                    <div class="flex w-full justify-between">
-                        <div class="flex">
-                            <span class="font-bold text-sm mr-1 text-green-700"><i class="fa fa-arrow-down"></i></span>
-                            <?php foreach($ext=MyQueries::getTotMovsByType($conn,'dep',$id,$fila['id']) as $row) { ?>
-                            <span class="text-sm text-zinc-500"><?php echo $row['total']; ?></span>
-                            <?php } ?>
-                        </div>
-                        <div class="flex">
-                            <span class="font-bold text-sm mr-1 text-red-700"><i class="fa fa-arrow-up"></i></span>
-                            <?php foreach($ext=MyQueries::getTotMovsByType($conn,'ext',$id,$fila['id']) as $row) { ?>
-                            <span class="text-sm text-zinc-500"><?php echo $row['total']; ?></span>
-                            <?php } ?>
-                        </div>
-                        <div class="flex">                
-                            <span class="font-bold text-sm mr-1 text-yellow-500"><i class="fa fa-retweet"></i></span>
-                            <?php foreach($ext=MyQueries::getTotMovsByType($conn,'tra',$id,$fila['id']) as $row) { ?>
-                            <span class="text-sm text-zinc-500"><?php echo $row['total']; ?></span>
-                            <?php } ?>
+                    <div class="flex w-full">
+                        <div class="flex w-full justify-between items-center">
+                            <div class="flex">
+                                <span class="font-bold text-sm mr-1 text-green-700"><i class="fa fa-arrow-down"></i></span>
+                                <?php foreach($ext=MyQueries::getTotMovsByType($conn,'dep',$id,$fila['id']) as $row) { ?>
+                                <span class="text-sm text-zinc-500"><?php echo $row['total']; ?></span>
+                                <?php } ?>
+                            </div>
+                            <div class="flex">
+                                <span class="font-bold text-sm mr-1 text-red-700"><i class="fa fa-arrow-up"></i></span>
+                                <?php foreach($ext=MyQueries::getTotMovsByType($conn,'ext',$id,$fila['id']) as $row) { ?>
+                                <span class="text-sm text-zinc-500"><?php echo $row['total']; ?></span>
+                                <?php } ?>
+                            </div>
+                            <div class="flex">                
+                                <span class="font-bold text-sm mr-1 text-yellow-500"><i class="fa fa-retweet"></i></span>
+                                <?php foreach($ext=MyQueries::getTotMovsByType($conn,'tra',$id,$fila['id']) as $row) { ?>
+                                <span class="text-sm text-zinc-500"><?php echo $row['total']; ?></span>
+                                <?php } ?>
+                            </div>
                         </div>
                     </div>
                 </div>
