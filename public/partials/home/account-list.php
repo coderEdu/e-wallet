@@ -11,9 +11,9 @@
         <div class="flex w-11/12 h-fit sm:w-[48.05%] md:w-[48.35%] lg:w-[32.1%] xl:w-[23.7%] 2xl:w-[24.1%] m-1.5 py-3 px-4 rounded-xl rounded-tr-3xl card-box-shadow card-box-shadow:hover bg-white"> <!-- begin card -->
             <div class="flex flex-col w-full space-y-1.5">
                 
-                <div class="relative flex justify-between items-end py-1">
+                <div class="relative flex justify-between items-end">
                     <div class="flex">
-                        <p class="font-serif mb-1 text-lg text-zinc-800"><?php echo strtoupper($fila[('nombre')]); ?></p>
+                        <p class="font-serif text-lg text-zinc-800"><?php echo strtoupper($fila[('nombre')]); ?></p>
                     </div>
                     <!-- a circle with a wallet icon inside it -->   
                     <i class="absolute -top-6 -right-8 border-4 fa fa-wallet text-[1.3rem] xl:text-[1.4rem] mx-auto p-2.5 rounded-full border-white" style="color: #FFFFFF; background-color: <?php echo MyFx::colorBalance(floatval($fila['saldo'])) ?> ;"></i>
