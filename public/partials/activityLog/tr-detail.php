@@ -1,5 +1,5 @@
 <div class="flex flex-col w-full xl:flex-row py-2 px-2 space-y-2 sm:space-y-0 rounded-md box-decoration-slice justify-between">
-    <div class="flex p-2 w-fit xl:max-w-[75%] bg-gray-50 rounded-r-xl">
+    <div class="flex p-2 w-fit xl:max-w-[85%] bg-gray-50 rounded-r-xl">
         <span class="text-zinc-600 sm:pr-3"><?php echo $row['concepto']; ?></span>
     </div>
     <div class="flex justify-end">
