@@ -116,9 +116,9 @@ class MyQueries {
         return $rows;
     }
 
-    public static function newTInsertQuery(PDO $conn, string $tipo, float $monto, string $concepto, int $id_user, int $id_account) : int
+    public static function newTInsertQuery(PDO $conn, string $tipo, float $monto, float $saldoCue, string $concepto, int $id_user, int $id_account) : int
     { 
-        $sql = $conn->exec("INSERT INTO movimientos (tipo,monto,concepto,id_usuario,id_cuenta) VALUES ('$tipo','$monto','$concepto','$id_user','$id_account')");
+        $sql = $conn->exec("INSERT INTO movimientos (tipo,monto,saldoCuenta,concepto,id_usuario,id_cuenta) VALUES ('$tipo','$monto','$saldoCue','$concepto','$id_user','$id_account')");
         return $sql;
     }
 

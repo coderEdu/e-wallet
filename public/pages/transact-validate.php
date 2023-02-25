@@ -14,10 +14,10 @@ if (isset($_POST['deposit'])) {
         $tipo = "dep";
     
         foreach (MyQueries::getAccountById($conn,$id_account) as $row) {
-            $balance = $row['saldo'];
+            $balance = floatval( $row['saldo'] );
         }
 
-        if ( MyQueries::newTInsertQuery($conn,$tipo,$amount,$concept,$id_user,$id_account) == 1 ) {
+        if ( MyQueries::newTInsertQuery($conn,$tipo,$amount,$balance,$concept,$id_user,$id_account) == 1 ) {
             $balance += $amount;
             MyQueries::updateBalanceByTrans($conn,$balance,$id_user,$id_account);
             echo "<script> alert('Transacción exitosa!'); </script>";
@@ -39,11 +39,11 @@ if (isset($_POST['withdraw'])) {
         //var_dump($_POST);
     
         foreach (MyQueries::getAccountById($conn,$id_account) as $row) {
-            $balance = $row['saldo'];
+            $balance = floatval( $row['saldo'] );
         }
     
         if (floatval( $balance ) >= $amount) {
-            if ( MyQueries::newTInsertQuery($conn,$tipo,$amount,$concept,$id_user,$id_account) == 1 ) {
+            if ( MyQueries::newTInsertQuery($conn,$tipo,$amount, $balance,$concept,$id_user,$id_account) == 1 ) {
                 $balance -= $amount;
                 MyQueries::updateBalanceByTrans($conn,$balance,$id_user,$id_account);
                 echo "<script> alert('Transacción exitosa!'); </script>";
@@ -72,18 +72,18 @@ if (isset($_POST['transfer'])) {
         // get name and balance of account1
         foreach (MyQueries::getAccountById($conn,$id_account1) as $row) {
             $origin_name = strtoupper( $row['nombre'] );
-            $origin_balance = $row['saldo'];
+            $origin_balance = floatval( $row['saldo'] );
         }
 
         foreach (MyQueries::getAccountById($conn,$id_account2) as $row) {
             $destination_name = strtoupper( $row['nombre'] );
-            $destination_balance = $row['saldo'];
+            $destination_balance = floatval( $row['saldo'] );
         }
     
         if (floatval( $origin_balance ) >= $amount) {
             $concept = "Transferencia exitosa!. (" . $destination_name . ") => " . $concept; 
             $concept2 = "Transferencia recibida. (" . $origin_name . ")";
-            if ( MyQueries::newTInsertQuery($conn,$tipo,$amount,$concept,$id_user,$id_account1) == 1 && ( MyQueries::newTInsertQuery($conn,$tipo2,$amount,$concept2,$id_user,$id_account2) == 1 ) ) {
+            if ( MyQueries::newTInsertQuery($conn,$tipo,$amount,$origin_balance,$concept,$id_user,$id_account1) == 1 && ( MyQueries::newTInsertQuery($conn,$tipo2,$amount,$destination_balance,$concept2,$id_user,$id_account2) == 1 ) ) {
                 // updating account1 balance
                 $origin_balance -= $amount;
                 MyQueries::updateBalanceByTrans($conn,$origin_balance,$id_user,$id_account1);
