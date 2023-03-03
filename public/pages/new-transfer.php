@@ -31,8 +31,8 @@ include_once "../queries/myQueries.php";
                     />
                    
                     <div class="flex justify-between items-center">
-                        <label for="account1" class="flex w-[40%] pr-2 font-sans font-normal text-base text-gray-500">De la cuenta:</label>
-                        <select id="account1" class="flex w-full py-2" name="account1"> <!-- working here -->
+                        <label for="account1" class="flex w-full pr-2 font-sans font-normal text-base text-gray-500">De la cuenta:</label>
+                        <select id="account1" class="flex py-2" name="account1"> <!-- working here -->
                             <?php $id_user = $_SESSION['logged_id']; ?>
                             
                             <?php foreach (MyQueries::getAccountsByLogged($conn,$id_user) as $row) { ?>
@@ -42,8 +42,8 @@ include_once "../queries/myQueries.php";
                     </div>
 
                     <div class="flex justify-between items-center">
-                        <label for="account2" class="flex w-[40%] pr-2 font-sans font-normal text-base text-gray-500">A la cuenta:</label>
-                        <select id="account2" class="flex w-full py-2" name="account2"> <!-- working here -->
+                        <label for="account2" class="flex w-full pr-2 font-sans font-normal text-base text-gray-500">A la cuenta:</label>
+                        <select id="account2" class="flex py-2" name="account2"> <!-- working here -->
                             <?php $id_user = $_SESSION['logged_id']; ?>
                             
                             <?php foreach (MyQueries::getAccountsByLogged($conn,$id_user) as $row) { ?>
