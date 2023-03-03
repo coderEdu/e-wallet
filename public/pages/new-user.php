@@ -12,18 +12,18 @@ include_once "../queries/myQueries.php";
       x-transition
 >
     <div class="model-inner">
-        <div class="modal-header">
-            <h3>Creando una cuenta</h3>
+        <div class="modal-header space-x-5">
+            <h3>Creando un nuevo usuario</h3>
             <button aria-label="Close" x-on:click="isNewUserOpen = false">✖</button>
         </div>
-        <div class="flex flex-col justify-between">
+        <div class="flex flex-col pt-5 justify-between">
             <form action="" method="post"> <?php //action="account-validate.php" ?>
                 <div class="flex flex-col space-y-6">
-                    <input type="text" name="nombre" placeholder="Ingrese un nombre" autofocus required class="border-2 py-2 px-2 text-right">
+                    <input type="text" name="nombre" placeholder="Ingrese nombre-usuario" autofocus required class="border-2 py-2 px-2 text-right">
                     <input
                         type="text"
                         name="monto"
-                        placeholder="Ingrese monto en pesos"
+                        placeholder="Ingrese contraseña"
                         autofocus
                         oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
                         class="border-2 py-2 px-2 text-right"
