@@ -20,6 +20,14 @@ include_once "../queries/myQueries.php";
         <div class="flex flex-col justify-between">
             <form action="" method="post"> <?php //action="transact-validate.php" ?>
                 <div class="flex flex-col space-y-6">
+
+                    <!-- withdraw date -->
+                    <input type="date" name="wDate" id="wDate" class="border-2 py-2 px-2 text-right">
+
+                    <!-- withdraw time -->
+                    <input type="time" name="wTime" id="wTime" class="border-2 py-2 px-2 text-right">
+
+                    <!-- withdraw amount -->
                     <input
                         type="text"
                         name="monto"
@@ -28,8 +36,8 @@ include_once "../queries/myQueries.php";
                         required
                         oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
                         class="border-2 py-2 px-2 text-right"
-                    />
-                   
+                    />     
+
                     <div class="flex justify-between items-center">
                         <label for="account" class="flex w-full pr-2 font-sans font-normal text-base text-gray-500">De la cuenta:</label>
                         <select id="account" class="flex py-2" name="account"> <!-- working here -->

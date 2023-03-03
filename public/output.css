@@ -766,10 +766,6 @@ video {
   width: 150px;
 }
 
-.w-\[40\%\] {
-  width: 40%;
-}
-
 .w-\[50\%\] {
   width: 50%;
 }
@@ -789,10 +785,6 @@ video {
 
 .w-screen {
   width: 100vw;
-}
-
-.w-\[45\%\] {
-  width: 45%;
 }
 
 .max-w-sm {

@@ -29,7 +29,10 @@ if (isset($_POST['deposit'])) {
 
 // logic for a new withdraw
 if (isset($_POST['withdraw'])) {    
-    if (isset($_POST['monto']) && isset($_POST['textarea']) && isset($_POST['account'])) {
+    if (isset($_POST['wDate']) && isset($_POST['wTime']) && isset($_POST['monto']) && isset($_POST['textarea']) && isset($_POST['account'])) {
+        $wDate = $_POST['wDate'];   // withdraw date
+        $wTime = $_POST['wTime'];   // withdraw time
+        $wDateTime = $wDate . " " . $wTime . ":00";
         $amount = floatval( $_POST['monto'] );
         $concept = $_POST['textarea'];
         $id_account = $_POST['account'];
@@ -37,13 +40,18 @@ if (isset($_POST['withdraw'])) {
         $tipo = "ext";
         
         //var_dump($_POST);
+        //var_dump($wDateTime);
+        //var_dump($wDate);
     
         foreach (MyQueries::getAccountById($conn,$id_account) as $row) {
             $balance = floatval( $row['saldo'] );
         }
+
+        // select query based on $wDate value
+        $q = ($wDate != '') ? MyQueries::newWDrawInsertQuery($conn,$wDateTime,$tipo,$amount,$balance,$concept,$id_user,$id_account) : MyQueries::newTInsertQuery($conn,$tipo,$amount,$balance,$concept,$id_user,$id_account);
     
         if (floatval( $balance ) >= $amount) {
-            if ( MyQueries::newTInsertQuery($conn,$tipo,$amount, $balance,$concept,$id_user,$id_account) == 1 ) {
+            if ( $q == 1 ) {
                 $balance -= $amount;
                 MyQueries::updateBalanceByTrans($conn,$balance,$id_user,$id_account);
                 echo "<script> alert('Transacción exitosa!'); </script>";
@@ -52,8 +60,8 @@ if (isset($_POST['withdraw'])) {
             }
         } else {
             echo "<script> alert('Error: No dispone de saldo suficiente para efectuar la transacción.'); </script>";
-        }
-    }
+        }  
+    } 
 }
 
 // logic for a new transfer
