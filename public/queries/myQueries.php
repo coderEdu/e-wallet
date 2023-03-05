@@ -10,6 +10,13 @@ class MyQueries {
         return $rows;
     }
 
+    // users
+    public static function createUser(PDO $conn, string $nUser, string $nPass)
+    {
+        $sql = $conn->exec("INSERT INTO usuarios (usuario,clave) VALUES ('$nUser','$nPass')");
+        return $sql;
+    }
+
     public static function updatePassword(PDO $conn, string $user_name, string $user_pass)
     {
         $query = "UPDATE usuarios SET clave='$user_pass' WHERE usuario='$user_name'";

@@ -17,15 +17,14 @@ include_once "../queries/myQueries.php";
             <button aria-label="Close" x-on:click="isNewUserOpen = false">✖</button>
         </div>
         <div class="flex flex-col pt-5 justify-between">
-            <form action="" method="post"> <?php //action="account-validate.php" ?>
+            <form action="" method="post"> <?php //action="nUser-validate.php" ?>
                 <div class="flex flex-col space-y-6">
-                    <input type="text" name="nombre" placeholder="Ingrese nombre-usuario" autofocus required class="border-2 py-2 px-2 text-right">
+                    <input type="text" name="nombre" placeholder="Usuario" autofocus required class="border-2 py-2 px-2 text-right">
                     <input
-                        type="text"
-                        name="monto"
-                        placeholder="Ingrese contraseña"
+                        type="password"
+                        name="contra"
+                        placeholder="Contraseña"
                         autofocus
-                        oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/(\..*)\./g, '$1');"
                         class="border-2 py-2 px-2 text-right"
                     >     
                 </div>
@@ -35,7 +34,7 @@ include_once "../queries/myQueries.php";
                 </div>
 
                 <div class="flex pt-4">
-                    <input type="hidden" name="create">
+                    <input type="hidden" name="nUser">
                 </div>
             </form>
         </div>

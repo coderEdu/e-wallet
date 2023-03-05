@@ -1,12 +1,13 @@
 <?php
 session_start();
+include_once "../partials/bd/conn.php";
+include_once "../queries/myQueries.php";
+include_once "nUser-validate.php";
 
-if ($_POST) {
+if (isset($_POST['user_name']) && isset($_POST['user_pass'])) {
   $user_name = $_POST['user_name'];
   $user_pass = $_POST['user_pass'];
 
-  include_once "../partials/bd/conn.php";
-  include_once "../queries/myQueries.php";
 
   foreach (MyQueries::authLogin($conn, $user_name, $user_pass) as $row) {
     if ($row) {
@@ -46,10 +47,10 @@ if ($_POST) {
     <?php include_once "new-user.php"; ?>
     <div class="flex items-center content-center w-screen min-h-screen">
         <!-- Content here -->    
-        <div class="flex text-sm sm:text-xs w-[80%] sm:w-80 text-center mx-auto h-1/2 bg-white rounded-2xl opacity-90">
+        <div class="flex text-sm sm:text-xs w-[80%] sm:w-80 text-center mx-auto h-1/2 bg-white rounded-2xl opacity-100">
             <!-- login form -->            
             <form action="index.php" method="post" class="p-8 space-y-4 mx-auto">
-                <p class="flex text-xl justify-center py-2 mb-3 rounded-xl text-neutral-900 bg-neutral-100">Inicio de sesión</p>
+                <p class="flex text-xl justify-center py-2 mb-3 rounded-xl text-neutral-900 bg-zinc-50">Inicio de sesión</p>
                 <input type="text" class="bg-slate-100 py-2 px-2 border-2 sm:text-sm text-center border-orange-300 rounded-xl w-full" id="usuario" placeholder="Ingresa tu usuario" name="user_name">
                 <input type="password" class="bg-slate-100 py-1 px-2 border-2 sm:text-base text-center border-orange-300 rounded-xl w-full" id="contra" placeholder="Ingresa tu contraseña" name="user_pass">
                 
