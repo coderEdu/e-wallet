@@ -58,7 +58,7 @@ class MyFx
         return $fDate; 
     }
 
-    static function getBalance(PDO $conn, int $id_user, int $id_account )
+    public static function getBalance(PDO $conn, int $id_user, int $id_account )
     {
         $dep = 0;
         foreach(MyQueries::getMovsSumByType($conn,"dep",$id_user,$id_account) as $sumRow) {
@@ -78,6 +78,13 @@ class MyFx
         $balance = $dep - $ext - $tra;
         
         return $balance;
+    }
+
+    public static function randomSeconds():string {
+        $r = rand(0,59);
+        if ($r < 10)
+            $r = "0".$r;
+        return $r;
     }
 }
 ?>

@@ -129,7 +129,7 @@ class MyQueries {
         return $sql;
     }
 
-    public static function newWDrawInsertQuery(PDO $conn, string $fecha, string $tipo, float $monto, float $saldoCue, string $concepto, int $id_user, int $id_account) : int
+    public static function newTDInsertQuery(PDO $conn, string $fecha, string $tipo, float $monto, float $saldoCue, string $concepto, int $id_user, int $id_account) : int
     { 
         $sql = $conn->exec("INSERT INTO movimientos (fecha,tipo,monto,saldoCuenta,concepto,id_usuario,id_cuenta) VALUES ('$fecha','$tipo','$monto','$saldoCue','$concepto','$id_user','$id_account')");
         return $sql;
