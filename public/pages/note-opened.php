@@ -13,17 +13,12 @@ include_once "../classes/functions.php";
       x-transition
 >
     <div class="model-inner">
-        <div class="modal-header">
+        <div class="flex justify-between items-center pb-4">
         <script> //document.write(action); </script>
         <?php foreach (MyQueries::getNoteByIdNote($conn, intval($_SESSION['id_note'])) as $row) { ?>
             <h3><?php echo (isset($row['fec_crea'])) ? MyFx::formatDate($row['fec_crea']) : ''; ?></h3>
         <?php } ?>
             <button aria-label="Close" x-on:click="isNoteOpenedOpen = false" x-on:closed='<?php $_SESSION['id_note']='false'; ?>'>✖</button>
-
-            <?php
-            //var_dump($GLOBALS[ $id_note ]);
-            ?>
-
         </div>
         <?php foreach (MyQueries::getNoteByIdNote($conn,intval( $_SESSION['id_note']) ) as $row) { ?>
         <?php } ?>
@@ -34,7 +29,7 @@ include_once "../classes/functions.php";
                 </div>
 
                 <div class="flex pt-4">
-                    <textarea class="border-2 py-2 px-2" name="note" id="" cols="32" rows="8" readonly placeholder="Texto de la nota"><?php echo (isset($row['nota'])) ? $row['nota'] : ''; ?></textarea>
+                    <textarea class="border-2 py-2 px-2" name="note" id="" cols="34" rows="8" readonly placeholder="Texto de la nota"><?php echo (isset($row['nota'])) ? $row['nota'] : ''; ?></textarea>
                 </div>
                 
                 <div class="flex justify-between pt-4 items-center">
