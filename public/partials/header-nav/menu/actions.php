@@ -12,7 +12,7 @@
         <div class="overflow-hidden bg-white border shadow-xl rounded-lg border-neutral-200">
             <div class="relative w-full flex flex-col px-0 py-3 space-y-8">
                 <ul class="space-y-0 text-sm">
-                    <?php if ( $_SESSION['activate_menus_dep_ext'] ) { ?>
+                    <?php if ( $_SESSION['activate_menus'] ) { ?>
                         <li><a x-on:click="isNewDepOpen = true, open = false" href="#" class="block pl-4 hover:bg-zinc-100 py-2 text-slate-900">Depositar</a></li>
                         <li><a x-on:click="isNewExtOpen = true, open = false" href="#" class="block pl-4 hover:bg-zinc-100 py-2 text-slate-900">Extraer</a></li>
                     <?php } else { ?>

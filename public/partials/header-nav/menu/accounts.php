@@ -11,10 +11,15 @@
     <div  x-show="open" x-transition class="absolute left-0 z-10 w-full max-w-sm pt-3 px-0 mt-0 sm:px-0" id="headlessui-popover-panel-21">
         <div class="overflow-hidden bg-white border shadow-xl rounded-lg border-neutral-200">
             <div class="relative w-full flex flex-col px-0 py-3 space-y-8">
-                <ul class="space-y-0 text-sm text-slate-900">
-                    <li><a href="#" x-on:click="isNewAccOpen = true, open = false" class="block pl-4 hover:bg-zinc-100 py-2">Crear</a></li>
-                    <li><a href="#" class="block pl-4 hover:bg-zinc-100 py-2">Editar</a></li>
-                    <li><a href="#" class="block pl-4 hover:bg-zinc-100 py-2">Eliminar</a></li>
+                <ul class="space-y-0 text-sm">
+                    <li><a href="#" x-on:click="isNewAccOpen = true, open = false" class="block pl-4 hover:bg-zinc-100 py-2 text-slate-900">Crear</a></li>
+                    <?php if ( $_SESSION['activate_menus'] ) { ?>
+                        <li><a href="#" class="block pl-4 hover:bg-zinc-100 py-2 text-slate-900">Editar</a></li>
+                        <li><a href="#" class="block pl-4 hover:bg-zinc-100 py-2 text-slate-900">Eliminar</a></li>
+                    <?php } else { ?>
+                        <li class="block pl-4 hover:bg-zinc-100 py-2 text-gray-300">Editar</li>
+                        <li class="block pl-4 hover:bg-zinc-100 py-2 text-gray-300">Eliminar</li>
+                    <?php } ?>                    
                 </ul>
             </div>
         </div>

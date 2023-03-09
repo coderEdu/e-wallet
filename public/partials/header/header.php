@@ -5,28 +5,7 @@ include_once "transact-validate.php";
 include_once "account-validate.php";
 include_once "note-validate.php";
 include_once "password-validate.php";
-
-$_SESSION['activate_menu_transfer']=false;
-$_SESSION['activate_menus_dep_ext']=false;
-$_SESSION['activate_menu_reg']=false;
-$user = $_SESSION['logged_id'];
-$accCounter=0;
-$movCounter=0;
-
-foreach(MyQueries::getAccountsByLogged($conn, $user) as $fila) { $accCounter++; }
-foreach(MyQueries::getLastMovs($conn, $user) as $fila) { $movCounter++; }
-
-if ($accCounter > 1) {
-    $_SESSION['activate_menu_transfer']=true;
-    $_SESSION['activate_menus_dep_ext']=true;
-} elseif ($accCounter > 0) {
-    $_SESSION['activate_menus_dep_ext']=true;
-} else {
-    $_SESSION['activate_menu_transfer']=false;
-    $_SESSION['activate_menus_dep_ext']=false;
-}
-
-($_SESSION['activate_menus_dep_ext'] && $movCounter > 0) ? $_SESSION['activate_menu_reg']=true : $_SESSION['activate_menu_reg']=false;
+include_once "activate-menus.php";
 ?>
 
 <!DOCTYPE html>
