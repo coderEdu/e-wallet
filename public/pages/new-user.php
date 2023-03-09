@@ -12,7 +12,7 @@ include_once "../queries/myQueries.php";
       x-transition
 >
     <div class="model-inner">
-        <div class="modal-header space-x-5">
+        <div class="modal-header space-x-11">
             <h3>Creando un nuevo usuario</h3>
             <button aria-label="Close" x-on:click="isNewUserOpen = false">✖</button>
         </div>

@@ -13,7 +13,7 @@ include_once "../classes/functions.php";
       x-transition
 >
     <div class="model-inner">
-        <div class="flex justify-between items-center pb-4">
+        <div class="modal-header">
         <script> //document.write(action); </script>
         <?php foreach (MyQueries::getNoteByIdNote($conn, intval($_SESSION['id_note'])) as $row) { ?>
             <h3><?php echo (isset($row['fec_crea'])) ? MyFx::formatDate($row['fec_crea']) : ''; ?></h3>

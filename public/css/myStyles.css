@@ -59,6 +59,8 @@
     align-items: center;
     justify-content: space-between;
     border-bottom: 2px solid black;
+    padding-left: 0px;
+    padding-right: 0px;
     margin-bottom: 24px;
 }     
 .overlay {
