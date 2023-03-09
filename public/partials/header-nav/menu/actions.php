@@ -26,11 +26,10 @@
                         <li class="block pl-4 hover:bg-zinc-100 py-2 text-gray-300">Transferir</li>
                     <?php } ?>
 
+                    <hr>
                     <?php if ( $_SESSION['activate_menu_reg'] ) { ?>
-                        <hr>
                         <li><a href="log.php" class="block pl-4 hover:bg-zinc-100 py-2 text-slate-900">Registro</a></li>         
                     <?php } else { ?>
-                        <hr>
                         <li class="block pl-4 hover:bg-zinc-100 py-2 text-gray-300">Registro</li>
                     <?php } ?>
                 </ul>
