@@ -13,8 +13,10 @@ include_once "../queries/myQueries.php";
 >
     <div class="model-inner">
         <div class="modal-header">
-        <script> //document.write(action); </script>
-            <h3>Realizar una extracción</h3>
+            <div class="flex space-x-2">
+                <i class="flex fa fa-arrow-up font-bold text-xs py-1 px-1 rounded-md text-white" style="background-color: <?php echo "#E30000" ?>;"></i>
+                <h3>Extracción</h3>
+            </div>
             <button aria-label="Close" x-on:click="isNewExtOpen = false">✖</button>
         </div>
         <div class="flex flex-col justify-between">

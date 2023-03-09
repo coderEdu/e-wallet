@@ -13,8 +13,10 @@ include_once "../queries/myQueries.php";
 >
     <div class="model-inner">
         <div class="modal-header">
-        <script> //document.write(action); </script>
-            <h3>Realizar un depósito</h3>
+            <div class="flex space-x-2">
+                <i class="flex fa fa-arrow-down font-bold text-xs py-1 px-1 rounded-md text-white" style="background-color: <?php echo "#0CA002" ?>;"></i>
+                <h3>Depósito</h3>
+            </div>
             <button aria-label="Close" x-on:click="isNewDepOpen = false">✖</button>
         </div>
         <div class="flex flex-col justify-between">

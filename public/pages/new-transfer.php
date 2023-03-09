@@ -13,8 +13,10 @@ include_once "../queries/myQueries.php";
 >
     <div class="model-inner">
         <div class="modal-header">
-        <script> //document.write(action); </script>
-            <h3>Realizar una transferencia</h3>
+            <div class="flex space-x-2">
+            <i class="flex font-bold text-xs py-1 px-1 rounded-md text-white bg-yellow-500 fa fa-retweet"></i>
+                <h3>Transferencia</h3>
+            </div>
             <button aria-label="Close" x-on:click="isNewTraOpen = false">✖</button>
         </div>
         <div class="flex flex-col justify-between">
@@ -63,7 +65,7 @@ include_once "../queries/myQueries.php";
 
                 </div>
                 <div class="flex pt-4">
-                    <textarea class="border-2 py-2 px-2" name="textarea" id="" cols="32" rows="5" placeholder="En concepto de ..."></textarea>
+                    <textarea class="border-2 py-2 px-2" name="textarea" id="" cols="34" rows="5" placeholder="En concepto de ..."></textarea>
                 </div>
                 <div class="flex pt-4">
                     <button x-on:click="isNewTraOpen = false" type="submit" class="border-2 border-blue-500 bg-blue-800 text-white py-1 px-2">Transferir</button>
