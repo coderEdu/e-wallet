@@ -66,11 +66,15 @@
                             </div>
 
                             <div class="py-3"> <!-- third - monto -->
+
                                 <?php include("filterByAmount.php"); ?>
+
                             </div>
 
                             <div class="py-3"> <!-- concepto -->
+
                                 <?php include("filterByConcept.php"); ?>
+
                             </div>
 
                             <div class="py-3"> <!-- sixth -->
@@ -78,8 +82,8 @@
                                 <div class="relative mt-6">
                                     <div class="flex flex-row gap-8">
 
-                                        <?php include("filterByAccount.php"); ?>
-                                                                        
+                                        <?php include("filterByAccount.php"); ?>    
+                                                                                                            
                                     </div>
                                 </div>
                             </div>
