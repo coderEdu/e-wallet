@@ -5,7 +5,7 @@ $movs_count=0;
 <!-- last movements -->
 <div class="flex flex-col w-11/12 h-fit sm:w-[47.2%] md:w-[47.5%] lg:w-[48.1%] xl:w-[48.2%] 2xl:w-[48.3%] m-2 rounded-2xl mov-card-b-shadow bg-white">
     <div class="flex flex-row w-full ml-4 justify-center items-center">
-        <span class="flex "><i class="fa fa-money text-xl text-lime-700 bg-slate-200"></i></span>
+        <span class="flex "><i class="fa fa-dollar-sign text-xl text-lime-700 bg-slate-200"></i></span>
         <h1 class="flex def-f-family text-base w-full mx-auto content-start px-3 py-3 text-slate-800">Tus últimos movimientos</h1>
     </div>
     <div class="flex w-full h-0.5 border-b-2 border-gray-200"></div>
