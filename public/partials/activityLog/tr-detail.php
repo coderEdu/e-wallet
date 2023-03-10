@@ -1,9 +1,25 @@
-<div class="flex flex-col w-full xl:flex-row py-2 px-2 space-y-2 sm:space-y-0 rounded-md box-decoration-slice justify-between">
-    <div class="flex p-2 w-fit 2xl:max-w-[80%] bg-gray-50 rounded-r-xl">
+<div class="flex flex-col w-full py-2 px-2 space-y-2 rounded-md box-decoration-slice justify-between">
+    <div class="flex p-2 w-fit 2xl:max-w-full bg-white rounded-r-xl">
         <span class="text-zinc-600 sm:pr-3"><?php echo $row['concepto']; ?></span>
     </div>
-    <div class="flex justify-end">
-        <div class="flex flex-row pt-1 justify-end items-center space-x-2">
+    <div class="flex justify-between items-end">
+
+        <div class="flex flex-row pt-1 justify-center items-center space-x-2">
+            <div class="flex">
+                <h2 class="def-f-family font-medium text-lg text-end sm:text-xl" style="color: <?php echo ($row['concepto']!='$correctivo') ? "#212F3D" : "#B6B6B6"; ?>;">
+                    <i class="fa fa-dollar-sign text-neutral-400 text-base pr-1"></i>
+                    <span class="def-f-family font-medium text-neutral-400 text-lg">
+                        <?php echo ($row['saldoCuenta']=='0.00') ? "- -" : $row['saldoCuenta']; ?>
+                        <?php //var_dump($row['saldoCuenta']); ?>
+                    </span>      
+                </h2>
+            </div>
+            <div class="flex">
+                <img src="https://icons.iconarchive.com/icons/saki/nuoveXT-2/128/Actions-blue-arrow-undo-icon.png" width="20" height="20">
+            </div>  
+        </div>
+
+        <div class="flex flex-row pt-1 justify-center items-center space-x-2">
             <div class="flex">
                 <h2 class="def-f-family font-medium text-lg text-end sm:text-xl" style="color: <?php echo ($row['concepto']!='$correctivo') ? "#212F3D" : "#B6B6B6"; ?>;">
                     <?php if ($row['tipo']=='rec') { ?>

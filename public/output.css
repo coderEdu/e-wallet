@@ -1489,6 +1489,11 @@ video {
   color: rgb(39 39 42 / var(--tw-text-opacity));
 }
 
+.text-neutral-400 {
+  --tw-text-opacity: 1;
+  color: rgb(163 163 163 / var(--tw-text-opacity));
+}
+
 .opacity-100 {
   opacity: 1;
 }
@@ -1841,5 +1846,9 @@ video {
 
   .\32xl\:max-w-\[80\%\] {
     max-width: 80%;
+  }
+
+  .\32xl\:max-w-full {
+    max-width: 100%;
   }
 }
