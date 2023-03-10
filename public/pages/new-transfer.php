@@ -24,7 +24,7 @@ include_once "../queries/myQueries.php";
                 <div class="flex flex-col space-y-6">
 
                     <!-- transfer date -->
-                    <input type="date" name="tDate" id="tDate" class="border-2 py-2 px-2 text-right">
+                    <input type="date" max="<?php echo date("Y-m-d"); ?>" name="tDate" id="tDate" class="border-2 py-2 px-2 text-right">
 
                     <!-- transfer time -->
                     <input type="time" name="tTime" id="tTime" class="border-2 py-2 px-2 text-right">

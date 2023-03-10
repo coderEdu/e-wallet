@@ -24,7 +24,7 @@ include_once "../queries/myQueries.php";
                 <div class="flex flex-col space-y-6">
 
                     <!-- withdraw date -->
-                    <input type="date" name="wDate" id="wDate" class="border-2 py-2 px-2 text-right">
+                    <input type="date" max="<?php echo date("Y-m-d"); ?>" name="wDate" id="wDate" class="border-2 py-2 px-2 text-right">
 
                     <!-- withdraw time -->
                     <input type="time" name="wTime" id="wTime" class="border-2 py-2 px-2 text-right">

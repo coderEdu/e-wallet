@@ -22,9 +22,9 @@ include_once "../queries/myQueries.php";
         <div class="flex flex-col justify-between">
             <form action="" method="post"> <?php //action="transact-validate.php" ?>
                 <div class="flex flex-col space-y-6">
-                    
+
                     <!-- withdraw date -->
-                    <input type="date" name="dDate" id="dDate" class="border-2 py-2 px-2 text-right">
+                    <input type="date" max="<?php echo date("Y-m-d"); ?>" name="dDate" id="dDate" class="border-2 py-2 px-2 text-right">
 
                     <!-- withdraw time -->
                     <input type="time" name="dTime" id="dTime" class="border-2 py-2 px-2 text-right">
