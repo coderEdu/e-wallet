@@ -17,7 +17,7 @@ include_once "../queries/myQueries.php";
             <i class="flex font-bold text-xs py-1 px-1 rounded-md text-white bg-yellow-500 fa fa-retweet"></i>
                 <h3>Transferencia</h3>
             </div>
-            <button aria-label="Close" x-on:click="isNewTraOpen = false">✖</button>
+            <button aria-label="Close" x-on:click="isNewTraOpen = false, seeWallets = true">✖</button>
         </div>
         <div class="flex flex-col justify-between">
             <form action="" method="post"> <?php //action="transact-validate.php" ?>

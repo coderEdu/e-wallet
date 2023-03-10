@@ -15,7 +15,7 @@ include_once "../queries/myQueries.php";
         <div class="modal-header">
         <script> //document.write(action); </script>
             <h3>Cambiar clave de usuario</h3>
-            <button aria-label="Close" x-on:click="isChangePasswordOpen = false">✖</button>
+            <button aria-label="Close" x-on:click="isChangePasswordOpen = false, seeWallets = true">✖</button>
 
             <?php
             //var_dump($GLOBALS[ $id_note ]);

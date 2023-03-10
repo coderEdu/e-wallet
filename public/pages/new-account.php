@@ -15,7 +15,7 @@ include_once "../queries/myQueries.php";
         <div class="modal-header">
         <script> //document.write(action); </script>
             <h3>Creando una cuenta</h3>
-            <button aria-label="Close" x-on:click="isNewAccOpen = false">✖</button>
+            <button aria-label="Close" x-on:click="isNewAccOpen = false, seeWallets = true">✖</button>
         </div>
         <div class="flex flex-col justify-between">
             <form action="" method="post"> <?php //action="account-validate.php" ?>
