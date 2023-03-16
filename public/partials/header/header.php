@@ -30,7 +30,7 @@ include_once "activate-menus.php";
     <title>E-Wallet - Home</title>
 </head>
 <body x-data="{
-    'seeWallets': true,
+    'seeWallets': <?php echo $_SESSION['wallets']; ?>,
     'isNewDepOpen': false,
     'isNewExtOpen': false,
     'isNewTraOpen': false,
@@ -40,7 +40,10 @@ include_once "activate-menus.php";
     'isChangePasswordOpen': false,
     'isNoteOpenedOpen': <?php echo $_SESSION['open-note']; ?>
 }" class="flex flex-col body-h bg-default">
-
+<?php 
+//var_dump($_SESSION['open-note']); 
+//var_dump($_SESSION['wallets']); 
+?>
     <?php include_once "new-deposit.php"; ?>
     <?php include_once "new-withdraw.php"; ?>
     <?php include_once "new-transfer.php"; ?>

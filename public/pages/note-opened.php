@@ -2,23 +2,29 @@
 include_once "../partials/bd/conn.php";
 include_once "../queries/myQueries.php";
 include_once "../classes/functions.php";
+
 ?>
+<?php
+// I set this session-var to false to stop viewing the form
+$_SESSION['open-note']='false';
+?>  
 <div
       class="modal"
       role="dialog"
       tabindex="-1"
       x-show="isNoteOpenedOpen"      
       x-on:click.away="isNoteOpenedOpen = false"
+      x-onload="seeWallets = false"
       x-cloak
       x-transition
+      
 >
     <div class="model-inner">
         <div class="modal-header">
-        <script> //document.write(action); </script>
         <?php foreach (MyQueries::getNoteByIdNote($conn, intval($_SESSION['id_note'])) as $row) { ?>
             <h3><?php echo (isset($row['fec_crea'])) ? MyFx::formatDate($row['fec_crea']) : ''; ?></h3>
         <?php } ?>
-            <button aria-label="Close" x-on:click="isNoteOpenedOpen = false" x-on:closed='<?php $_SESSION['id_note']='false'; ?>'>✖</button>
+            <button aria-label="Close" x-on:click="isNoteOpenedOpen = false, seeWallets = true" x-on:closed='<?php $_SESSION['id_note']='false'; ?>'>✖</button>
         </div>
         <?php foreach (MyQueries::getNoteByIdNote($conn,intval( $_SESSION['id_note']) ) as $row) { ?>
         <?php } ?>
@@ -54,7 +60,3 @@ include_once "../classes/functions.php";
     </div>
 </div>
 <div class="overlay" x-show="isNoteOpenedOpen" x-cloak></div>
-<?php
-// I set this session-var to false to stop viewing the form
-$_SESSION['open-note']='false';
-?>

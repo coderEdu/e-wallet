@@ -15,6 +15,7 @@ if (isset($_POST['user_name']) && isset($_POST['user_pass'])) {
         $_SESSION['user-name']=$row['usuario'];
         $_SESSION['user-pass']=$row['clave'];
         $_SESSION['open-note']='false';
+        $_SESSION['wallets']='true';
 
         header("Location: home.php");
     }
