@@ -17,7 +17,7 @@ include_once "../queries/myQueries.php";
                 <i class="flex fa fa-arrow-up font-bold text-xs py-1 px-1 rounded-md text-white" style="background-color: <?php echo "#E30000" ?>;"></i>
                 <h3>Extracción</h3>
             </div>
-            <button aria-label="Close" x-on:click="isNewExtOpen = false, seeWallets = true">✖</button>
+            <button aria-label="Close" x-on:click="isNewExtOpen = false">✖</button>
         </div>
         <div class="flex flex-col justify-between">
             <form action="" method="post"> <?php //action="transact-validate.php" ?>

@@ -16,11 +16,7 @@
                         <p class="font-serif text-lg text-zinc-800"><?php echo strtoupper($fila[('nombre')]); ?></p>
                     </div>
                     <!-- a circle with a wallet icon inside it -->   
-                    <i 
-                        x-show="seeWallets"
-                        class="absolute -top-6 -right-8 border-4 fa fa-wallet text-[1.3rem] xl:text-[1.4rem] mx-auto p-2.5 rounded-full border-white"
-                        style="color: #FFFFFF; background-color: <?php echo MyFx::colorBalance(floatval($fila['saldo'])) ?> ;" 
-                    ></i>
+                    <!-- code removed -->
                 </div>
 
                 <a href="#">

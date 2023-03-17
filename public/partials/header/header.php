@@ -30,7 +30,6 @@ include_once "activate-menus.php";
     <title>E-Wallet - Home</title>
 </head>
 <body x-data="{
-    'seeWallets': <?php echo $_SESSION['wallets']; ?>,
     'isNewDepOpen': false,
     'isNewExtOpen': false,
     'isNewTraOpen': false,
