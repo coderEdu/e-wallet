@@ -15,7 +15,7 @@
                 </h2>
             </div>
             <div class="flex">
-                <img src="https://icons.iconarchive.com/icons/saki/nuoveXT-2/128/Actions-blue-arrow-undo-icon.png" width="20" height="20">
+                <span style="color: <?php echo ($row['concepto'] != '$correctivo') ? "#F51818" : "#B6B6B6"; ?>;">sm.</span>
             </div>  
         </div>
 
