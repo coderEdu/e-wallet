@@ -21,7 +21,7 @@
                 </div>
 
                 <a href="#">
-                    <h2 class="w-full def-f-family font-medium text-xl py-2 pr-4 mr-3 text-right text-slate-700 bg-slate-50 rounded-r-xl"><i class="fa fa-dollar-sign pr-1"></i><?php echo $fila['saldo']; ?></i></h2>
+                    <h2 class="w-full def-f-family font-medium text-xl py-2 pr-4 mr-3 text-right text-slate-700 bg-slate-50 rounded-r-xl"><i class="fa fa-dollar-sign pr-1"></i><?php echo number_format( floatval($fila['saldo']),2 ); ?></i></h2>
                 </a>
                 <div class="flex w-full justify-between items-center">
                     <div class="flex w-full">

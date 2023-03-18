@@ -23,11 +23,11 @@
             <div class="flex">
                 <h2 class="def-f-family font-medium text-lg text-end sm:text-xl" style="color: <?php echo ($row['concepto']!='$correctivo') ? "#212F3D" : "#B6B6B6"; ?>;">
                     <?php if ($row['tipo']=='rec') { ?>
-                        <span class="text-base text-green-600">+ </span><i class="fa fa-dollar-sign text-base pr-1"></i><span class="def-f-family font-medium text-lg"><?php echo $row['monto']; ?></span> 
+                        <span class="text-base text-green-600">+ </span><i class="fa fa-dollar-sign text-base pr-1"></i><span class="def-f-family font-medium text-lg"><?php echo number_format( floatval($row['monto']),2 ); ?></span> 
                     <?php } else if ($row['tipo']=='tra') { ?>    
-                        <span class="text-xl font-normal text-red-600">- </span><i class="fa fa-dollar-sign text-base pr-1"></i><span class="def-f-family font-medium text-lg"><?php echo $row['monto']; ?></span>   
+                        <span class="text-xl font-normal text-red-600">- </span><i class="fa fa-dollar-sign text-base pr-1"></i><span class="def-f-family font-medium text-lg"><?php echo number_format( floatval($row['monto']),2 ); ?></span>   
                     <?php } else { ?>   
-                        <i class="fa fa-dollar-sign text-base pr-1"></i><span class="def-f-family font-medium text-lg"><?php echo $row['monto']; ?></span> 
+                        <i class="fa fa-dollar-sign text-base pr-1"></i><span class="def-f-family font-medium text-lg"><?php echo number_format( floatval($row['monto']),2 ); ?></span> 
                     <?php } ?>          
                 </h2>
             </div>
