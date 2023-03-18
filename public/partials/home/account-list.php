@@ -12,7 +12,7 @@
             <div class="flex flex-col w-full space-y-1.5">
                 
                 <div class="relative flex justify-start items-center space-x-1">
-                    <div class="flex h-4 w-4 rounded-full" style="background-image: radial-gradient(white, <?php echo MyFx::colorBalance(floatval($fila['saldo'])) ?>, blue);"></div>
+                    <!--<div class="flex h-4 w-4 rounded-full" style="background-image: radial-gradient(white, <?php echo MyFx::colorBalance(floatval($fila['saldo'])) ?>, blue);"></div>-->
                     <div class="flex">
                         <p class="font-serif text-lg text-zinc-800"><?php echo strtoupper($fila[('nombre')]); ?></p>
                     </div>
