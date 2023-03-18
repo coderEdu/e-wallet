@@ -83,7 +83,7 @@ include_once "../queries/myQueries.php";
                                 }
                                 ?>
                             </div>
-                            <h3 class="flex font-serif font-light text-sm mb-1 text-zinc-500"><?php echo MyFx::formatDate($row['fecha']); ?></h3> 
+                            <h3 class="flex font-sans font-light text-sm mb-1 text-zinc-500"><?php echo MyFx::formatDate($row['fecha']); ?></h3> 
                             <?php //var_dump($row); ?>
                         </div>
                         <?php include("../partials/activityLog/tr-detail.php"); ?>                

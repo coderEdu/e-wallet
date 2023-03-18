@@ -23,18 +23,18 @@ $notes_count=0;
                 <i class="fa fa-clipboard flex text-4xl sm:text-5xl text-blue-200"></i>
             </div>
             <div class="flex flex-col w-full"> 
-                <div class="flex  w-full justify-between flex-wrap">
+                <div class="flex w-full justify-between flex-wrap">
                     <div class="flex">
-                        <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo MyFx::formatDate($row['fec_crea']); ?></h3>
+                        <h3 class="flex font-sans font-light mb-1 text-sm text-zinc-500"><?php echo MyFx::formatDate($row['fec_crea']); ?></h3>
                     </div>
-                    <div class="flex">
-                        <div class="mx-1"><img src="../img/Edit-icon.png" alt=""></div>
-                        <h3 class="flex font-serif mb-1 text-sm text-zinc-500"><?php echo MyFx::formatDate($row['fec_modif']); ?></h3>
+                    <div class="flex items-center">
+                        <div class=" flex mx-1"><i class="fa fa-pencil text-xs text-neutral-500 pr-1"></i></div>
+                        <h3 class="flex font-sans font-light mb-1 text-sm text-zinc-500"><?php echo MyFx::formatDate($row['fec_modif']); ?></h3>
                     </div>
                 </div>               
                 <div class="flex flex-col sm:flex-row space-y-1 w-full justify-between">
                     <div class="flex flex-wrap w-full rounded-md py-1 gap-2 bg-slate-50">
-                        <span class="text-zinc-600"><?php echo $row['titulo']; ?></span>
+                        <span class="text-zinc-900"><?php echo $row['titulo']; ?></span>
                     </div>                    
                 </div>
             </div>
