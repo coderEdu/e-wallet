@@ -1,6 +1,6 @@
 <div class="relative" x-data="{ open: false }" @mouseover="open = true" @mouseout="open = false">
     <button        
-        class="flex items-center justify-center px-4 py-2 text-sm border rounded-full focus:outline-none border-primary-500 hover:text-slate-800"
+        class="flex items-center justify-center px-2 py-2 text-sm focus:outline-none hover:text-slate-800"
         id="headlessui-popover-button-18"
         type="button"
         aria-expanded="true"

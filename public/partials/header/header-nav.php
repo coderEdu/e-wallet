@@ -10,8 +10,8 @@
             </a>
     
             <!-- logged name -->
-            <div class="flex font-sans text-base lg:text-lg space-x-2">
-                <span class="flex">Hola, <span class="font-sans ml-2 font-medium text-blue-800"> <?php echo strtoupper($_SESSION['user-name']); ?>!</span></span>
+            <div class="flex font-sans text-base lg:text-lg">
+                <span class="flex">Hola, <span class="font-sans ml-2 font-medium text-green-800"> <?php echo strtoupper($_SESSION['user-name']); ?>!</span></span>
                 <div class="flex"><?php include "../partials/header-nav/menu/sessions.php" ?></div>
             </div>
         </div>
