@@ -11,17 +11,16 @@
         <div class="flex w-11/12 h-fit sm:w-[48.05%] md:w-[48.35%] lg:w-[32.1%] xl:w-[23.7%] 2xl:w-[24.1%] m-1.5 py-3 px-4 rounded-xl card-box-shadow card-box-shadow:hover bg-white"> <!-- begin card -->
             <div class="flex flex-col w-full space-y-1.5">
                 
-                <div class="relative flex justify-start items-center space-x-1">
-                    <!--<div class="flex h-4 w-4 rounded-full" style="background-image: radial-gradient(white, <?php echo MyFx::colorBalance(floatval($fila['saldo'])) ?>, blue);"></div>-->
+                <div class="relative flex justify-start items-center space-x-1 w-full rounded-tr-md" style="background-image: linear-gradient(to right,white, 75%, <?php echo MyFx::colorBalance(floatval($fila['saldo'])) ?>);">
                     <div class="flex">
-                        <p class="font-serif text-lg text-zinc-800"><?php echo strtoupper($fila[('nombre')]); ?></p>
+                        <p class="font-serif font-medium text-base text-zinc-800"><?php echo strtoupper($fila[('nombre')]); ?></p>
                     </div>
                     <!-- a circle with a wallet icon inside it -->   
                     <!-- code removed -->
                 </div>
 
                 <a href="#">
-                    <h2 class="w-full def-f-family font-medium text-xl py-2 pr-4 mr-3 text-right text-slate-700 bg-slate-50 rounded-r-xl"><i class="fa fa-dollar-sign pr-1"></i><?php echo number_format( floatval($fila['saldo']),2 ); ?></i></h2>
+                    <h2 class="w-full def-f-family font-medium text-xl py-2 pr-4 mr-3 text-right text-slate-700 bg-white border-2 border-slate-100"><i class="fa fa-dollar-sign pr-1"></i><?php echo number_format( floatval($fila['saldo']),2 ); ?></i></h2>
                 </a>
                 <div class="flex w-full justify-between items-center">
                     <div class="flex w-full">
