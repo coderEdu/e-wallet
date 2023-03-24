@@ -27,6 +27,9 @@ include_once "activate-menus.php";
     <!-- alpine cdn -->
     <script defer src="https://unpkg.com/alpinejs@3.10.5/dist/cdn.min.js"></script>
 
+    <!-- jquery cdn -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
     <title>E-Wallet - Home</title>
 </head>
 <body x-data="{
@@ -50,4 +53,15 @@ include_once "activate-menus.php";
     <?php include_once "new-note.php"; ?>
     <?php include_once "note-opened.php"; ?>
     <?php include_once "change-password.php"; ?>
+
+    <script>
+        $(document).ready(function() {
+            var position= $(window).scrollTop();
+    
+            //some things here
+    
+            $(window).scrollTop(position);
+            //alert(position);
+        })
+    </script>
     
