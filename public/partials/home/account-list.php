@@ -11,7 +11,7 @@
         <div class="flex w-11/12 h-fit sm:w-[48.05%] md:w-[48.35%] lg:w-[32.1%] xl:w-[23.7%] 2xl:w-[24.1%] m-1.5 py-3 px-4 rounded-xl card-box-shadow card-box-shadow:hover bg-white"> <!-- begin card -->
             <div class="flex flex-col w-full space-y-1.5">
                 
-                <div class="relative flex justify-start items-center space-x-1 w-full rounded-tr-md" style="background-image: linear-gradient(to right,white, 75%, <?php echo MyFx::colorBalance(floatval($fila['saldo'])) ?>);">
+                <div class="relative flex justify-start items-center space-x-1 w-full rounded-tr-md">
                     <div class="flex">
                         <p class="font-serif font-medium text-base text-zinc-800"><?php echo strtoupper($fila[('nombre')]); ?></p>
                     </div>
