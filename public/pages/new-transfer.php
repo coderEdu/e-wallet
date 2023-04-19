@@ -39,29 +39,74 @@ include_once "../queries/myQueries.php";
                         class="border-2 py-2 px-2 text-right"
                     />
                    
-                    <div class="flex flex-col space-y-2 bg-gray-50 py-2 pl-10 pr-2 rounded-md">
+                    <!-- Working Here -->
+                    <div class="flex flex-col space-y-3 bg-gray-50 py-2 pl-10 pr-2 rounded-md">
                         <div class="flex justify-between items-center">
-                            <label for="account1" class="flex w-full pr-2 font-sans font-normal text-base text-gray-500">De la cuenta:</label>
+                            <label for="account1" class="flex w-full pr-2 font-sans font-normal text-sm text-gray-500">De la cuenta:</label>
                             <select id="account1" class="flex py-0 px-2 border-1" name="account1"> <!-- working here -->
                                 <?php $id_user = $_SESSION['logged_id']; ?>
-                                
-                                <?php foreach (MyQueries::getAccountsByLogged($conn,$id_user) as $row) { ?>
-                                    <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></option>
-                                <?php } ?>
-                            </select>
-                        </div>
-
-                        <div class="flex justify-between items-center">
-                            <label for="account2" class="flex w-full pr-2 font-sans font-normal text-base text-gray-500">A la cuenta:</label>
-                            <select id="account2" class="flex py-0 px-2 border-1" name="account2"> <!-- working here -->
-                                <?php $id_user = $_SESSION['logged_id']; ?>
-                                
+                                <option value=""></option>
                                 <?php foreach (MyQueries::getAccountsByLogged($conn,$id_user) as $row) { ?>
                                     <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></option>
                                 <?php } ?>
                             </select>
                         </div>
                     </div>
+
+                    <div class="flex">
+                        <div class="flex text-sm space-x-1">
+                            <input type="checkbox" name="" id="innerAcc" onclick="change()" value="innerAcc" checked>
+                            <label for="innerAcc"><span id="btnAcc" class="text-blue-700">a una de tus cuentas</span> | <span id="extAcc">a una cuenta externa</span></label>
+                        </div>
+                    </div>
+
+                    <!-- bloque1 -->
+                    <div class="flex flex-col space-y-3 bg-gray-50 py-2 pl-10 pr-2 rounded-md" id="bloque1">
+                        
+                        <div class="flex justify-between items-center">
+                            <label for="account2" class="flex w-full pr-2 font-sans font-normal text-sm text-gray-500">A la cuenta:</label>
+                            <select id="account2" class="flex py-0 px-2 border-1" name="account2"> <!-- working here -->
+                                <?php $id_user = $_SESSION['logged_id']; ?>
+                                <option value=""></option>
+                                <?php foreach (MyQueries::getAccountsByLogged($conn,$id_user) as $row) { ?>
+                                    <option value="<?php echo $row['id']; ?>"><?php echo $row['nombre']; ?></option>
+                                <?php } ?>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- bloque2 -->
+                    <div class="hidden flex-col justify-start items-start bg-gray-50 py-2 px-2 rounded-md" id="bloque2">
+                        <label for="extern" class="flex w-fit pb-2 font-sans font-normal text-sm text-gray-500">CBU / ALIAS de la cuenta externa:</label>
+                        <input type="text" name="extern" id="extern" class="flex w-full border-2 py-1 px-2 text-left">
+                        
+                        <label for="ownerAcc" class="flex w-fit pt-3 pb-2 font-sans font-normal text-sm text-gray-500">Titular de la cuenta externa:</label>
+                        <input type="text" name="ownerAcc" id="ownerAcc" class="flex w-full border-2 py-1 px-2 text-left">
+                    </div>
+
+                    <script>
+                        let b1 = document.getElementById('bloque1');
+                        let b2 = document.getElementById('bloque2');
+                        let btw = document.getElementById('btnAcc');
+                        let ext = document.getElementById('extAcc');
+
+                        function change() {
+                            let innerAccount = document.getElementById('innerAcc');
+
+                            if (innerAccount.checked) {
+                                b1.style.display='flex';
+                                b2.style.display='none';
+                                btw.style.color='blue';
+                                ext.style.color='rgb(107,114,128)';
+                            } else {
+                                b1.style.display='none';
+                                b2.style.display='flex';
+                                btw.style.color='rgb(107,114,128)';
+                                ext.style.color='blue';
+                            }
+                        }
+                    </script>
+                    <!-- End -->
 
                 </div>
                 <div class="flex pt-4">
