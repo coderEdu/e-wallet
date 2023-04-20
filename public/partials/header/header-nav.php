@@ -18,7 +18,7 @@
     
         <!-- navbar mainmenu -->
         <nav class="hidden xl:flex">
-            <ul class="flex flex-row w-fit h-full text-md p-6 space-x-4 items-center">
+            <ul class="flex flex-row w-fit h-full text-md p-6 -space-x-4 items-center">
                 <?php include "../partials/header-nav/menu/accounts.php" ?>
                 <?php include "../partials/header-nav/menu/actions.php" ?>
                 <?php include "../partials/header-nav/menu/notes.php" ?>
