@@ -33,31 +33,44 @@ $_SESSION['open-note']='false';
         <div class="flex flex-col justify-between">
             <form action="" method="post"> <?php //action="account-validate.php" ?>
                 <div class="flex flex-col space-y-6">
-                    <input type="text" name="title" placeholder="Título de la nota" value="<?php echo (isset($row['titulo'])) ? $row['titulo'] : ''; ?>" readonly class="border-2 py-2 px-2 text-right">    
+                    <input type="text" name="title" placeholder="Título de la nota" value="<?php echo (isset($row['titulo'])) ? $row['titulo'] : ''; ?>" readonly class="border-2 py-2 px-2 text-left">    
                 </div>
 
                 <div class="flex pt-4">
-                    <textarea class="border-2 py-2 px-2" name="note" id="" cols="34" rows="8" readonly placeholder="Texto de la nota"><?php echo (isset($row['nota'])) ? $row['nota'] : ''; ?></textarea>
+                    <textarea class="border-2 py-2 px-2" name="note" id="note" cols="34" rows="8" readonly placeholder="Texto de la nota"><?php echo (isset($row['nota'])) ? $row['nota'] : ''; ?></textarea>
                 </div>
                 
-                <div class="flex justify-between pt-4 items-center">
-                    <div class="flex">
-                        <button x-on:click="isNoteOpenedOpen = false" type="submit" class="border-2 border-blue-500 bg-blue-800 text-white py-1 px-2">Cerrar</button>
-                    </div>
-                    <div class="flex justify-between items-center space-x-2">
-                        <div class="flex">
-                            <button class="w-8 h-8"><img src="../img/Actions-document-edit-icon.png" alt="edit-icon"></button>
-                        </div>
-                        <div class="flex">
-                            <button class="w-8 h-8"><img src="../img/Actions-document-close-icon.png" alt="delete-icon"></button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="flex pt-4">
-                    <input type="hidden" name="">
-                </div>
             </form>
+            <div class="flex justify-between pt-4 items-center">
+                <div class="flex">
+                    <button x-on:click="isNoteOpenedOpen = false" type="submit" class="border-2 border-blue-500 bg-blue-800 text-white py-1 px-2">Cerrar</button>
+                </div>
+                <div class="flex justify-between items-center space-x-2">
+                    <div class="flex">
+                        <button class="w-8 h-8"><img src="../img/Actions-document-edit-icon.png" alt="edit-icon" onclick="edit()"></button>
+                    </div>
+                    <div class="flex">
+                        <button class="w-8 h-8"><img src="../img/Actions-document-close-icon.png" alt="delete-icon" onclick="save()"></button>
+                    </div>
+                </div>
+            </div>
+            <script>
+                function edit() {
+                    //document.getElementById('note').setAttribute('readonly',true);
+                    document.getElementById('note').removeAttribute('readonly');
+                    document.getElementById('note').style.backgroundColor='#FFFFD9';
+                }
+
+                function save() {
+                    alert('Nota guardada!');
+                    document.getElementById('note').style.backgroundColor='white';
+                    document.getElementById('note').setAttribute('readonly',true);
+                }
+            </script>
+            
+            <div class="flex pt-4">
+                <input type="hidden" name="">
+            </div>
         </div>
     </div>
 </div>
