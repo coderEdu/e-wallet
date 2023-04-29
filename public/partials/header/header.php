@@ -32,7 +32,7 @@ include_once "activate-menus.php";
 
     <title>E-Wallet - Home</title>
 </head>
-<body x-data="{
+<body onload="load()" x-data="{
     'isNewDepOpen': false,
     'isNewExtOpen': false,
     'isNewTraOpen': false,

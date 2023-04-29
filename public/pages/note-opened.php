@@ -42,30 +42,77 @@ $_SESSION['open-note']='false';
                 
             </form>
             <div class="flex justify-between pt-4 items-center">
-                <div class="flex">
-                    <button x-on:click="isNoteOpenedOpen = false" type="submit" class="border-2 border-blue-500 bg-blue-800 text-white py-1 px-2">Cerrar</button>
-                </div>
                 <div class="flex justify-between items-center space-x-2">
                     <div class="flex">
-                        <button class="w-8 h-8"><img src="../img/Actions-document-edit-icon.png" alt="edit-icon" onclick="edit()"></button>
+                        <button class="border-3 bg-yellow-200 py-1 px-2" id="editBtn" onclick="edit()">
+                            Editar
+                            <!--<img src="../img/Actions-document-edit-icon.png" alt="edit-icon">-->
+                        </button>
                     </div>
                     <div class="flex">
-                        <button class="w-8 h-8"><img src="../img/Actions-document-close-icon.png" alt="delete-icon" onclick="save()"></button>
+                        <button class="border-2 py-1 px-2" id="saveBtn" onclick="save()">
+                            Guardar
+                            <!--<img src="../img/Actions-document-close-icon.png" alt="delete-icon">-->
+                        </button>
+                    </div>
+                    <div>
+                        <span>
+                        <i class="fa-floppy-disk"></i>
+                        </span>
                     </div>
                 </div>
             </div>
             <script>
+               
+                let edit_button = document.getElementById('editBtn');
+                let save_button = document.getElementById('saveBtn');
+                let note = document.getElementById('note');
+                let note_content = note.value;
+
+                // Checks if the 'textarea' content has changed
+                note.addEventListener('input', () => {
+                    (note_content !== note.value) ? enablingSaveBtn() : disablingSaveBtn();
+                });
+                
+                function load() {
+                    edit_button.style.borderColor='#FFF700';
+                    save_button.style.backgroundColor='#E7E7E7';
+                    save_button.style.borderColor='#DFDFDF';
+                    save_button.style.color='#C1C1C1';
+                    save_button.disabled=true;
+                }
+
+                function enablingSaveBtn() {
+                    save_button.disabled=false;
+                    save_button.style.backgroundColor='#0146FF';
+                    save_button.style.borderColor='#0000FF';
+                    save_button.style.color='white';
+                }
+
+                function disablingSaveBtn() {
+                    save_button.style.backgroundColor='#E7E7E7';
+                    save_button.style.borderColor='#DFDFDF';
+                    save_button.style.color='#C1C1C1';
+                    save_button.disabled=true;
+                }
+                
                 function edit() {
                     //document.getElementById('note').setAttribute('readonly',true);
-                    document.getElementById('note').removeAttribute('readonly');
-                    document.getElementById('note').style.backgroundColor='#FFFFD9';
+                    edit_button.textContent='Editando ...'; 
+                    note.removeAttribute('readonly');
+                    note.style.backgroundColor='#FFFFD9';                    
+                    note.focus();
                 }
 
                 function save() {
-                    alert('Nota guardada!');
-                    document.getElementById('note').style.backgroundColor='white';
-                    document.getElementById('note').setAttribute('readonly',true);
+                    if (save_button.disabled !== true) {
+                        note.style.backgroundColor='white';
+                        note.setAttribute('readonly',true);
+                        edit_button.textContent='Editar';
+                        disablingSaveBtn();
+                    }
                 }
+
             </script>
             
             <div class="flex pt-4">
