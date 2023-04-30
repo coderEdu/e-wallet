@@ -51,8 +51,8 @@ $_SESSION['open-note']='false';
                     <div class="flex flex-col">
                         <textarea class="flex border-2 py-2 px-2" name="note" id="note" cols="34" rows="8" readonly placeholder="Texto de la nota"><?php echo (isset($row['nota'])) ? $row['nota'] : ''; ?></textarea>
                         <div class="flex pt-1 space-x-1">
-                            <input type="checkbox" name="edit_chkbox" id="edit_chkbox" onclick="edit()">
-                            <label for="edit_chkbox">Editar</label>
+                            <input type="checkbox" id="edit_chkbox" name="edit_chkbox" onclick="edit()">
+                            <label for="edit_chkbox" id="lbl_check" class="font-sans font-normal text-sm text-gray-800">Editar</label>
                         </div>
                     </div>
                 </div>
@@ -68,6 +68,7 @@ $_SESSION['open-note']='false';
                
                 let edit_check = document.getElementById('edit_chkbox');
                 let save_button = document.getElementById('saveBtn');
+                let lbl_check = document.getElementById('lbl_check');
                 let note = document.getElementById('note');
                 let note_save_content = note.value;
 
@@ -91,7 +92,6 @@ $_SESSION['open-note']='false';
                     save_button.style.color='white';
                 }
 
-                
                 function disablingSaveBtn() {
                     save_button.style.backgroundColor='#E7E7E7';
                     save_button.style.borderColor='#DFDFDF';
@@ -104,10 +104,12 @@ $_SESSION['open-note']='false';
                     if (edit_check.checked) {
                         if (note_save_content !== note.value)
                             enablingSaveBtn();
+                        lbl_check.innerHTML='Editando';
                         note.removeAttribute('readonly');
                         note.style.backgroundColor='#FFFFD9';                    
                         note.focus();
                     } else {
+                        lbl_check.innerHTML='Editar';
                         note.style.backgroundColor='white';
                         note.setAttribute('readonly',true);
                         disablingSaveBtn();
