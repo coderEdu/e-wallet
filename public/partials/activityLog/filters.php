@@ -46,7 +46,7 @@
                             <div class="py-3"> <!-- first -->
                                 <h3 class="text-base font-medium">Rango de fechas:</h3>
                                 <div class="relative mt-6">
-                                    <div class="flex flex-wrap justify-between items-center space-y-4 sm:space-y-0 sm:space-x-4">
+                                    <div class="flex flex-col space-y-4">
         
                                         <?php include("filterByDate.php"); ?>
                              

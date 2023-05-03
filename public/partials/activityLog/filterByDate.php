@@ -1,8 +1,8 @@
-<div class="flex flex-col items-start">
+<div class="flex flex-col items-start space-y-1">
     <div class="flex text-xs sm:text-base">
         <label for="desde">Desde</label>
     </div>
-    <div class="flex border-1 border-gray-400 rounded-md text-slate-700 p-2">
+    <div class="flex w-full border-1 justify-center border-gray-400 rounded-md text-slate-700 p-2">
         <input 
             type="date"
             max="<?php echo date("Y-m-d"); ?>"
@@ -13,11 +13,11 @@
     </div>
 </div>
 
-<div class="flex flex-col items-start">
+<div class="flex flex-col items-start space-y-1">
     <div class="flex text-xs sm:text-base">
         <label for="desde">Hasta</label>
     </div>
-    <div class="flex border-1 border-gray-400 rounded-md text-slate-700 p-2">
+    <div class="flex w-full border-1 justify-center border-gray-400 rounded-md text-slate-700 p-2">
         <input 
             type="date"
             max="<?php echo date("Y-m-d"); ?>"
