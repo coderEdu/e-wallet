@@ -67,74 +67,80 @@ include_once "../queries/myQueries.php";
             <!-- container -->
             <div class="space-x-4 lg:flex">
                 <div class="block overflow-y-auto">
-                    <div class="flex px-4 pt-3 pb-20 text-center sm:block sm:p-0">
-                        <!-- begin form -->
-                        <form x-on:click.away="dropdown = 'close'" class="relative inline-block overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-xl sm:my-8 sm:align-middle sm:max-w-xl sm:w-fit" action="">
-                            <div class="relative flex flex-shrink-0 justify-between items-center px-6 py-4 text-center border-b border-neutral-200 dark:border-neutral-800">
-                                <h3 class="flex text-lg font-medium leading-6 text-gray-900" id="headlessui-dialog-title-132">Filtros de búsqueda</h3>
-                            </div>
-                            <div class="flex-grow overflow-y-auto">
-                                <div class="px-10 divide-y divide-neutral-200 dark:divide-neutral-800">
-                                    <div class="py-3">
-                                        <!-- first -->
-                                        <h3 class="text-base font-medium">Rango de fechas:</h3>
-                                        <div class="relative mt-6">
-                                            <div class="flex flex-col space-y-4">
-                                                <?php include("../partials/activityLog/filterByDate.php"); ?>
+                    <div class="flex w-fit">
+                        <!-- left panel -->
+                        <div class="relative px-4 pt-3 pb-20 text-center sm:block sm:p-0" id="filtersPanel">
+                            <!-- begin form -->
+                            <form class="relative inline-block overflow-hidden text-left align-middle bg-white shadow-xl rounded-xl sm:my-8 sm:align-middle sm:max-w-xl sm:w-fit" action="">
+                                <div class="relative flex flex-shrink-0 justify-between items-center px-6 py-4 text-center border-b border-neutral-200">
+                                    <h3 class="flex text-lg font-medium leading-6 text-gray-900" id="headlessui-dialog-title-132">Filtros de búsqueda</h3>
+                                </div>
+                                <div class="flex-grow overflow-y-auto">
+                                    <div class="px-10 divide-y divide-neutral-200">
+                                        <div class="py-3">
+                                            <!-- first -->
+                                            <h3 class="text-base font-medium">Rango de fechas:</h3>
+                                            <div class="relative mt-6">
+                                                <div class="flex flex-col space-y-4">
+                                                    <?php include("../partials/activityLog/filterByDate.php"); ?>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="py-3">
-                                        <!-- second -->
-                                        <h3 class="text-base font-medium">Tipo:</h3>
-                                        <div class="relative mt-6">
-                                            <div class="flex flex-row">
-                                                <?php include("../partials/activityLog/filterByType.php"); ?>
+    
+                                        <div class="py-3">
+                                            <!-- second -->
+                                            <h3 class="text-base font-medium">Tipo:</h3>
+                                            <div class="relative mt-6">
+                                                <div class="flex flex-row">
+                                                    <?php include("../partials/activityLog/filterByType.php"); ?>
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-
-                                    <div class="py-3">
-                                        <!-- third - monto -->
-
-                                        <?php include("../partials/activityLog/filterByAmount.php"); ?>
-                                    </div>
-
-                                    <div class="py-3">
-                                        <!-- concepto -->
-
-                                        <?php include("../partials/activityLog/filterByConcept.php"); ?>
-                                    </div>
-
-                                    <div class="py-3">
-                                        <!-- sixth -->
-                                        <h3 class="text-base font-medium">Cuenta:</h3>
-                                        <div class="relative mt-6">
-                                            <div class="flex flex-row gap-8">
-                                                <?php include("../partials/activityLog/filterByAccount.php"); ?>
+    
+                                        <div class="py-3">
+                                            <!-- third - monto -->
+    
+                                            <?php include("../partials/activityLog/filterByAmount.php"); ?>
+                                        </div>
+    
+                                        <div class="py-3">
+                                            <!-- concepto -->
+    
+                                            <?php include("../partials/activityLog/filterByConcept.php"); ?>
+                                        </div>
+    
+                                        <div class="py-3">
+                                            <!-- sixth -->
+                                            <h3 class="text-base font-medium">Cuenta:</h3>
+                                            <div class="relative mt-6">
+                                                <div class="flex flex-row gap-8">
+                                                    <?php include("../partials/activityLog/filterByAccount.php"); ?>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
-
-                            <!-- buttons -->
-                            <div class="flex items-center justify-end p-3 space-x-4 bg-neutral-50">
-                                <button
-                                    type="submit"
-                                    class="relative inline-flex items-center justify-center h-auto px-4 py-2 bg-cyan-700 text-xs text-white font-medium transition-colors rounded-full sm:text-base sm:px-5 ttnc-ButtonPrimary disabled:bg-opacity-70 bg-primary-600 hover:bg-primary-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary-600 dark:focus:ring-offset-0"
-                                >
-                                    Aplicar
-                                </button>
-                            </div>
-                        </form>
+    
+                                <!-- buttons -->
+                                <div class="flex items-center justify-end p-3 space-x-4 bg-neutral-50">
+                                    <button
+                                        type="submit"
+                                        class="relative inline-flex items-center justify-center h-auto w-full px-4 py-2 bg-cyan-600 text-xs text-white font-medium rounded-lg sm:text-base sm:px-5"
+                                    >
+                                        Aplicar
+                                    </button>
+                                </div>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </div> <!-- finish filters -->
 
-        <div class="flex w-full ">
+        <!-- hidden panel -->
+        <div class="hidden" id="hiddenPanel"></div>
+         <!-- right panel -->
+        <div class="flex w-full" id="rightPanel">
             <?php if (isset($movs_count)) { ?>
             <div class="container w-full mt-5 mb-12">
                 <!-- all movements -->
@@ -172,3 +178,6 @@ include_once "../queries/myQueries.php";
 </div>
 <!-- footer -->
 <?php include "../partials/footer/footer.php"; ?>
+
+<!-- myScripts -->
+<script defer src="../js/logScroll.js"></script>
