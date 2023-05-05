@@ -7,5 +7,5 @@ if (isset($_GET['id'])) {
     $_SESSION['wallets']='false';
 }
 $_SESSION['noteId'] = intval($_SESSION['id_note']);
-header("Location: ".$_SERVER['HTTP_REFERER']);
+header("Location: ".$_SERVER['HTTP_REFERER'].'#note_section');
 ?>
