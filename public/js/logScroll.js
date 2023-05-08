@@ -4,16 +4,19 @@ let documentHeight = document.documentElement.clientHeight;
 window.addEventListener('scroll', () => {
     let position = document.documentElement.scrollTop;    
     let left_panel = document.getElementById('filtersPanel');
+    let lp_width = left_panel.offsetWidth;
     let hidden_panel = document.getElementById('hiddenPanel');
     let right_panel = document.getElementById('rightPanel');
     let rp_height = right_panel.offsetHeight;
+
+    //alert(lp_width);
     
     if (position > 282 && rp_height > documentHeight) {
         left_panel.style.position='fixed';
         left_panel.style.top='-20px';    
         hidden_panel.style.display='flex';
         // hidden panel
-        hidden_panel.style.minWidth='335px';
+        hidden_panel.style.minWidth=lp_width+'px';
     } else {
         left_panel.style.position='relative';
         left_panel.style.top='0px';
