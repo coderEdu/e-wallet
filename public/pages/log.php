@@ -69,50 +69,74 @@ include_once "../queries/myQueries.php";
                 <div class="block overflow-y-auto">
                     <div class="flex w-fit">
                         <!-- left panel -->
-                        <div class="relative px-4 pt-3 pb-20 text-center sm:block sm:p-0" id="filtersPanel">
+                        <div class="relative px-3 pt-0 pb-20 text-center bg-white sm:block sm:p-0" id="filtersPanel">
                             <!-- begin form -->
-                            <form class="relative inline-block overflow-hidden text-left align-middle bg-white shadow-xl rounded-xl sm:my-8 sm:align-middle sm:max-w-xl sm:w-fit" action="">
-                                <div class="relative flex flex-shrink-0 justify-between items-center px-6 py-4 text-center border-b border-neutral-200">
-                                    <h3 class="flex text-lg font-medium leading-6 text-gray-900" id="headlessui-dialog-title-132">Filtros de búsqueda</h3>
+                            <form class="relative min-w-[290px] inline-block overflow-hidden text-left align-middle mt-4 mb-8 sm:align-middle sm:max-w-xl sm:w-fit" action="">
+                                <div class="relative items-center px-6 pb-4 pt-0 text-center border-b border-neutral-200">
+                                    <h3 class="block text-lg font-medium leading-6 text-gray-900">Filtros de búsqueda</h3>
                                 </div>
                                 <div class="flex-grow overflow-y-auto">
-                                    <div class="px-10 divide-y divide-neutral-200">
+                                    <div class="px-4 divide-y bg-neutral-50">
+                                        
+                                        <!-- first - range of dates-->
                                         <div class="py-3">
-                                            <!-- first -->
-                                            <h3 class="text-base font-medium">Rango de fechas:</h3>
-                                            <div class="relative mt-6">
+                                            <div class="flex justify-between items-center">
+                                                <h3 class="flex text-base font-medium">Rango de fechas:</h3>
+                                                <button type="button" class="flex text-xl font-bold" id="btn_dates">></button>
+                                            </div>
+                                            <div class="hidden relative mt-6 bg-white" id="datesPanel">
                                                 <div class="flex flex-col space-y-4">
                                                     <?php include("../partials/activityLog/filterByDate.php"); ?>
                                                 </div>
                                             </div>
                                         </div>
     
+                                        <!-- second - transaction types -->
                                         <div class="py-3">
-                                            <!-- second -->
-                                            <h3 class="text-base font-medium">Tipo:</h3>
-                                            <div class="relative mt-6">
+                                            <div class="flex justify-between items-center">
+                                                <h3 class="flex text-base font-medium">Tipo de transacción:</h3>
+                                                <button type="button" class="flex text-xl font-bold" id="btn_type">></button>
+                                            </div>
+                                            <div class="hidden relative mt-6 bg-white" id="typePanel">
                                                 <div class="flex flex-row">
                                                     <?php include("../partials/activityLog/filterByType.php"); ?>
                                                 </div>
                                             </div>
                                         </div>
     
+                                        <!-- third - amount -->
                                         <div class="py-3">
-                                            <!-- third - monto -->
-    
-                                            <?php include("../partials/activityLog/filterByAmount.php"); ?>
+                                            <div class="flex justify-between items-center">                                                
+                                                <h3 class="flex text-base font-medium">Monto:</h3>
+                                                <button type="button" class="flex text-xl font-bold" id="btn_amount">></button>
+                                            </div>
+                                            <div class="hidden relative mt-6 bg-white" id="amountPanel">
+                                                <div class="flex flex-row justify-center gap-8">
+                                                    <?php include("../partials/activityLog/filterByAmount.php"); ?>
+                                                </div>
+                                            </div>    
                                         </div>
     
+                                        <!-- fourth - concept -->
                                         <div class="py-3">
-                                            <!-- concepto -->
-    
-                                            <?php include("../partials/activityLog/filterByConcept.php"); ?>
+                                            <div class="flex justify-between items-center">
+                                                <h3 class="flex text-base font-medium">Concepto:</h3>
+                                                <button type="button" class="flex text-xl font-bold" id="btn_concept">></button>
+                                            </div>
+                                            <div class="hidden relative mt-6 bg-white" id="conceptPanel">
+                                                <div class="flex flex-row justify-center gap-8">
+                                                    <?php include("../partials/activityLog/filterByConcept.php"); ?>
+                                                </div>
+                                            </div>    
                                         </div>
-    
+        
+                                        <!-- fifth - account -->
                                         <div class="py-3">
-                                            <!-- sixth -->
-                                            <h3 class="text-base font-medium">Cuenta:</h3>
-                                            <div class="relative mt-6">
+                                            <div class="flex justify-between items-center">
+                                                <h3 class="text-base font-medium">Cuenta:</h3>
+                                                <button type="button" class="flex text-xl font-bold" id="btn_account">></button>
+                                            </div>
+                                            <div class="hidden relative mt-6 bg-white" id="accountPanel">
                                                 <div class="flex flex-row gap-8">
                                                     <?php include("../partials/activityLog/filterByAccount.php"); ?>
                                                 </div>
@@ -123,12 +147,7 @@ include_once "../queries/myQueries.php";
     
                                 <!-- buttons -->
                                 <div class="flex items-center justify-end p-3 space-x-4 bg-neutral-50">
-                                    <button
-                                        type="submit"
-                                        class="relative inline-flex items-center justify-center h-auto w-full px-4 py-2 bg-cyan-600 text-xs text-white font-medium rounded-lg sm:text-base sm:px-5"
-                                    >
-                                        Aplicar
-                                    </button>
+                                    <button type="submit" class="relative inline-flex items-center justify-center h-auto w-full px-4 py-2 bg-cyan-600 text-xs text-white font-medium rounded-lg sm:text-base sm:px-5">Aplicar</button>
                                 </div>
                             </form>
                         </div>
@@ -142,7 +161,7 @@ include_once "../queries/myQueries.php";
          <!-- right panel -->
         <div class="flex w-full" id="rightPanel">
             <?php if (isset($movs_count)) { ?>
-            <div class="container w-full mt-5 mb-12">
+            <div class="container w-full mt-3 mb-12 ml-2">
                 <!-- all movements -->
                 <div class="flex flex-col w-full space-y-3">
                     <?php foreach (MyQueries::generalQuery($conn, $id_user, $startDate, $endDate, $type, $account, $amount, $concept) as $row) { // call the query
@@ -181,3 +200,4 @@ include_once "../queries/myQueries.php";
 
 <!-- myScripts -->
 <script defer src="../js/logScroll.js"></script>
+<script defer src="../js/logFiltersPanel.js"></script>

@@ -8,14 +8,12 @@ window.addEventListener('scroll', () => {
     let hidden_panel = document.getElementById('hiddenPanel');
     let right_panel = document.getElementById('rightPanel');
     let rp_height = right_panel.offsetHeight;
-
-    //alert(lp_width);
     
-    if (position > 282 && rp_height > documentHeight) {
+    if (position > 260 && rp_height > documentHeight) {
         left_panel.style.position='fixed';
-        left_panel.style.top='-20px';    
-        hidden_panel.style.display='flex';
+        left_panel.style.top='0px';    
         // hidden panel
+        hidden_panel.style.display='flex';
         hidden_panel.style.minWidth=lp_width+'px';
     } else {
         left_panel.style.position='relative';
@@ -24,3 +22,4 @@ window.addEventListener('scroll', () => {
         hidden_panel.style.display='none';
     }
 });
+
