@@ -110,7 +110,7 @@ include_once "../queries/myQueries.php";
 
                 </div>
                 <div class="flex pt-4">
-                    <textarea class="border-2 py-2 px-2" name="textarea" id="" cols="34" rows="5" placeholder="En concepto de ..."></textarea>
+                    <textarea class="border-2 py-2 px-2" name="textarea" cols="34" rows="5" placeholder="En concepto de ..."></textarea>
                 </div>
                 <div class="flex pt-4">
                     <button x-on:click="isNewTraOpen = false" type="submit" class="border-2 border-blue-500 bg-blue-800 text-white py-1 px-2">Transferir</button>

@@ -24,7 +24,7 @@ include_once "../queries/myQueries.php";
                 </div>
 
                 <div class="flex pt-4">
-                    <textarea class="border-2 py-2 px-2" name="note" id="" cols="32" rows="5" placeholder="Ingrese su nota aquí"></textarea>
+                    <textarea class="border-2 py-2 px-2" name="note" cols="32" rows="5" placeholder="Ingrese su nota aquí"></textarea>
                 </div>
 
                 <div class="flex pt-4">
