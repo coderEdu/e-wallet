@@ -9,8 +9,7 @@
                 <h2 class="def-f-family font-medium text-lg text-end sm:text-xl" style="color: <?php echo ($row['concepto']!='$correctivo') ? "#212F3D" : "#B6B6B6"; ?>;">
                     <i class="fa fa-dollar-sign text-neutral-400 text-base pr-1"></i>
                     <span class="def-f-family font-medium text-neutral-400 text-lg">
-                        <?php echo ($row['saldoCuenta']=='0.00') ? "- -" : $row['saldoCuenta']; ?>
-                        <?php //var_dump($row['saldoCuenta']); ?>
+                        <?php echo number_format( floatval($row['saldoCuenta']),2 ); ?>
                     </span>      
                 </h2>
             </div>
