@@ -19,7 +19,7 @@ document.getElementById('btn_dates').addEventListener('click', () => {
         document.getElementById('btn_dates').innerHTML='˅';
     } else {
         datesPanel.style.display='none';
-        document.getElementById('btn_dates').innerHTML='>';
+        document.getElementById('btn_dates').innerHTML='<';
     }
 });
 
@@ -30,7 +30,7 @@ document.getElementById('btn_type').addEventListener('click', () => {
         document.getElementById('btn_type').innerHTML='˅';
     } else {
         typePanel.style.display='none';
-        document.getElementById('btn_type').innerHTML='>';
+        document.getElementById('btn_type').innerHTML='<';
     }
 });
 
@@ -41,7 +41,7 @@ document.getElementById('btn_amount').addEventListener('click', () => {
         document.getElementById('btn_amount').innerHTML='˅';
     } else {
         amountPanel.style.display='none';
-        document.getElementById('btn_amount').innerHTML='>';
+        document.getElementById('btn_amount').innerHTML='<';
     }
 });
 
@@ -52,7 +52,7 @@ document.getElementById('btn_concept').addEventListener('click', () => {
         document.getElementById('btn_concept').innerHTML='˅';
     } else {
         conceptPanel.style.display='none';
-        document.getElementById('btn_concept').innerHTML='>';
+        document.getElementById('btn_concept').innerHTML='<';
     }
 });
 
@@ -63,6 +63,6 @@ document.getElementById('btn_account').addEventListener('click', () => {
         document.getElementById('btn_account').innerHTML='˅';
     } else {
         accountPanel.style.display='none';
-        document.getElementById('btn_account').innerHTML='>';
+        document.getElementById('btn_account').innerHTML='<';
     }
 });
