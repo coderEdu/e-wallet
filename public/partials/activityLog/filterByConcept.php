@@ -4,7 +4,7 @@
             type="text"
             id="concept"
             name="concept"
-            placeholder="Palabra o frase"
+            placeholder="Palabra a buscar"
             value="<?php echo (isset($_GET['concept']) ? $_GET['concept'] : ''); ?>"
             class="p-2 border-1 border-gray-400 rounded-md"
         />        
