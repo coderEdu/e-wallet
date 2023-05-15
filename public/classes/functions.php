@@ -3,7 +3,7 @@ class MyFx
 {
     // method declaration
     public static function colorBalance(float $balance): string {
-        $color=''; // you must initialize this var to avoid function crash
+        $color=''; // you must initialize var to avoid function crash
         if (floatval($balance) > 100000) { 
             $color = "#01579B";
         } else if (floatval($balance) > 50000) { 
@@ -20,10 +20,8 @@ class MyFx
             $color = "#4FC3F7";
         } else if (floatval($balance) > 500) {
             $color = "#81D4FA";
-        } else if (floatval($balance) > 200) {
-            $color = "#B3E5FC";
         } else if (floatval($balance) >= 0) {
-            $color = "#D7F2FF";
+            $color = "#B3E5FC";
         }
         return $color;
     }
@@ -60,7 +58,7 @@ class MyFx
         return $fDate; 
     }
 
-    public static function getBalance(PDO $conn, int $id_user, int $id_account )
+    static function getBalance(PDO $conn, int $id_user, int $id_account )
     {
         $dep = 0;
         foreach(MyQueries::getMovsSumByType($conn,"dep",$id_user,$id_account) as $sumRow) {
@@ -80,13 +78,6 @@ class MyFx
         $balance = $dep - $ext - $tra;
         
         return $balance;
-    }
-
-    public static function randomSeconds():string {
-        $r = rand(0,59);
-        if ($r < 10)
-            $r = "0".$r;
-        return $r;
     }
 }
 ?>

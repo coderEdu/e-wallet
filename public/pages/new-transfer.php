@@ -23,12 +23,6 @@ include_once "../queries/myQueries.php";
             <form action="" method="post"> <?php //action="transact-validate.php" ?>
                 <div class="flex flex-col space-y-6">
 
-                    <!-- transfer date -->
-                    <input type="date" max="<?php echo date("Y-m-d"); ?>" name="tDate" id="tDate" class="border-2 py-2 px-2 text-right">
-
-                    <!-- transfer time -->
-                    <input type="time" name="tTime" id="tTime" class="border-2 py-2 px-2 text-right">
-
                     <input 
                         type="text"
                         name="monto"
@@ -53,8 +47,8 @@ include_once "../queries/myQueries.php";
                         </div>
                     </div>
 
-                    <div class="flex">
-                        <div class="flex text-sm space-x-1">
+                    <div class="flex items-center">
+                        <div class="flex text-sm space-x-2">
                             <input type="checkbox" name="" id="innerAcc" onclick="change()" value="innerAcc" checked>
                             <label for="innerAcc"><span id="btnAcc" class="text-blue-700">a una de tus cuentas</span> | <span id="extAcc">a una cuenta externa</span></label>
                         </div>
