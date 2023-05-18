@@ -60,6 +60,14 @@ class MyQueries {
         return $sql;
     }
 
+    public static function updateNote(PDO $conn, string $note, int $id_user, int $id_note)
+    {
+        //UPDATE `notas` SET `nota`='1' WHERE id_user=2 AND id=8
+        $query = "UPDATE notas SET nota = '$note' WHERE id_user = $id_user AND id = $id_note";
+        $rows = $conn->query($query);
+        return $rows;
+    }
+
     public static function getNotesByIdLogged(PDO $conn, int $id_user)
     {
         $query = "SELECT * FROM notas WHERE id_user = '$id_user'";
