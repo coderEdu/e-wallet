@@ -46,17 +46,21 @@ include_once "../queries/myQueries.php";
                             </select>
                         </div>
                     </div>
-
-                    <div class="flex items-center">
+                    
+                    <!-- select btw owner account / extern aaccount -->
+                    <div class="flex flex-col items-start pl-2 space-y-2">
                         <div class="flex text-sm space-x-2">
-                            <input type="checkbox" name="" id="innerAcc" onclick="change()" value="innerAcc" checked>
-                            <label for="innerAcc"><span id="btnAcc" class="text-blue-700">a una de tus cuentas</span> | <span id="extAcc">a una cuenta externa</span></label>
+                            <input type="radio" name="choice" id="radio_owner" value="owner" checked onclick="yourChoice()">
+                            <label for="radio_owner" class="text-neutral-900">Hacia otra de tus cuentas</label>
+                        </div>
+                        <div class="flex text-sm space-x-2">
+                            <input type="radio" name="choice" id="radio_extern" value="extern" onclick="yourChoice()">
+                            <label for="radio_extern" class="text-neutral-900">Hacia una cuenta externa</label>
                         </div>
                     </div>
 
                     <!-- bloque1 -->
-                    <div class="flex flex-col space-y-3 bg-gray-50 py-2 pl-10 pr-2 rounded-md" id="bloque1">
-                        
+                    <div class="flex flex-col space-y-3 bg-gray-50 py-2 pl-10 pr-2 rounded-md" id="bloque1">                        
                         <div class="flex justify-between items-center">
                             <label for="account2" class="flex w-full pr-2 font-sans font-normal text-sm text-gray-500">A la cuenta:</label>
                             <select id="account2" class="flex py-0 px-2 border-1" name="account2"> <!-- working here -->
@@ -71,36 +75,12 @@ include_once "../queries/myQueries.php";
 
                     <!-- bloque2 -->
                     <div class="hidden flex-col justify-start items-start bg-gray-50 py-2 px-2 rounded-md" id="bloque2">
-                        <label for="extern" class="flex w-fit pb-2 font-sans font-normal text-sm text-gray-500">CBU / ALIAS de la cuenta externa:</label>
-                        <input type="text" name="extern" id="extern" class="flex w-full border-2 py-1 px-2 text-left">
+                        <label for="cbu_alias" class="flex w-fit pb-2 font-sans font-normal text-sm text-gray-500">CBU / ALIAS de la cuenta externa:</label>
+                        <input type="text" name="cbu_alias" id="cbu_alias" class="flex w-full border-2 py-1 px-2 text-left">
                         
                         <label for="ownerAcc" class="flex w-fit pt-3 pb-2 font-sans font-normal text-sm text-gray-500">Titular de la cuenta externa:</label>
                         <input type="text" name="ownerAcc" id="ownerAcc" class="flex w-full border-2 py-1 px-2 text-left">
                     </div>
-
-                    <script>
-                        let b1 = document.getElementById('bloque1');
-                        let b2 = document.getElementById('bloque2');
-                        let btw = document.getElementById('btnAcc');
-                        let ext = document.getElementById('extAcc');
-
-                        function change() {
-                            let innerAccount = document.getElementById('innerAcc');
-
-                            if (innerAccount.checked) {
-                                b1.style.display='flex';
-                                b2.style.display='none';
-                                btw.style.color='blue';
-                                ext.style.color='rgb(107,114,128)';
-                            } else {
-                                b1.style.display='none';
-                                b2.style.display='flex';
-                                btw.style.color='rgb(107,114,128)';
-                                ext.style.color='blue';
-                            }
-                        }
-                    </script>
-                    <!-- End -->
 
                 </div>
                 <div class="flex pt-4">
@@ -118,3 +98,4 @@ include_once "../queries/myQueries.php";
     </div>
 </div>
 <div class="overlay" x-show="isNewTraOpen" x-cloak></div>
+<script defer src="../js/yourChoice.js"></script>
