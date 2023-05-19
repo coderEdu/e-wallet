@@ -99,3 +99,4 @@ include_once "../queries/myQueries.php";
 </div>
 <div class="overlay" x-show="isNewTraOpen" x-cloak></div>
 <script defer src="../js/yourChoice.js"></script>
+<script defer src="../js/avoidAccSelf-transf.js"></script>
