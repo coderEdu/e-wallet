@@ -31,7 +31,7 @@ include_once "../queries/myQueries.php";
                 </div>       
                 <div class="flex justify-between pt-4 items-center">
                     <div class="flex">
-                        <button type="submit" class="border-2 border-blue-500 bg-blue-800 text-white py-1 px-2">Guardar</button>
+                        <button type="submit" class="bg-blue-500 text-white py-2 px-3 rounded-sm">Guardar</button>
                     </div>
                 </div>                
                 <div class="flex pt-4">
