@@ -6,14 +6,15 @@ include_once "../partials/bd/conn.php";
 include_once "../classes/functions.php";
 include_once "../queries/myQueries.php";
 
-        //var_dump(MyQueries::generalTestQuery($id_user,"2022-11-29","","","",""));
+//var_dump(MyQueries::generalTestQuery($id_user,"2022-11-29","","","",""));
 
-        $type = (isset($_GET['type'])) ? $_GET['type'] : "";
-        $amount = (isset($_GET['amount'])) ? $_GET['amount'] : "";
-        $account = (isset($_GET['account'])) ? $_GET['account'] : "";
-        $concept = (isset($_GET['concept'])) ? $_GET['concept'] : "";
-        $startDate = (isset($_GET['desde'])) ? $_GET['desde'] : "";
-        $endDate = (isset($_GET['hasta'])) ? $_GET['hasta'] : "";
+$type = (isset($_GET['type'])) ? $_GET['type'] : "";
+$amount = (isset($_GET['tAmount'])) ? str_replace( ',','',$_GET['tAmount'] ) : "";
+$account = (isset($_GET['account'])) ? $_GET['account'] : "";
+$concept = (isset($_GET['concept'])) ? $_GET['concept'] : "";
+$startDate = (isset($_GET['desde'])) ? $_GET['desde'] : "";
+$endDate = (isset($_GET['hasta'])) ? $_GET['hasta'] : "";
+
 ?>
 
 <?php include "../partials/header/header-nav.php"; ?>        

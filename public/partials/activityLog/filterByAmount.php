@@ -2,16 +2,13 @@
     <div class="flex text-slate-700">
         <input 
             type="text"
-            id="amount"
-            name="amount"
-            placeholder="$ 0.00"
-            value="<?php echo (isset($_GET['amount']) ? $_GET['amount'] : ''); ?>"
+            id="tAmount"
+            name="tAmount"
+            data-type="currency"
+            placeholder="$ 0,00"
+            value="<?php echo (isset($_GET['tAmount']) ? $_GET['tAmount'] : ''); ?>"
             class="p-2 border-1 border-gray-400 rounded-md text-right"
+            oninput="this.value = this.value.replace(/[^0-9.]/g, '').replace(/\B(?=(\d{3})+(?!\d))/g, ',')"
         />        
     </div>        
-    <script>
-        function resetAmount() {
-            document.getElementById('amount').value = "";
-        }
-    </script>
 </div>
