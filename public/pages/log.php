@@ -172,7 +172,7 @@ $endDate = (isset($_GET['hasta'])) ? $_GET['hasta'] : "";
                     <?php foreach (MyQueries::generalQuery($conn, $id_user, $startDate, $endDate, $type, $account, $amount, $concept) as $row) { // call the query
                         $movs_count++; // movements counter
                         ?>    
-                        <a href="#" class="flex w-full h-auto py-3 px-6 mb-0 card-box-shadow card-box-shadow:hover rounded-lg <?php echo $aColor = ($row['concepto'] != '$correctivo') ? "bg-white" : "bg-green-50"; ?>"> 
+                        <a href="#" class="flex w-full h-auto py-3 px-6 mb-0 card-box-shadow card-box-shadow:hover rounded-lg <?php echo $aColor = (str_contains( $row['concepto'],'código:' )) ? "bg-gray-100" : "bg-white"; ?>"> 
                             <div class="flex flex-col w-full space-y-1">
                                 <div class="flex w-full justify-between flex-wrap">
                                     <div class="flex justify-center items-center h-fit">

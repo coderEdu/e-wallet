@@ -3,10 +3,10 @@ include_once "../partials/bd/conn.php";
 include_once "../queries/myQueries.php";
 include_once "../classes/functions.php";
 
-if (isset($_POST['edit_chkbox'])) {
-    $title = (isset($_POST['title'])) ? $_POST['title'] : '';
-    $note = (isset($_POST['note'])) ? $_POST['note'] : '';
-    $check = (isset($_POST['edit_chkbox'])) ? $_POST['edit_chkbox'] : '';
+if (isset($_POST['edit_chkbox']) && (isset($_POST['title'])) && (isset($_POST['note']))) {
+    $title = $_POST['title'];
+    $note =  $_POST['note'];
+    $check = $_POST['edit_chkbox'];
     $id_user = intval($_SESSION['logged_id']);
     $id_note = intval($_SESSION['noteId']);
 
@@ -59,7 +59,7 @@ $_SESSION['open-note']='false';
                 
                 <div class="flex justify-end pt-4 items-center">
                     <div class="flex">
-                        <button type="submit" class="border-2 py-1 px-2" id="saveBtn" ">Guardar</button>
+                        <button type="submit" class="py-2 px-3 rounded-sm" id="saveBtn">Guardar</button>
                     </div>
                 </div>
             </form>

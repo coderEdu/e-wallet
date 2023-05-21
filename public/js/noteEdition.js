@@ -1,5 +1,5 @@
 let edit_check = document.getElementById('edit_chkbox');
-let save_button = document.getElementById('saveBtn');
+let save_btn = document.getElementById('saveBtn');
 let lbl_check = document.getElementById('lbl_check');
 let note = document.getElementById('note');
 let note_save_content = note.value;
@@ -10,25 +10,21 @@ note.addEventListener('input', () => {
 });
 
 function load() {
-    //edit_check.style.borderColor='#FFF700';
-    save_button.style.backgroundColor='#E7E7E7';
-    save_button.style.borderColor='#DFDFDF';
-    save_button.style.color='#C1C1C1';
-    save_button.disabled=true;
+    save_btn.style.backgroundColor='#E7E7E7';
+    save_btn.style.color='#C1C1C1';
+    save_btn.disabled=true;
 }
 
 function enablingSaveBtn() {
-    save_button.disabled=false;
-    save_button.style.backgroundColor='#0146FF';
-    save_button.style.borderColor='#0000FF';
-    save_button.style.color='white';
+    save_btn.disabled=false;
+    save_btn.style.backgroundColor='#3B82F6';
+    save_btn.style.color='white';
 }
 
 function disablingSaveBtn() {
-    save_button.style.backgroundColor='#E7E7E7';
-    save_button.style.borderColor='#DFDFDF';
-    save_button.style.color='#C1C1C1';
-    save_button.disabled=true;
+    save_btn.style.backgroundColor='#E7E7E7';
+    save_btn.style.color='#C1C1C1';
+    save_btn.disabled=true;
 }
 
 function edit() {
