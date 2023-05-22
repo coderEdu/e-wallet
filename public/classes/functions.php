@@ -42,7 +42,7 @@ class MyFx
         return $fDate; 
     }
 
-    public static function formatDateToAccount(string $date) : string
+    public static function formatDateSMonth(string $date, bool $short_month) : string
     {
         date_default_timezone_set('America/Argentina/San_Luis');
         $sDate = $date;
@@ -54,7 +54,8 @@ class MyFx
         $min = date('i',$tDate);
         $sec = date('s',$tDate);
         $intDate = mktime($hou,$min,$sec,$mon,$day,$yea);
-        $fDate = date("F j, Y",$intDate);
+        $mon_format = ($short_month) ? 'M' : 'F';
+        $fDate = date($mon_format . " j, Y",$intDate);
         return $fDate; 
     }
 

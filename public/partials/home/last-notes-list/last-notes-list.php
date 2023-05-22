@@ -25,11 +25,10 @@ $notes_count=0;
             <div class="flex flex-col w-full"> 
                 <div class="flex w-full justify-between flex-wrap">
                     <div class="flex">
-                        <h3 class="flex font-sans font-light mb-1 text-sm text-zinc-500"><?php echo MyFx::formatDate($row['fec_crea']); ?></h3>
+                        <h3 class="flex font-sans font-light mb-1 text-sm text-zinc-500">c. <?php echo MyFx::formatDate($row['fec_crea']); ?></h3>
                     </div>
-                    <div class="flex items-center">
-                        <div class=" flex mx-1"><i class="fa fa-pencil text-xs text-neutral-500 pr-1"></i></div>
-                        <h3 class="flex font-sans font-light mb-1 text-sm text-zinc-500"><?php echo MyFx::formatDate($row['fec_modif']); ?></h3>
+                    <div class="flex">
+                        <h3 class="flex font-sans font-light mb-1 text-sm text-zinc-500">m. <?php echo MyFx::formatDate($row['fec_modif']); ?></h3>
                     </div>
                 </div>               
                 <div class="flex flex-col sm:flex-row space-y-1 w-full justify-between">
@@ -44,8 +43,3 @@ $notes_count=0;
     ?>
     <?php include "all-notes-list.php" ?>
 </div>
-
-<script>    
-    let winScroll = document.body.scrollTop || document.documentElement.scrollTop;
-    //alert(winScroll);
-</script>

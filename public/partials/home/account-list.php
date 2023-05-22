@@ -28,7 +28,7 @@
                 <div class="flex w-full justify-between items-center">
                     <div class="flex w-full">
                         <div>
-                            <span class="font-light text-sm font-serif text-zinc-500"><?php echo MyFx::formatDateToAccount($fila['fec_crea']); ?></span>
+                            <span class="font-light text-sm font-serif text-zinc-500"><?php echo MyFx::formatDateSMonth($fila['fec_crea'],false); ?></span>
                         </div>
                     </div>
                     <div class="flex w-full">
