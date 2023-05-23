@@ -1,11 +1,7 @@
 <?php session_start(); ?>
 <?php include "../partials/header/header.php" ?>
 <?php include "../partials/header/header-nav.php"; ?>
-<?php
 
-
-
-?>   
 <div class="container flex flex-col w-full mx-auto bg-default">    
     <section>
 
