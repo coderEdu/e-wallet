@@ -19,17 +19,7 @@ if (isset($_POST['edit_chkbox']) && (isset($_POST['title'])) && (isset($_POST['n
 // I set this session-var to false to stop viewing the form
 $_SESSION['open-note']='false';
 ?>  
-<div
-      class="modal"
-      role="dialog"
-      tabindex="-1"
-      x-show="isNoteOpenedOpen"      
-      x-on:click.away="isNoteOpenedOpen = false"
-      x-onload="seeWallets = false"
-      x-cloak
-      x-transition
-      
->
+<div class="modal" role="dialog" tabindex="-1" x-show="isNoteOpenedOpen" x-on:click.away="isNoteOpenedOpen = false" x-onload="seeWallets = false" x-cloak x-transition>
     <div class="model-inner">
         <div class="modal-header">
             <?php if (isset($_SESSION['id_note'])) { ?>

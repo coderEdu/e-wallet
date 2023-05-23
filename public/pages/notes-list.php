@@ -1,6 +1,11 @@
 <?php session_start(); ?>
 <?php include "../partials/header/header.php" ?>
-<?php include "../partials/header/header-nav.php"; ?>        
+<?php include "../partials/header/header-nav.php"; ?>
+<?php
+
+
+
+?>   
 <div class="container flex flex-col w-full mx-auto bg-default">    
     <section>
 
@@ -25,7 +30,7 @@
                                 <p class="font-serif font-semibold text-xs md:text-sm xl:text-base text-zinc-800"><?php echo $str; ?></p>
                             </div>
                             <div class="flex justify-end items-center w-12 h-3 sm:w-14 sm:h-4 space-x-1">
-                                <a href="">
+                                <a href="../partials/home/last-notes-list/process-note.php?id=<?php echo $fila[('id')]; ?>" x-on:click="isNoteOpenedOpen = true, open = false" >
                                     <div class="flex h-[16px] md:h-[18px]">
                                         <img src="../img/Actions-document-edit-icon.png" alt="edit-note" srcset="" >
                                     </div>
