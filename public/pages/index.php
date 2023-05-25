@@ -1,5 +1,8 @@
 <?php
 session_start();
+
+$_SESSION['authorized']=false;
+
 include_once "../partials/bd/conn.php";
 include_once "../queries/myQueries.php";
 include_once "nUser-validate.php";
@@ -8,9 +11,9 @@ if (isset($_POST['user_name']) && isset($_POST['user_pass'])) {
   $user_name = $_POST['user_name'];
   $user_pass = $_POST['user_pass'];
 
-
   foreach (MyQueries::authLogin($conn, $user_name, $user_pass) as $row) {
     if ($row) {
+        $_SESSION['authorized']=true;
         $_SESSION['logged_id']=$row['id'];
         $_SESSION['user-name']=$row['usuario'];
         $_SESSION['user-pass']=$row['clave'];

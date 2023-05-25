@@ -1,4 +1,3 @@
-<?php session_start(); ?>
 <?php include "../partials/header/header.php" ?>
 <?php include "../partials/header/header-nav.php"; ?>
 

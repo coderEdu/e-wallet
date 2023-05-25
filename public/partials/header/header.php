@@ -1,4 +1,9 @@
 <?php
+session_start();
+
+$auth=boolval( $_SESSION['authorized'] );
+if (!$auth) header("Location: index.php");
+
 include_once "../partials/bd/conn.php";
 include_once "../queries/myQueries.php";
 include_once "transact-validate.php";
