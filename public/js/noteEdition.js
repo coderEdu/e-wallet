@@ -1,8 +1,18 @@
 let edit_check = document.getElementById('edit_chkbox');
 let save_btn = document.getElementById('saveBtn');
+let del_btn = document.getElementById('delBtn');
+let delete_note = document.getElementById('deleteNote');
 let lbl_check = document.getElementById('lbl_check');
 let note = document.getElementById('note');
 let note_save_content = note.value;
+
+del_btn.addEventListener('click', () => {
+    if (del_btn.innerHTML=='Confirma ?') {
+        del_btn.type='submit';
+        alert('Nota eliminada.');
+    }    
+    del_btn.innerHTML='Confirma ?';
+})
 
 // Checks if the 'textarea' content has changed
 note.addEventListener('input', () => {

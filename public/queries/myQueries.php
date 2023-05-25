@@ -68,9 +68,16 @@ class MyQueries {
         return $rows;
     }
 
+    public static function deleteNote(PDO $conn, int $id_user, int $id_note)
+    {
+        $query = "DELETE FROM notas WHERE id_user = $id_user AND id = $id_note";
+        $r = $conn->exec($query);
+        return $r;
+    }
+
     public static function getNotesByIdLogged(PDO $conn, int $id_user)
     {
-        $query = "SELECT * FROM notas WHERE id_user = '$id_user'";
+        $query = "SELECT * FROM notas WHERE id_user = '$id_user' ORDER BY fec_crea DESC";
         $rows = $conn->query($query);
         return $rows;
     }

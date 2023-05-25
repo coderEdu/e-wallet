@@ -3,17 +3,24 @@ include_once "../partials/bd/conn.php";
 include_once "../queries/myQueries.php";
 include_once "../classes/functions.php";
 
-if (isset($_POST['edit_chkbox']) && (isset($_POST['title'])) && (isset($_POST['note']))) {
-    $title = $_POST['title'];
-    $note =  $_POST['note'];
-    $check = $_POST['edit_chkbox'];
-    $id_user = intval($_SESSION['logged_id']);
-    $id_note = intval($_SESSION['noteId']);
 
-    $r = '';
-    if ($check=='on')
-        $r=MyQueries::updateNote($conn,$note,$id_user,$id_note);
+if (isset($_POST['mySubmit'])) {
+    if ($_POST['mySubmit']=='save') {
+        //var_dump($_POST);
+        $title = $_POST['title'];
+        $note =  $_POST['note'];
+        $check = $_POST['edit_chkbox'];
+        $id_user = intval($_SESSION['logged_id']);
+        $id_note = intval($_SESSION['noteId']);
+        
+        $r = '';
+        if ($check=='on')
+            $r=MyQueries::updateNote($conn,$note,$id_user,$id_note);
+    } elseif ($_POST['mySubmit']=='del') {
+        MyQueries::deleteNote($conn,$id_user,intval($_SESSION['noteId']));
+    }
 }
+
 ?>
 <?php
 // I set this session-var to false to stop viewing the form
@@ -46,12 +53,21 @@ $_SESSION['open-note']='false';
                         </div>
                     </div>
                 </div>
-                
-                <div class="flex justify-end pt-4 items-center">
-                    <div class="flex">
-                        <button type="submit" class="py-2 px-3 rounded-sm" id="saveBtn">Guardar</button>
+
+                <div class="flex justify-between items-center">
+                    <div class="flex justify-end pt-4 items-center">
+                        <div class="flex">
+                            <button type="button" class="py-2 px-3 bg-red-700 text-white rounded-sm" name="mySubmit" id="delBtn" value="del">Eliminar</button>
+                        </div>
+                    </div>                    
+                    <div class="flex justify-end pt-4 items-center">
+                        <div class="flex">
+                            <button type="submit" class="py-2 px-3 rounded-sm" name="mySubmit" id="saveBtn" value="save">Guardar</button>
+                        </div>
                     </div>
                 </div>
+
+                <input type="hidden" name="hidIdNote" id="id-note" value="<?php echo $_SESSION['noteId']; ?>">
             </form>
         </div>
     </div>

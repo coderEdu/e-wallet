@@ -4,6 +4,7 @@ include_once "../queries/myQueries.php";
 ?>
 
 <?php
+// create note
 if (isset($_POST['nombre']) && isset($_POST['monto']) && isset($_POST['create'])) {
     $name = $_POST['nombre'];
     $balance = floatval( $_POST['monto'] );
@@ -13,6 +14,6 @@ if (isset($_POST['nombre']) && isset($_POST['monto']) && isset($_POST['create'])
         echo "<script> alert('Cuenta creada con éxito!'); </script>";
     } else {
         echo "<script> alert('Error: No se pudo crear la cuenta.'); </script>";
-    }
+    }    
 }
 ?>
