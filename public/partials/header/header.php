@@ -51,8 +51,7 @@ include_once "activate-menus.php";
     'isNoteOpenedOpen': <?php echo $_SESSION['open-note']; ?>
 }" class="flex flex-col body-h bg-default">
 <?php 
-//var_dump($_SESSION['open-note']); 
-//var_dump($_SESSION['wallets']); 
+
 ?>
     <?php include_once "new-deposit.php"; ?>
     <?php include_once "new-withdraw.php"; ?>
@@ -61,15 +60,4 @@ include_once "activate-menus.php";
     <?php include_once "new-note.php"; ?>
     <?php include_once "note-opened.php"; ?>
     <?php include_once "change-password.php"; ?>
-
-    <script>
-        $(document).ready(function() {
-            var position= $(window).scrollTop();
-    
-            //some things here
-    
-            $(window).scrollTop(position);
-            //alert(position);
-        })
-    </script>
     

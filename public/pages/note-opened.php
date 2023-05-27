@@ -3,7 +3,6 @@ include_once "../partials/bd/conn.php";
 include_once "../queries/myQueries.php";
 include_once "../classes/functions.php";
 
-
 if (isset($_POST['mySubmit'])) {
     if ($_POST['mySubmit']=='save') {
         //var_dump($_POST);
@@ -73,4 +72,4 @@ $_SESSION['open-note']='false';
     </div>
 </div>
 <div class="overlay" x-show="isNoteOpenedOpen" x-cloak></div>
-<script src="../js/noteEdition.js"></script>
+<script defer src="../js/noteEdition.js"></script>

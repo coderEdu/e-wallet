@@ -1,5 +1,15 @@
 <?php include "../partials/header/header.php" ?>
 <?php include "../partials/header/header-nav.php"; ?>
+<?php include "../partials/bd/conn.php"; ?>
+
+<?php
+
+if (isset($_GET['id'])) {
+    $id_user = intval($_SESSION['logged_id']);
+    $id = intval( $_GET['id'] );
+    MyQueries::deleteNote($conn,$id_user,$id);
+}
+?>
 
 <div class="container flex flex-col w-full mx-auto bg-default">    
     <section>
@@ -30,9 +40,9 @@
                                         <img src="../img/Actions-document-edit-icon.png" alt="edit-note" srcset="" >
                                     </div>
                                 </a>
-                                <a href="">
+                                <a href="<?php $_SERVER['PHP_SELF'] ?>?id=<?php echo $fila[('id')]; ?>" onclick="return confirm('Presione aceptar para eliminar la nota.')">
                                     <div class="flex h-[18px] md:h-5">
-                                        <img src="../img/Actions-document-close-icon.png" alt="edit-note" srcset="" >
+                                        <img src="../img/Actions-document-close-icon.png" alt="edit-note" srcset="">
                                     </div>
                                 </a>
                             </div>
