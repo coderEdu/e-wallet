@@ -16,7 +16,7 @@ $user = "root";
 $pass = "";
 
 try {
-    $conn = new PDO('mysql:host=localhost;dbname=billetera', $user, $pass);
+    $conn = new PDO('mysql:host=localhost;dbname=billetera;port=3308', $user, $pass);
     //echo "Connected!!";
     //$conn = null;
 } catch (PDOException $e) {

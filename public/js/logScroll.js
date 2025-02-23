@@ -9,9 +9,9 @@ window.addEventListener('scroll', () => {
     let right_panel = document.getElementById('rightPanel');
     let rp_height = right_panel.offsetHeight;
     
-    if (position > 260 && rp_height > documentHeight) {
+    if (position > 250 && rp_height > documentHeight) {
         left_panel.style.position='fixed';
-        left_panel.style.top='0px';    
+        left_panel.style.top='10px';    
         // hidden panel
         hidden_panel.style.display='flex';
         hidden_panel.style.minWidth=lp_width+'px';
